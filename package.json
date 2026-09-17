@@ -1,0 +1,16 @@
+{
+  "name": "pokemon-toolset-shiny-checker-tracker",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "./run-local-server.command",
+    "audit:events": "node scripts/refresh-leekduck-events.mjs --audit",
+    "refresh:events": "node scripts/refresh-leekduck-events.mjs",
+    "test:events-index": "node tests/events-index.test.mjs",
+    "test:event-parser": "node tests/parse-event-page.test.mjs",
+    "test:shiny-refresh": "node tests/shiny-refresh.test.mjs"
+  },
+  "dependencies": {
+    "cheerio": "^1.1.2"
+  }
+}

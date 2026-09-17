@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>Pokémon Toolset</title>
+  <link rel="stylesheet" href="style.css?v=container-grid-density-v10" />
+  <script src="app.js?v=stable-utility-drawer-v8"></script>
+</head>
+<body>
+  <section id="trackerView" class="app-view tracker-panel">
+    <div class="app-shell">
+    <header class="topbar">
+      <div class="title-group">
+        <p class="eyebrow">Toolset</p>
+        <h1>Shiny Dex</h1>
+        <p class="subtitle">Scan events and hunt shinies.</p>
+        <button class="toolset-card-switch" type="button" data-view-tab="checker" aria-label="Open Shiny Tracking" title="Open Shiny Tracking">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M7.25 7.25A6.75 6.75 0 0 1 18.7 5.6" />
+            <path d="M18.75 2.75V5.9h-3.15" />
+            <path d="M16.75 16.75A6.75 6.75 0 0 1 5.3 18.4" />
+            <path d="M5.25 21.25V18.1H8.4" />
+            <path d="M8.25 12h7.5" />
+            <path d="M13.75 10l2 2-2 2" />
+            <path d="M10.25 10l-2 2 2 2" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="progress-card">
+        <p class="progress-label">Progress</p>
+        <p id="progressText" class="progress-value">Shiny: 0 / 0</p>
+
+        <div class="progress-bar-track">
+          <div id="progressBarFill" class="progress-bar-fill"></div>
+        </div>
+
+        <div class="progress-rank-row">
+          <p id="progressRank" class="progress-rank">A CASUAL COLLECTOR</p>
+          <button
+            id="regionCompletionToggle"
+            class="region-completion-toggle"
+            type="button"
+            aria-label="Toggle region completion"
+            aria-expanded="false"
+            aria-controls="regionCompletionPanel"
+          >
+            <svg class="region-completion-chevron" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M6.25 9.25L12 15l5.75-5.75" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <section class="region-completion-wrap">
+      <div id="regionCompletionPanel" class="region-completion-panel" hidden>
+        <div id="regionProgressGrid" class="region-progress-grid"></div>
+      </div>
+    </section>
+
+    <section class="toolbar">
+      <div class="tracker-filter-row">
+        <div class="search-wrap">
+          <input
+            type="text"
+            id="searchInput"
+            placeholder="Search by name or ID..."
+            autocomplete="off"
+          />
+        </div>
+
+        <div class="controls">
+          <div class="controls-left">
+            <button id="leekEventsBtn" type="button">EVENTS</button>
+            
+            <button id="missingFilterBtn" type="button">UNREGISTERED</button>
+            <button id="ultraGridBtn" class="mini-grid-btn" type="button" aria-label="Extra compact grid" title="Extra compact grid">
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <rect x="4" y="4" width="3" height="3" rx="0.8"></rect>
+                <rect x="10.5" y="4" width="3" height="3" rx="0.8"></rect>
+                <rect x="17" y="4" width="3" height="3" rx="0.8"></rect>
+                <rect x="4" y="10.5" width="3" height="3" rx="0.8"></rect>
+                <rect x="10.5" y="10.5" width="3" height="3" rx="0.8"></rect>
+                <rect x="17" y="10.5" width="3" height="3" rx="0.8"></rect>
+                <rect x="4" y="17" width="3" height="3" rx="0.8"></rect>
+                <rect x="10.5" y="17" width="3" height="3" rx="0.8"></rect>
+                <rect x="17" y="17" width="3" height="3" rx="0.8"></rect>
+              </svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+      <section id="leekEventPanel" class="leek-event-panel" hidden>
+        <div id="leekEventPanelContent" class="leek-event-panel-content">
+          <div class="leek-event-panel-head">
+            <p class="leek-event-panel-title">Events</p>
+            <p id="leekEventPanelMeta" class="leek-event-panel-meta">Loading Leek Duck events…</p>
+          </div>
+          <div id="leekEventTrack" class="leek-event-track"></div>
+        </div>
+      </section>
+
+      <!-- Final-geometry measurement template. Never visible or interactive. -->
+      <section id="leekEventMeasure" class="leek-event-measure" aria-hidden="true">
+        <div id="leekEventMeasureContent" class="leek-event-panel-content">
+          <div class="leek-event-panel-head">
+            <p class="leek-event-panel-title">Events</p>
+            <p class="leek-event-panel-meta">000 events · Leek Duck</p>
+          </div>
+          <div class="leek-event-track">
+            <div class="leek-event-card leek-event-skeleton">
+              <div class="leek-event-card-top">
+                <span class="leek-skeleton-pill"></span>
+                <span class="leek-skeleton-status"></span>
+              </div>
+              <span class="leek-skeleton-title"><i></i><i></i><i></i></span>
+              <span class="leek-skeleton-time"><i></i><i></i></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section class="list-wrap">
+      <div id="pokemonList"></div>
+    </section>
+  </div>
+
+  </section>
+
+  <section id="checkerView" class="app-view shiny-checker-panel" hidden>
+
+    <main>
+      
+  <section class="checker-topbar">
+    <div class="title-group checker-title-card">
+      <p class="eyebrow">Toolset</p>
+      <h1>Shiny Hunt</h1>
+      <p class="subtitle">Tool to hunt shiny.</p>
+      <button class="toolset-card-switch" type="button" data-view-tab="tracker" aria-label="Open Shiny Dex" title="Open Shiny Dex">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <path d="M7.25 7.25A6.75 6.75 0 0 1 18.7 5.6" />
+          <path d="M18.75 2.75V5.9h-3.15" />
+          <path d="M16.75 16.75A6.75 6.75 0 0 1 5.3 18.4" />
+          <path d="M5.25 21.25V18.1H8.4" />
+          <path d="M8.25 12h7.5" />
+          <path d="M13.75 10l2 2-2 2" />
+          <path d="M10.25 10l-2 2 2 2" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="checker-key-card">
+      <p class="progress-label">Key</p>
+      <div class="key-row">
+        <input id="keyInput" value="8855" maxlength="4" inputmode="numeric" autocomplete="off"/>
+        <button id="buildBtn">Build</button>
+      </div>
+      <p id="error" class="error"></p>
+    </div>
+  </section>
+
+  <section class="card">
+    <div class="time-row">
+      <div class="wheel-field">
+        <div class="wheel-label">Target hour</div>
+        <div id="hourWheel" class="time-wheel" aria-label="Target hour"></div>
+      </div>
+      <div class="clock-card">
+        <div class="clock-label">Malaysia Time</div>
+        <div id="malaysiaClock" class="clock-time">--:--:--</div>
+        <div id="malaysiaDate" class="clock-date">Loading...</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">Chain</h2>
+    <div class="chain-wrap"><div id="stack" class="stack"></div></div>
+  </section>
+
+  <section class="card">
+    <h2 class="section-title">Pokédex checker</h2>
+    <div class="pokedex-grid">
+      <div class="pokedex-input-row">
+        <input id="pokemonInput" list="checkerPokemonList" placeholder="Type Pokémon name" autocomplete="off"/>
+        <datalist id="checkerPokemonList"></datalist>
+        <button id="pokemonGoBtn" type="button">Go</button>
+      </div>
+      <div class="dex-result"><div id="dexNo" class="dex-no">—</div><div id="dexName" class="dex-name">No match</div></div>
+    </div>
+  </section>
+
+  <section class="card alarm-preview-card">
+    <div class="alarm-card-header">
+      <h2 class="section-title">Alarms</h2>
+      <label class="alarm-volume-control" aria-label="Alarm volume">
+        <span class="alarm-volume-edge" aria-hidden="true">−</span>
+        <input id="alarmVolumeSlider" type="range" min="0" max="100" step="1" value="90" />
+        <span class="alarm-volume-edge" aria-hidden="true">+</span>
+      </label>
+    </div>
+    <div class="alarm-preview-meta" id="alarmPreviewMeta" hidden></div>
+
+    <div class="alarm-toggle-grid" aria-label="Alarm controls">
+      <div class="alarm-sound-row">
+        <span id="nextShinyMinuteLabel" class="alarm-sound-label">Next shiny minute</span>
+        <label class="alarm-sound-toggle" aria-label="Toggle alarm sound" title="Toggle alarm sound">
+          <input id="alarmSoundToggle" type="checkbox" />
+          <span class="alarm-ios-toggle">
+            <span class="alarm-ios-toggle-thumb"></span>
+          </span>
+        </label>
+      </div>
+
+      <div class="prealarm-row">
+        <div>
+          <div id="nextPreAlarmLabel" class="alarm-sound-label">Next pre-alarm</div>
+          <div id="preAlarmStatus" class="prealarm-status">Tap an alarm time below to select.</div>
+        </div>
+        <label class="alarm-sound-toggle" aria-label="Toggle 35 second pre-alarm" title="Toggle 35 second pre-alarm">
+          <input id="preAlarmToggle" type="checkbox" />
+          <span class="alarm-ios-toggle">
+            <span class="alarm-ios-toggle-thumb"></span>
+          </span>
+        </label>
+      </div>
+    </div>
+
+    <div class="alarm-preview-list" id="alarmPreviewList">Build a valid key to preview alarm minutes.</div>
+  </section>
+
+
+    </main>
+  </section>
+
+  <div
+    class="floating-save-panel"
+    role="group"
+    aria-label="Shiny Dex utility controls"
+    tabindex="0"
+  >
+    <button
+      id="themeToggleBtn"
+      type="button"
+      class="floating-icon-btn floating-theme-btn"
+      aria-label="Toggle light or dark mode"
+      title="Toggle light or dark mode"
+      data-theme-toggle-button
+    >
+      <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M12 4V2m0 20v-2m8-8h2M2 12h2m14.95-6.95 1.41-1.41M3.64 20.36l1.41-1.41m0-13.9L3.64 3.64m16.72 16.72-1.41-1.41" />
+        <circle cx="12" cy="12" r="4" />
+      </svg>
+      <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+        <path d="M21 14.5A8.5 8.5 0 0 1 9.5 3 7 7 0 1 0 21 14.5Z" />
+      </svg>
+    </button>
+
+    <button
+      id="exportBtn"
+      type="button"
+      class="floating-icon-btn floating-save-only"
+      aria-label="Export Save"
+      title="Export Save"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M14 3a1 1 0 0 0 0 2h3.59l-6.3 6.29a1 1 0 1 0 1.42 1.42L19 6.41V10a1 1 0 1 0 2 0V4a1 1 0 0 0-1-1h-6Z"></path>
+        <path d="M5 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-4a1 1 0 1 0-2 0v4H5V7h4a1 1 0 1 0 0-2H5Z"></path>
+      </svg>
+    </button>
+
+    <button
+      id="importBtn"
+      type="button"
+      class="floating-icon-btn floating-save-only"
+      aria-label="Import Save"
+      title="Import Save"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M4 3h14l3 3v15H4V3zm2 2v14h12V7.5L16.5 5H6zm2 2h6v4H8V7zm0 6h8v5H8v-5z"></path>
+      </svg>
+    </button>
+
+    <input id="importFileInput" type="file" accept=".json,application/json" hidden />
+  </div>
+
+
+  <script src="pokemon-data.js?v=sobble-shiny-released-20260704"></script>
+<script src="pokemon-species-local.js?v=local-species-v1"></script>
+<script src="data/leekduck-event-data.generated.js?v=persistent-shiny-registry-v2"></script>
+<script src="leekduck-events.js?v=persistent-shiny-registry-v2"></script>
+  <script src="script.js?v=container-grid-density-v10"></script>
+  <script>
+(function(){
+
+const GROUPS = { 1:["1","6"], 2:["2","7"], 3:["3","8"], 4:["4","9"], 5:["5","0"] };
+const DIGIT_TO_GROUP = Object.fromEntries(Object.entries(GROUPS).flatMap(([g,ds]) => ds.map(d => [d, Number(g)])));
+const CHAIN_ORDER = [1,3,2,5,4];
+const POKEMON_NAMES = ["Bulbasaur", "Ivysaur", "Venusaur", "Charmander", "Charmeleon", "Charizard", "Squirtle", "Wartortle", "Blastoise", "Caterpie", "Metapod", "Butterfree", "Weedle", "Kakuna", "Beedrill", "Pidgey", "Pidgeotto", "Pidgeot", "Rattata", "Raticate", "Spearow", "Fearow", "Ekans", "Arbok", "Pikachu", "Raichu", "Sandshrew", "Sandslash", "Nidoran♀", "Nidorina", "Nidoqueen", "Nidoran♂", "Nidorino", "Nidoking", "Clefairy", "Clefable", "Vulpix", "Ninetales", "Jigglypuff", "Wigglytuff", "Zubat", "Golbat", "Oddish", "Gloom", "Vileplume", "Paras", "Parasect", "Venonat", "Venomoth", "Diglett", "Dugtrio", "Meowth", "Persian", "Psyduck", "Golduck", "Mankey", "Primeape", "Growlithe", "Arcanine", "Poliwag", "Poliwhirl", "Poliwrath", "Abra", "Kadabra", "Alakazam", "Machop", "Machoke", "Machamp", "Bellsprout", "Weepinbell", "Victreebel", "Tentacool", "Tentacruel", "Geodude", "Graveler", "Golem", "Ponyta", "Rapidash", "Slowpoke", "Slowbro", "Magnemite", "Magneton", "Farfetch'd", "Doduo", "Dodrio", "Seel", "Dewgong", "Grimer", "Muk", "Shellder", "Cloyster", "Gastly", "Haunter", "Gengar", "Onix", "Drowzee", "Hypno", "Krabby", "Kingler", "Voltorb", "Electrode", "Exeggcute", "Exeggutor", "Cubone", "Marowak", "Hitmonlee", "Hitmonchan", "Lickitung", "Koffing", "Weezing", "Rhyhorn", "Rhydon", "Chansey", "Tangela", "Kangaskhan", "Horsea", "Seadra", "Goldeen", "Seaking", "Staryu", "Starmie", "Mr. Mime", "Scyther", "Jynx", "Electabuzz", "Magmar", "Pinsir", "Tauros", "Magikarp", "Gyarados", "Lapras", "Ditto", "Eevee", "Vaporeon", "Jolteon", "Flareon", "Porygon", "Omanyte", "Omastar", "Kabuto", "Kabutops", "Aerodactyl", "Snorlax", "Articuno", "Zapdos", "Moltres", "Dratini", "Dragonair", "Dragonite", "Mewtwo", "Mew", "Chikorita", "Bayleef", "Meganium", "Cyndaquil", "Quilava", "Typhlosion", "Totodile", "Croconaw", "Feraligatr", "Sentret", "Furret", "Hoothoot", "Noctowl", "Ledyba", "Ledian", "Spinarak", "Ariados", "Crobat", "Chinchou", "Lanturn", "Pichu", "Cleffa", "Igglybuff", "Togepi", "Togetic", "Natu", "Xatu", "Mareep", "Flaaffy", "Ampharos", "Bellossom", "Marill", "Azumarill", "Sudowoodo", "Politoed", "Hoppip", "Skiploom", "Jumpluff", "Aipom", "Sunkern", "Sunflora", "Yanma", "Wooper", "Quagsire", "Espeon", "Umbreon", "Murkrow", "Slowking", "Misdreavus", "Unown", "Wobbuffet", "Girafarig", "Pineco", "Forretress", "Dunsparce", "Gligar", "Steelix", "Snubbull", "Granbull", "Qwilfish", "Scizor", "Shuckle", "Heracross", "Sneasel", "Teddiursa", "Ursaring", "Slugma", "Magcargo", "Swinub", "Piloswine", "Corsola", "Remoraid", "Octillery", "Delibird", "Mantine", "Skarmory", "Houndour", "Houndoom", "Kingdra", "Phanpy", "Donphan", "Porygon2", "Stantler", "Smeargle", "Tyrogue", "Hitmontop", "Smoochum", "Elekid", "Magby", "Miltank", "Blissey", "Raikou", "Entei", "Suicune", "Larvitar", "Pupitar", "Tyranitar", "Lugia", "Ho-Oh", "Celebi", "Treecko", "Grovyle", "Sceptile", "Torchic", "Combusken", "Blaziken", "Mudkip", "Marshtomp", "Swampert", "Poochyena", "Mightyena", "Zigzagoon", "Linoone", "Wurmple", "Silcoon", "Beautifly", "Cascoon", "Dustox", "Lotad", "Lombre", "Ludicolo", "Seedot", "Nuzleaf", "Shiftry", "Taillow", "Swellow", "Wingull", "Pelipper", "Ralts", "Kirlia", "Gardevoir", "Surskit", "Masquerain", "Shroomish", "Breloom", "Slakoth", "Vigoroth", "Slaking", "Nincada", "Ninjask", "Shedinja", "Whismur", "Loudred", "Exploud", "Makuhita", "Hariyama", "Azurill", "Nosepass", "Skitty", "Delcatty", "Sableye", "Mawile", "Aron", "Lairon", "Aggron", "Meditite", "Medicham", "Electrike", "Manectric", "Plusle", "Minun", "Volbeat", "Illumise", "Roselia", "Gulpin", "Swalot", "Carvanha", "Sharpedo", "Wailmer", "Wailord", "Numel", "Camerupt", "Torkoal", "Spoink", "Grumpig", "Spinda", "Trapinch", "Vibrava", "Flygon", "Cacnea", "Cacturne", "Swablu", "Altaria", "Zangoose", "Seviper", "Lunatone", "Solrock", "Barboach", "Whiscash", "Corphish", "Crawdaunt", "Baltoy", "Claydol", "Lileep", "Cradily", "Anorith", "Armaldo", "Feebas", "Milotic", "Castform", "Kecleon", "Shuppet", "Banette", "Duskull", "Dusclops", "Tropius", "Chimecho", "Absol", "Wynaut", "Snorunt", "Glalie", "Spheal", "Sealeo", "Walrein", "Clamperl", "Huntail", "Gorebyss", "Relicanth", "Luvdisc", "Bagon", "Shelgon", "Salamence", "Beldum", "Metang", "Metagross", "Regirock", "Regice", "Registeel", "Latias", "Latios", "Kyogre", "Groudon", "Rayquaza", "Jirachi", "Deoxys", "Turtwig", "Grotle", "Torterra", "Chimchar", "Monferno", "Infernape", "Piplup", "Prinplup", "Empoleon", "Starly", "Staravia", "Staraptor", "Bidoof", "Bibarel", "Kricketot", "Kricketune", "Shinx", "Luxio", "Luxray", "Budew", "Roserade", "Cranidos", "Rampardos", "Shieldon", "Bastiodon", "Burmy", "Wormadam", "Mothim", "Combee", "Vespiquen", "Pachirisu", "Buizel", "Floatzel", "Cherubi", "Cherrim", "Shellos", "Gastrodon", "Ambipom", "Drifloon", "Drifblim", "Buneary", "Lopunny", "Mismagius", "Honchkrow", "Glameow", "Purugly", "Chingling", "Stunky", "Skuntank", "Bronzor", "Bronzong", "Bonsly", "Mime Jr.", "Happiny", "Chatot", "Spiritomb", "Gible", "Gabite", "Garchomp", "Munchlax", "Riolu", "Lucario", "Hippopotas", "Hippowdon", "Skorupi", "Drapion", "Croagunk", "Toxicroak", "Carnivine", "Finneon", "Lumineon", "Mantyke", "Snover", "Abomasnow", "Weavile", "Magnezone", "Lickilicky", "Rhyperior", "Tangrowth", "Electivire", "Magmortar", "Togekiss", "Yanmega", "Leafeon", "Glaceon", "Gliscor", "Mamoswine", "Porygon-Z", "Gallade", "Probopass", "Dusknoir", "Froslass", "Rotom", "Uxie", "Mesprit", "Azelf", "Dialga", "Palkia", "Heatran", "Regigigas", "Giratina", "Cresselia", "Phione", "Manaphy", "Darkrai", "Shaymin", "Arceus", "Victini", "Snivy", "Servine", "Serperior", "Tepig", "Pignite", "Emboar", "Oshawott", "Dewott", "Samurott", "Patrat", "Watchog", "Lillipup", "Herdier", "Stoutland", "Purrloin", "Liepard", "Pansage", "Simisage", "Pansear", "Simisear", "Panpour", "Simipour", "Munna", "Musharna", "Pidove", "Tranquill", "Unfezant", "Blitzle", "Zebstrika", "Roggenrola", "Boldore", "Gigalith", "Woobat", "Swoobat", "Drilbur", "Excadrill", "Audino", "Timburr", "Gurdurr", "Conkeldurr", "Tympole", "Palpitoad", "Seismitoad", "Throh", "Sawk", "Sewaddle", "Swadloon", "Leavanny", "Venipede", "Whirlipede", "Scolipede", "Cottonee", "Whimsicott", "Petilil", "Lilligant", "Basculin", "Sandile", "Krokorok", "Krookodile", "Darumaka", "Darmanitan", "Maractus", "Dwebble", "Crustle", "Scraggy", "Scrafty", "Sigilyph", "Yamask", "Cofagrigus", "Tirtouga", "Carracosta", "Archen", "Archeops", "Trubbish", "Garbodor", "Zorua", "Zoroark", "Minccino", "Cinccino", "Gothita", "Gothorita", "Gothitelle", "Solosis", "Duosion", "Reuniclus", "Ducklett", "Swanna", "Vanillite", "Vanillish", "Vanilluxe", "Deerling", "Sawsbuck", "Emolga", "Karrablast", "Escavalier", "Foongus", "Amoonguss", "Frillish", "Jellicent", "Alomomola", "Joltik", "Galvantula", "Ferroseed", "Ferrothorn", "Klink", "Klang", "Klinklang", "Tynamo", "Eelektrik", "Eelektross", "Elgyem", "Beheeyem", "Litwick", "Lampent", "Chandelure", "Axew", "Fraxure", "Haxorus", "Cubchoo", "Beartic", "Cryogonal", "Shelmet", "Accelgor", "Stunfisk", "Mienfoo", "Mienshao", "Druddigon", "Golett", "Golurk", "Pawniard", "Bisharp", "Bouffalant", "Rufflet", "Braviary", "Vullaby", "Mandibuzz", "Heatmor", "Durant", "Deino", "Zweilous", "Hydreigon", "Larvesta", "Volcarona", "Cobalion", "Terrakion", "Virizion", "Tornadus", "Thundurus", "Reshiram", "Zekrom", "Landorus", "Kyurem", "Keldeo", "Meloetta", "Genesect", "Chespin", "Quilladin", "Chesnaught", "Fennekin", "Braixen", "Delphox", "Froakie", "Frogadier", "Greninja", "Bunnelby", "Diggersby", "Fletchling", "Fletchinder", "Talonflame", "Scatterbug", "Spewpa", "Vivillon", "Litleo", "Pyroar", "Flabébé", "Floette", "Florges", "Skiddo", "Gogoat", "Pancham", "Pangoro", "Furfrou", "Espurr", "Meowstic", "Honedge", "Doublade", "Aegislash", "Spritzee", "Aromatisse", "Swirlix", "Slurpuff", "Inkay", "Malamar", "Binacle", "Barbaracle", "Skrelp", "Dragalge", "Clauncher", "Clawitzer", "Helioptile", "Heliolisk", "Tyrunt", "Tyrantrum", "Amaura", "Aurorus", "Sylveon", "Hawlucha", "Dedenne", "Carbink", "Goomy", "Sliggoo", "Goodra", "Klefki", "Phantump", "Trevenant", "Pumpkaboo", "Gourgeist", "Bergmite", "Avalugg", "Noibat", "Noivern", "Xerneas", "Yveltal", "Zygarde", "Diancie", "Hoopa", "Volcanion", "Rowlet", "Dartrix", "Decidueye", "Litten", "Torracat", "Incineroar", "Popplio", "Brionne", "Primarina", "Pikipek", "Trumbeak", "Toucannon", "Yungoos", "Gumshoos", "Grubbin", "Charjabug", "Vikavolt", "Crabrawler", "Crabominable", "Oricorio", "Cutiefly", "Ribombee", "Rockruff", "Lycanroc", "Wishiwashi", "Mareanie", "Toxapex", "Mudbray", "Mudsdale", "Dewpider", "Araquanid", "Fomantis", "Lurantis", "Morelull", "Shiinotic", "Salandit", "Salazzle", "Stufful", "Bewear", "Bounsweet", "Steenee", "Tsareena", "Comfey", "Oranguru", "Passimian", "Wimpod", "Golisopod", "Sandygast", "Palossand", "Pyukumuku", "Type: Null", "Silvally", "Minior", "Komala", "Turtonator", "Togedemaru", "Mimikyu", "Bruxish", "Drampa", "Dhelmise", "Jangmo-o", "Hakamo-o", "Kommo-o", "Tapu Koko", "Tapu Lele", "Tapu Bulu", "Tapu Fini", "Cosmog", "Cosmoem", "Solgaleo", "Lunala", "Nihilego", "Buzzwole", "Pheromosa", "Xurkitree", "Celesteela", "Kartana", "Guzzlord", "Necrozma", "Magearna", "Marshadow", "Poipole", "Naganadel", "Stakataka", "Blacephalon", "Zeraora", "Meltan", "Melmetal", "Grookey", "Thwackey", "Rillaboom", "Scorbunny", "Raboot", "Cinderace", "Sobble", "Drizzile", "Inteleon", "Skwovet", "Greedent", "Rookidee", "Corvisquire", "Corviknight", "Blipbug", "Dottler", "Orbeetle", "Nickit", "Thievul", "Gossifleur", "Eldegoss", "Wooloo", "Dubwool", "Chewtle", "Drednaw", "Yamper", "Boltund", "Rolycoly", "Carkol", "Coalossal", "Applin", "Flapple", "Appletun", "Silicobra", "Sandaconda", "Cramorant", "Arrokuda", "Barraskewda", "Toxel", "Toxtricity", "Sizzlipede", "Centiskorch", "Clobbopus", "Grapploct", "Sinistea", "Polteageist", "Hatenna", "Hattrem", "Hatterene", "Impidimp", "Morgrem", "Grimmsnarl", "Obstagoon", "Perrserker", "Cursola", "Sirfetch'd", "Mr. Rime", "Runerigus", "Milcery", "Alcremie", "Falinks", "Pincurchin", "Snom", "Frosmoth", "Stonjourner", "Eiscue", "Indeedee", "Morpeko", "Cufant", "Copperajah", "Dracozolt", "Arctozolt", "Dracovish", "Arctovish", "Duraludon", "Dreepy", "Drakloak", "Dragapult", "Zacian", "Zamazenta", "Eternatus", "Kubfu", "Urshifu", "Zarude", "Regieleki", "Regidrago", "Glastrier", "Spectrier", "Calyrex", "Wyrdeer", "Kleavor", "Ursaluna", "Basculegion", "Sneasler", "Overqwil", "Enamorus", "Sprigatito", "Floragato", "Meowscarada", "Fuecoco", "Crocalor", "Skeledirge", "Quaxly", "Quaxwell", "Quaquaval", "Lechonk", "Oinkologne", "Tarountula", "Spidops", "Nymble", "Lokix", "Pawmi", "Pawmo", "Pawmot", "Tandemaus", "Maushold", "Fidough", "Dachsbun", "Smoliv", "Dolliv", "Arboliva", "Squawkabilly", "Nacli", "Naclstack", "Garganacl", "Charcadet", "Armarouge", "Ceruledge", "Tadbulb", "Bellibolt", "Wattrel", "Kilowattrel", "Maschiff", "Mabosstiff", "Shroodle", "Grafaiai", "Bramblin", "Brambleghast", "Toedscool", "Toedscruel", "Klawf", "Capsakid", "Scovillain", "Rellor", "Rabsca", "Flittle", "Espathra", "Tinkatink", "Tinkatuff", "Tinkaton", "Wiglett", "Wugtrio", "Bombirdier", "Finizen", "Palafin", "Varoom", "Revavroom", "Cyclizar", "Orthworm", "Glimmet", "Glimmora", "Greavard", "Houndstone", "Flamigo", "Cetoddle", "Cetitan", "Veluza", "Dondozo", "Tatsugiri", "Annihilape", "Clodsire", "Farigiraf", "Dudunsparce", "Kingambit", "Great Tusk", "Scream Tail", "Brute Bonnet", "Flutter Mane", "Slither Wing", "Sandy Shocks", "Iron Treads", "Iron Bundle", "Iron Hands", "Iron Jugulis", "Iron Moth", "Iron Thorns", "Frigibax", "Arctibax", "Baxcalibur", "Gimmighoul", "Gholdengo", "Wo-Chien", "Chien-Pao", "Ting-Lu", "Chi-Yu", "Roaring Moon", "Iron Valiant", "Koraidon", "Miraidon", "Walking Wake", "Iron Leaves", "Dipplin", "Poltchageist", "Sinistcha", "Okidogi", "Munkidori", "Fezandipiti", "Ogerpon", "Archaludon", "Hydrapple", "Gouging Fire", "Raging Bolt", "Iron Boulder", "Iron Crown", "Terapagos", "Pecharunt"];
+const POKEMON = POKEMON_NAMES.map((name,index) => ({ no:index+1, name }));
+
+const keyInput = document.getElementById("keyInput");
+const hourWheel = document.getElementById("hourWheel");
+const buildBtn = document.getElementById("buildBtn");
+const stackEl = document.getElementById("stack");
+const errorEl = document.getElementById("error");
+const pokemonInput = document.getElementById("pokemonInput");
+const checkerPokemonList = document.getElementById("checkerPokemonList");
+const dexNo = document.getElementById("dexNo");
+const dexName = document.getElementById("dexName");
+
+let selectedHour = 12;
+let lastWheelStepAt = 0;
+let selectedPokemon = null;
+
+function normalizeKey(value) { return value.replace(/\D/g,"").slice(0,4); }
+function nextGroup(group) { const i = CHAIN_ORDER.indexOf(group); return CHAIN_ORDER[(i+1)%CHAIN_ORDER.length]; }
+function nextDigit(digit) {
+  const currentGroup = DIGIT_TO_GROUP[digit];
+  const pairIndex = GROUPS[currentGroup].indexOf(digit);
+  return GROUPS[nextGroup(currentGroup)][pairIndex];
+}
+function buildChainFromKey(key) {
+  const blocks = [key];
+  let current = key;
+  for (let i=0; i<CHAIN_ORDER.length-1; i++) {
+    current = current.split("").map(nextDigit).join("");
+    blocks.push(current);
+  }
+  return { blocks, chain: blocks.join("") };
+}
+function hourDigits(hourValue) {
+  const hour = Number(hourValue);
+  if (hour === 0) return ["2","4"];
+  return String(hour).padStart(2,"0").split("");
+}
+function targetGroupsForHour(hourValue) {
+  const [a,b] = hourDigits(hourValue);
+  return [DIGIT_TO_GROUP[a], DIGIT_TO_GROUP[b]];
+}
+function setError(message) {
+  errorEl.textContent = message;
+  errorEl.style.display = message ? "block" : "none";
+}
+
+function findHourHits(chain, targetGroups) {
+  const hitIndexes = new Set();
+  const [groupA, groupB] = targetGroups;
+  const length = chain.length;
+
+  const groupAt = i => DIGIT_TO_GROUP[chain[(i+length)%length]];
+  const add = i => hitIndexes.add((i+length)%length);
+
+  function expandSameElementFrom(index) {
+    const base = groupAt(index);
+    let left = index, right = index;
+    while (left-1 > index-length && groupAt(left-1) === base) left--;
+    while (right+1 < index+length && groupAt(right+1) === base) right++;
+    for (let j=left; j<=right; j++) add(j);
+    return { left, right };
+  }
+
+  for (let i=0; i<length; i++) {
+    const leftGroup = groupAt(i);
+    const rightGroup = groupAt(i+1);
+    const isTargetNeighbor =
+      (leftGroup === groupA && rightGroup === groupB) ||
+      (leftGroup === groupB && rightGroup === groupA);
+    if (isTargetNeighbor) {
+      expandSameElementFrom(i);
+      expandSameElementFrom(i+1);
+    }
+  }
+  return hitIndexes;
+}
+
+function uniquePermutations(arr) {
+  const result = [];
+  const used = Array(arr.length).fill(false);
+  arr = [...arr].sort();
+  function backtrack(path) {
+    if (path.length === arr.length) {
+      result.push([...path]);
+      return;
+    }
+    for (let i=0; i<arr.length; i++) {
+      if (used[i]) continue;
+      if (i>0 && arr[i] === arr[i-1] && !used[i-1]) continue;
+      used[i] = true;
+      path.push(arr[i]);
+      backtrack(path);
+      path.pop();
+      used[i] = false;
+    }
+  }
+  backtrack([]);
+  return result;
+}
+
+function findPokemonHits(chain, dexNoValue) {
+  const hitIndexes = new Set();
+  if (!dexNoValue) return hitIndexes;
+
+  const digits = String(Number(dexNoValue)).replace(/^0+/, "");
+  if (!digits) return hitIndexes;
+
+  const targetGroups = new Set(
+    digits
+      .split("")
+      .map(d => DIGIT_TO_GROUP[d])
+      .filter(Boolean)
+  );
+
+  chain.split("").forEach((digit, index) => {
+    if (targetGroups.has(DIGIT_TO_GROUP[digit])) {
+      hitIndexes.add(index);
+    }
+  });
+
+  return hitIndexes;
+}
+
+function renderChainRow(label, chain, hourHits, pokemonHits, selectedTimeHits = new Set()) {
+  const row = document.createElement("div");
+  row.className = "row";
+
+  chain.split("").forEach((digit,index) => {
+    const cell = document.createElement("div");
+    cell.className = "cell";
+    if (hourHits.has(index)) cell.classList.add("hit-hour");
+    if (pokemonHits.has(index)) cell.classList.add("hit-pokemon");
+    if (selectedTimeHits.has(index)) cell.classList.add("hit-selected-time");
+    cell.textContent = digit;
+    row.appendChild(cell);
+  });
+  return row;
+}
+
+
+function addCircularIndexesToSet(targetSet, start, count, chainLength) {
+  for (let offset = 0; offset < count; offset++) {
+    targetSet.add((start + offset + chainLength) % chainLength);
+  }
+}
+
+function findSelectedAlarmTimeHits(topChain, bottomChain, timeKey) {
+  const hits = {
+    top: new Set(),
+    bottom: new Set()
+  };
+
+  if (!timeKey || !String(timeKey).includes(":")) {
+    return hits;
+  }
+
+  const parts = String(timeKey).split(":");
+  const hourValue = Number(parts[0]);
+  const minuteText = String(parts[1] || "").padStart(2, "0");
+
+  if (Number.isNaN(hourValue) || !/^\d{2}$/.test(minuteText)) {
+    return hits;
+  }
+
+  const chainPairs = [
+    { name: "top", chain: topChain, oppositeName: "bottom", opposite: bottomChain },
+    { name: "bottom", chain: bottomChain, oppositeName: "top", opposite: topChain }
+  ];
+
+  chainPairs.forEach((pair) => {
+    const ranges = findHourMatchRanges(pair.chain, hourValue);
+
+    ranges.forEach((range) => {
+      const candidates = [
+        { chainName: pair.name, chain: pair.chain, start: range.end + 1 },
+        { chainName: pair.name, chain: pair.chain, start: range.start - 4 },
+        { chainName: pair.oppositeName, chain: pair.opposite, start: range.start - 4 },
+        { chainName: pair.oppositeName, chain: pair.opposite, start: range.end + 1 },
+        { chainName: pair.oppositeName, chain: pair.opposite, start: range.start }
+      ];
+
+      candidates.forEach((candidate) => {
+        const segment = circularDigitSlice(candidate.chain, candidate.start, 4);
+
+        if (validMinutesFromSegment(segment).includes(minuteText)) {
+          addCircularIndexesToSet(
+            hits[candidate.chainName],
+            candidate.start,
+            4,
+            candidate.chain.length
+          );
+        }
+      });
+    });
+  });
+
+  return hits;
+}
+
+function build() {
+  const key = normalizeKey(keyInput.value);
+  keyInput.value = key;
+  if (key.length !== 4) {
+    setError("Key must be exactly 4 digits.");
+    return;
+  }
+  setError("");
+
+  const top = buildChainFromKey(key);
+  const bottom = buildChainFromKey(key.split("").reverse().join(""));
+  const hourGroups = targetGroupsForHour(selectedHour);
+
+  const topHourHits = findHourHits(top.chain, hourGroups);
+  const bottomHourHits = findHourHits(bottom.chain, hourGroups);
+  const topPokemonHits = findPokemonHits(top.chain, selectedPokemon?.no);
+  const bottomPokemonHits = findPokemonHits(bottom.chain, selectedPokemon?.no);
+  const selectedAlarmTimeHits = findSelectedAlarmTimeHits(top.chain, bottom.chain, selectedPreAlarmTarget);
+
+  stackEl.innerHTML = "";
+  stackEl.appendChild(renderChainRow("Top", top.chain, topHourHits, topPokemonHits, selectedAlarmTimeHits.top));
+  stackEl.appendChild(renderChainRow("Bottom", bottom.chain, bottomHourHits, bottomPokemonHits, selectedAlarmTimeHits.bottom));
+  updateVisualAlarmPreview();
+}
+
+function hourLabel(value) {
+  const labels = {
+    0:"12 AM / 24",1:"1 AM / 01",2:"2 AM / 02",3:"3 AM / 03",4:"4 AM / 04",5:"5 AM / 05",6:"6 AM / 06",7:"7 AM / 07",
+    8:"8 AM / 08",9:"9 AM / 09",10:"10 AM",11:"11 AM",12:"12 PM",13:"1 PM / 13",14:"2 PM / 14",15:"3 PM / 15",
+    16:"4 PM / 16",17:"5 PM / 17",18:"6 PM / 18",19:"7 PM / 19",20:"8 PM / 20",21:"9 PM / 21",22:"10 PM / 22",23:"11 PM / 23"
+  };
+  return labels[value];
+}
+function setSelectedHour(hour) {
+  selectedHour = Number(hour);
+  const prev = (selectedHour + 23) % 24;
+  const next = (selectedHour + 1) % 24;
+  document.getElementById("prevHour").textContent = hourLabel(prev);
+  document.getElementById("currentHour").textContent = hourLabel(selectedHour);
+  document.getElementById("nextHour").textContent = hourLabel(next);
+  build();
+}
+
+function getMalaysiaHour() {
+  const malaysiaHour = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    hour: "2-digit",
+    hour12: false
+  }).format(new Date());
+
+  return Number(malaysiaHour);
+}
+
+function initHours() {
+  hourWheel.innerHTML = `
+    <div class="wheel-face">
+      <div id="prevHour" class="wheel-display side"></div>
+      <div id="currentHour" class="wheel-display current"></div>
+      <div id="nextHour" class="wheel-display side"></div>
+    </div>
+  `;
+  hourWheel.addEventListener("wheel", event => {
+    event.preventDefault();
+    const now = Date.now();
+    if (now - lastWheelStepAt < 420) return;
+    lastWheelStepAt = now;
+    setSelectedHour((selectedHour + (event.deltaY > 0 ? 1 : -1) + 24) % 24);
+  }, { passive:false });
+
+  let touchStartY = null;
+  hourWheel.addEventListener("touchstart", event => { touchStartY = event.touches[0].clientY; }, { passive:true });
+  hourWheel.addEventListener("touchend", event => {
+    if (touchStartY === null) return;
+    const diff = touchStartY - event.changedTouches[0].clientY;
+    if (Math.abs(diff) > 18) setSelectedHour((selectedHour + (diff > 0 ? 1 : -1) + 24) % 24);
+    touchStartY = null;
+  }, { passive:true });
+  setSelectedHour(getMalaysiaHour());
+}
+
+function compactText(value) {
+  return value.toLowerCase().replace(/[^a-z0-9]/g,"");
+}
+function initPokemonList() {
+  POKEMON.forEach(p => {
+    const option = document.createElement("option");
+    option.value = p.name;
+    checkerPokemonList.appendChild(option);
+  });
+}
+function updateDex() {
+  const raw = pokemonInput.value.trim();
+  if (!raw) {
+    selectedPokemon = null;
+    dexNo.textContent = "—";
+    dexName.textContent = "No match";
+    build();
+    return;
+  }
+
+  let pokemon = null;
+  if (/^\d+$/.test(raw)) {
+    const no = Number(raw);
+    if (no >= 1 && no <= 1025) pokemon = POKEMON[no-1];
+  } else {
+    const query = compactText(raw);
+    pokemon = POKEMON.find(p => compactText(p.name).startsWith(query)) ||
+              POKEMON.find(p => compactText(p.name).includes(query));
+  }
+
+  if (!pokemon) {
+    selectedPokemon = null;
+    dexNo.textContent = "—";
+    dexName.textContent = "No match";
+    build();
+    return;
+  }
+
+  selectedPokemon = pokemon;
+  pokemonInput.value = pokemon.name;
+  dexNo.textContent = String(pokemon.no);
+  dexName.textContent = pokemon.name;
+  build();
+}
+
+keyInput.addEventListener("input", () => { keyInput.value = normalizeKey(keyInput.value); });
+keyInput.addEventListener("keydown", e => { if (e.key === "Enter") build(); });
+buildBtn.addEventListener("click", build);
+pokemonInput.addEventListener("change", updateDex);
+pokemonInput.addEventListener("keydown", e => { if (e.key === "Enter") updateDex(); });
+pokemonInput.addEventListener("blur", updateDex);
+document.getElementById("pokemonGoBtn").addEventListener("click", updateDex);
+
+
+function updateMalaysiaClock() {
+  const now = new Date();
+
+  const time = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  }).format(now);
+
+  const date = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+    year: "numeric"
+  }).format(now);
+
+  const clockEl = document.getElementById("malaysiaClock");
+  const dateEl = document.getElementById("malaysiaDate");
+
+  if (clockEl) clockEl.textContent = time;
+  if (dateEl) dateEl.textContent = date;
+}
+
+
+// ----------------------
+// VISUAL ALARM PREVIEW - PASS 1
+// Calculation only. No dancing/animation yet.
+// ----------------------
+
+function getMalaysiaHourMinuteParts() {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    hour: "2-digit",
+    minute: "2-digit",
+    hour12: false
+  }).formatToParts(new Date());
+
+  const hour = Number(parts.find(part => part.type === "hour")?.value || "0");
+  const minute = Number(parts.find(part => part.type === "minute")?.value || "0");
+
+  return { hour, minute };
+}
+
+function circularDigitSlice(chain, start, count) {
+  const length = chain.length;
+  let output = "";
+
+  for (let offset = 0; offset < count; offset++) {
+    output += chain[(start + offset + length) % length];
+  }
+
+  return output;
+}
+
+function digitOptionsForGroup(group) {
+  return GROUPS[group] || [];
+}
+
+function validMinutesFromSegment(segment) {
+  const groupsInOrder = [];
+
+  segment.split("").forEach((digit) => {
+    const group = DIGIT_TO_GROUP[digit];
+    if (!groupsInOrder.includes(group)) {
+      groupsInOrder.push(group);
+    }
+  });
+
+  if (groupsInOrder.length < 2) return [];
+
+  const firstGroup = groupsInOrder[0];
+  const secondGroup = groupsInOrder[1];
+  const candidateGroupOrders = [
+    [firstGroup, secondGroup],
+    [secondGroup, firstGroup]
+  ];
+
+  const minutes = new Set();
+
+  candidateGroupOrders.forEach(([tensGroup, onesGroup]) => {
+    digitOptionsForGroup(tensGroup).forEach((tensDigit) => {
+      digitOptionsForGroup(onesGroup).forEach((onesDigit) => {
+        const minute = Number(tensDigit + onesDigit);
+
+        if (minute >= 0 && minute <= 59) {
+          minutes.add(String(minute).padStart(2, "0"));
+        }
+      });
+    });
+  });
+
+  return Array.from(minutes).sort();
+}
+
+function findHourMatchRanges(chain, hourValue) {
+  const targetGroups = targetGroupsForHour(hourValue);
+  const [groupA, groupB] = targetGroups;
+  const length = chain.length;
+  const ranges = [];
+  const seen = new Set();
+
+  function groupAt(index) {
+    return DIGIT_TO_GROUP[chain[(index + length) % length]];
+  }
+
+  function expandSameElementRange(index) {
+    const baseGroup = groupAt(index);
+    let left = index;
+    let right = index;
+
+    while (left - 1 > index - length && groupAt(left - 1) === baseGroup) {
+      left--;
+    }
+
+    while (right + 1 < index + length && groupAt(right + 1) === baseGroup) {
+      right++;
+    }
+
+    return { left, right };
+  }
+
+  for (let i = 0; i < length; i++) {
+    const leftGroup = groupAt(i);
+    const rightGroup = groupAt(i + 1);
+
+    const isTargetNeighbor =
+      (leftGroup === groupA && rightGroup === groupB) ||
+      (leftGroup === groupB && rightGroup === groupA);
+
+    if (!isTargetNeighbor) continue;
+
+    const leftRange = expandSameElementRange(i);
+    const rightRange = expandSameElementRange(i + 1);
+    const start = Math.min(leftRange.left, rightRange.left);
+    const end = Math.max(leftRange.right, rightRange.right);
+
+    const normalizedIndexes = [];
+    for (let j = start; j <= end; j++) {
+      normalizedIndexes.push((j + length) % length);
+    }
+
+    const key = normalizedIndexes.sort((a, b) => a - b).join(",");
+
+    if (!seen.has(key)) {
+      seen.add(key);
+      ranges.push({ start, end });
+    }
+  }
+
+  return ranges;
+}
+
+function buildVisualAlarmScheduleForHour(hourValue) {
+  const key = normalizeKey(keyInput.value);
+
+  if (key.length !== 4) {
+    return [];
+  }
+
+  const top = buildChainFromKey(key);
+  const bottom = buildChainFromKey(key.split("").reverse().join(""));
+
+  const chainPairs = [
+    { name: "top", chain: top.chain, opposite: bottom.chain },
+    { name: "bottom", chain: bottom.chain, opposite: top.chain }
+  ];
+
+  const alarmMinutes = new Set();
+
+  chainPairs.forEach((pair) => {
+    const ranges = findHourMatchRanges(pair.chain, hourValue);
+
+    ranges.forEach((range) => {
+      const sameAfter = circularDigitSlice(pair.chain, range.end + 1, 4);
+      const sameBefore = circularDigitSlice(pair.chain, range.start - 4, 4);
+      const oppositeBefore = circularDigitSlice(pair.opposite, range.start - 4, 4);
+      const oppositeAfter = circularDigitSlice(pair.opposite, range.end + 1, 4);
+      const oppositeMirror = circularDigitSlice(pair.opposite, range.start, 4);
+
+      [
+        sameAfter,
+        sameBefore,
+        oppositeBefore,
+        oppositeAfter,
+        oppositeMirror
+      ].forEach((segment) => {
+        validMinutesFromSegment(segment).forEach((minute) => {
+          alarmMinutes.add(minute);
+        });
+      });
+    });
+  });
+
+  return Array.from(alarmMinutes).sort();
+}
+
+function formatHourForAlarmDisplay(hour) {
+  if (hour === 0) return "12 AM / 24";
+  if (hour < 12) return String(hour).padStart(2, "0") + " AM";
+  if (hour === 12) return "12 PM";
+  return String(hour).padStart(2, "0") + " / " + (hour - 12) + " PM";
+}
+
+
+let visualAlarmActiveMinuteKey = "";
+let visualAlarmLastBeepMinuteKey = "";
+let visualAlarmLastHalfBeepKey = "";
+const VISUAL_ALARM_SOUND_KEY = "shinyCheckerAlarmSoundEnabled";
+const PRE_ALARM_ENABLED_KEY = "shinyCheckerPreAlarmEnabled";
+const PRE_ALARM_TARGET_KEY = "shinyCheckerPreAlarmTarget";
+const ALARM_VOLUME_KEY = "shinyCheckerAlarmVolume";
+let alarmVolume = Number(localStorage.getItem(ALARM_VOLUME_KEY));
+if (!Number.isFinite(alarmVolume)) {
+  alarmVolume = 0.9;
+}
+alarmVolume = Math.max(0, Math.min(alarmVolume, 1));
+let visualAlarmSoundEnabled = localStorage.getItem(VISUAL_ALARM_SOUND_KEY) !== "false";
+let preAlarmEnabled = localStorage.getItem(PRE_ALARM_ENABLED_KEY) === "true";
+let selectedPreAlarmTarget = localStorage.getItem(PRE_ALARM_TARGET_KEY) || "";
+let preAlarmActiveKey = "";
+let preAlarmSilencedKey = "";
+let preAlarmBeepTimer = null;
+let visualAlarmAudioEnabled = false;
+let visualAlarmAudioContext = null;
+
+function unlockVisualAlarmAudio() {
+  visualAlarmAudioEnabled = true;
+  primeManagedAlarmAudio();
+
+  ["pre", "shiny"].forEach(function (kind) {
+    try {
+      const audio = getManagedAudio(kind);
+      const previousMuted = audio.muted;
+      audio.muted = true;
+      audio.currentTime = 0;
+      const promise = audio.play();
+      if (promise && typeof promise.then === "function") {
+        promise.then(function () {
+          audio.pause();
+          audio.currentTime = 0;
+          audio.muted = previousMuted;
+        }).catch(function () {
+          audio.muted = previousMuted;
+        });
+      } else {
+        audio.pause();
+        audio.currentTime = 0;
+        audio.muted = previousMuted;
+      }
+    } catch (error) {
+      console.warn("Managed alarm audio unlock attempt failed.", error);
+    }
+  });
+
+  try {
+    const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+
+    if (!AudioContextClass) return;
+
+    if (!visualAlarmAudioContext) {
+      visualAlarmAudioContext = new AudioContextClass();
+    }
+
+    if (visualAlarmAudioContext.state === "suspended") {
+      visualAlarmAudioContext.resume();
+    }
+  } catch (error) {
+    console.warn("Visual alarm audio could not be unlocked.", error);
+  }
+}
+
+function getVisualAlarmAudioContext() {
+  const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+
+  if (!AudioContextClass) return null;
+
+  if (!visualAlarmAudioContext) {
+    visualAlarmAudioContext = new AudioContextClass();
+  }
+
+  if (visualAlarmAudioContext.state === "suspended") {
+    visualAlarmAudioContext.resume();
+  }
+
+  return visualAlarmAudioContext;
+}
+
+let visualAlarmMasterGain = null;
+let visualAlarmCompressor = null;
+
+function getAlarmVolume() {
+  if (!Number.isFinite(alarmVolume)) return 0.9;
+  return Math.max(0, Math.min(alarmVolume, 1));
+}
+
+function applyAlarmVolumeToAudioNodes() {
+  const volume = getAlarmVolume();
+
+  if (visualAlarmMasterGain) {
+    try {
+      visualAlarmMasterGain.gain.setTargetAtTime(volume, visualAlarmAudioContext ? visualAlarmAudioContext.currentTime : 0, 0.015);
+    } catch (error) {
+      visualAlarmMasterGain.gain.value = volume;
+    }
+  }
+
+  if (preAlarmAudio) preAlarmAudio.volume = volume;
+  if (shinyMinuteAudio) shinyMinuteAudio.volume = volume;
+  if (activePreAlarmClip) activePreAlarmClip.volume = volume;
+}
+
+let alarmVolumeFeedbackTimer = null;
+let alarmVolumeFeedbackAudio = null;
+
+function playAlarmVolumeFeedback() {
+  if (getAlarmVolume() <= 0) return;
+
+  try {
+    if (!alarmVolumeFeedbackAudio) {
+      alarmVolumeFeedbackAudio = new Audio(SHINY_MINUTE_AUDIO_FILE);
+      alarmVolumeFeedbackAudio.preload = "auto";
+    }
+
+    alarmVolumeFeedbackAudio.pause();
+    alarmVolumeFeedbackAudio.currentTime = 0;
+    alarmVolumeFeedbackAudio.volume = getAlarmVolume();
+
+    const playPromise = alarmVolumeFeedbackAudio.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function () {
+        playTonePulse({ type: "triangle", from: 1175, to: 1568, duration: 0.12, volume: 0.55, delay: 0 });
+      });
+    }
+  } catch (error) {
+    playTonePulse({ type: "triangle", from: 1175, to: 1568, duration: 0.12, volume: 0.55, delay: 0 });
+  }
+}
+
+function scheduleAlarmVolumeFeedback(delayMs) {
+  if (alarmVolumeFeedbackTimer) {
+    window.clearTimeout(alarmVolumeFeedbackTimer);
+  }
+
+  alarmVolumeFeedbackTimer = window.setTimeout(function () {
+    alarmVolumeFeedbackTimer = null;
+    playAlarmVolumeFeedback();
+  }, delayMs);
+}
+
+function initAlarmVolumeControl() {
+  const slider = document.getElementById("alarmVolumeSlider");
+  if (!slider) return;
+
+  slider.value = String(Math.round(getAlarmVolume() * 100));
+  applyAlarmVolumeToAudioNodes();
+
+  slider.addEventListener("input", function () {
+    alarmVolume = Number(slider.value) / 100;
+    if (!Number.isFinite(alarmVolume)) alarmVolume = 0.9;
+    alarmVolume = Math.max(0, Math.min(alarmVolume, 1));
+    localStorage.setItem(ALARM_VOLUME_KEY, String(alarmVolume));
+    applyAlarmVolumeToAudioNodes();
+    scheduleAlarmVolumeFeedback(260);
+  });
+
+  slider.addEventListener("change", function () {
+    scheduleAlarmVolumeFeedback(80);
+  });
+}
+
+function getVisualAlarmOutputChain(context) {
+  if (!visualAlarmMasterGain) {
+    visualAlarmMasterGain = context.createGain();
+    visualAlarmMasterGain.gain.value = getAlarmVolume();
+  }
+
+  if (!visualAlarmCompressor && context.createDynamicsCompressor) {
+    visualAlarmCompressor = context.createDynamicsCompressor();
+    visualAlarmCompressor.threshold.value = -18;
+    visualAlarmCompressor.knee.value = 20;
+    visualAlarmCompressor.ratio.value = 4;
+    visualAlarmCompressor.attack.value = 0.003;
+    visualAlarmCompressor.release.value = 0.16;
+    visualAlarmMasterGain.connect(visualAlarmCompressor);
+    visualAlarmCompressor.connect(context.destination);
+  } else if (!visualAlarmCompressor) {
+    visualAlarmMasterGain.connect(context.destination);
+  }
+
+  return visualAlarmMasterGain;
+}
+
+function playTonePulse(options) {
+  const context = getVisualAlarmAudioContext();
+
+  if (!context) return;
+
+  const startAt = context.currentTime + (options.delay || 0);
+  const duration = options.duration || 0.22;
+  const oscillator = context.createOscillator();
+  const gain = context.createGain();
+  const output = getVisualAlarmOutputChain(context);
+
+  oscillator.type = options.type || "sine";
+  oscillator.frequency.setValueAtTime(options.from || options.frequency || 880, startAt);
+
+  if (options.to) {
+    oscillator.frequency.exponentialRampToValueAtTime(options.to, startAt + duration * 0.72);
+  }
+
+  const volume = Math.max(0.0001, Math.min(options.volume || 0.35, 0.95));
+  gain.gain.setValueAtTime(0.0001, startAt);
+  gain.gain.exponentialRampToValueAtTime(volume, startAt + 0.012);
+  gain.gain.setValueAtTime(volume, startAt + Math.max(0.018, duration * 0.58));
+  gain.gain.exponentialRampToValueAtTime(0.0001, startAt + duration);
+
+  oscillator.connect(gain);
+  gain.connect(output);
+
+  oscillator.start(startAt);
+  oscillator.stop(startAt + duration + 0.04);
+}
+
+const SHINY_MINUTE_AUDIO_FILE = "shiny_minute.mp3";
+const PRE_ALARM_AUDIO_FILE = "pulsating_35s.mp3";
+const PRE_ALARM_REPEAT_PAUSE_MS = 420;
+let preAlarmAudio = null;
+let shinyMinuteAudio = null;
+let preAlarmLoopActive = false;
+let preAlarmLoopTimeout = null;
+let preAlarmWatchdogTimer = null;
+let activePreAlarmClip = null;
+let preAlarmFallbackArmed = false;
+
+function getManagedAudio(kind) {
+  const file = kind === "pre" ? PRE_ALARM_AUDIO_FILE : SHINY_MINUTE_AUDIO_FILE;
+  let audio = kind === "pre" ? preAlarmAudio : shinyMinuteAudio;
+
+  if (!audio) {
+    audio = new Audio(file);
+    audio.preload = "auto";
+    audio.volume = getAlarmVolume();
+
+    if (kind === "pre") {
+      preAlarmAudio = audio;
+    } else {
+      shinyMinuteAudio = audio;
+    }
+  }
+
+  return audio;
+}
+
+function primeManagedAlarmAudio() {
+  try {
+    getManagedAudio("pre").load();
+    getManagedAudio("shiny").load();
+  } catch (error) {
+    console.warn("Managed alarm audio could not be primed.", error);
+  }
+}
+
+function playAudioFileOnce(kind) {
+  if (!visualAlarmSoundEnabled || !visualAlarmAudioEnabled) return;
+
+  try {
+    const audio = getManagedAudio(kind);
+    audio.pause();
+    audio.currentTime = 0;
+    audio.volume = getAlarmVolume();
+
+    const playPromise = audio.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function (error) {
+        console.warn("Audio file alarm failed; using synthesized fallback.", error);
+
+        if (kind === "pre") {
+          playTonePulse({ type: "sine", from: 392, to: 349, duration: 0.22, volume: 0.48, delay: 0 });
+          playTonePulse({ type: "sine", from: 440, to: 392, duration: 0.22, volume: 0.40, delay: 0.32 });
+        } else {
+          [0, 0.16, 0.32].forEach(function (delay) {
+            playTonePulse({ type: "triangle", from: 1568, to: 2093, duration: 0.13, volume: 0.72, delay: delay });
+          });
+        }
+      });
+    }
+  } catch (error) {
+    console.warn("Audio file alarm failed.", error);
+  }
+}
+
+function playMainShinyMinuteBeep() {
+  playAudioFileOnce("shiny");
+}
+
+function playVisualAlarmEntryBeep(minuteKey) {
+  if (visualAlarmLastBeepMinuteKey === minuteKey) return;
+  visualAlarmLastBeepMinuteKey = minuteKey;
+  playMainShinyMinuteBeep();
+}
+
+function playVisualAlarmHalfMinuteBeep(minuteKey) {
+  if (visualAlarmLastHalfBeepKey === minuteKey) return;
+  visualAlarmLastHalfBeepKey = minuteKey;
+  playMainShinyMinuteBeep();
+}
+
+function playPreAlarmFallbackTone() {
+  playTonePulse({ type: "sine", from: 520, to: 440, duration: 0.24, volume: 0.52, delay: 0 });
+  playTonePulse({ type: "sine", from: 520, to: 440, duration: 0.24, volume: 0.48, delay: 0.34 });
+}
+
+function playPreAlarmBeep() {
+  if (!visualAlarmSoundEnabled || !visualAlarmAudioEnabled || !preAlarmLoopActive) return;
+
+  if (activePreAlarmClip && !activePreAlarmClip.paused && !activePreAlarmClip.ended) {
+    return;
+  }
+
+  try {
+    const audio = new Audio(PRE_ALARM_AUDIO_FILE);
+    activePreAlarmClip = audio;
+    audio.preload = "auto";
+    audio.volume = getAlarmVolume();
+
+    let fallbackTimer = window.setTimeout(function () {
+      if (!preAlarmLoopActive) return;
+      if (!audio || !audio.paused) return;
+
+      preAlarmFallbackArmed = true;
+      playPreAlarmFallbackTone();
+    }, 650);
+
+    audio.addEventListener("playing", function () {
+      window.clearTimeout(fallbackTimer);
+      preAlarmFallbackArmed = false;
+    }, { once: true });
+
+    audio.addEventListener("ended", function () {
+      window.clearTimeout(fallbackTimer);
+      if (!preAlarmLoopActive) return;
+
+      preAlarmLoopTimeout = window.setTimeout(function () {
+        playPreAlarmBeep();
+      }, PRE_ALARM_REPEAT_PAUSE_MS);
+    }, { once: true });
+
+    audio.addEventListener("error", function () {
+      window.clearTimeout(fallbackTimer);
+      if (preAlarmLoopActive) {
+        playPreAlarmFallbackTone();
+      }
+    }, { once: true });
+
+    const playPromise = audio.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function (error) {
+        window.clearTimeout(fallbackTimer);
+        console.warn("Pre-alarm MP3 failed; using fallback tone.", error);
+        if (preAlarmLoopActive) {
+          playPreAlarmFallbackTone();
+        }
+      });
+    }
+  } catch (error) {
+    console.warn("Pre-alarm MP3 failed; using fallback tone.", error);
+    playPreAlarmFallbackTone();
+  }
+
+  if (navigator.vibrate) {
+    navigator.vibrate([70, 60, 70]);
+  }
+}
+
+function scheduleNextPreAlarmClip() {
+  // The MP3 ended event schedules the next play. This watchdog covers
+  // browsers that fail to fire ended/error reliably or delay metadata.
+  if (preAlarmWatchdogTimer) return;
+
+  preAlarmWatchdogTimer = window.setInterval(function () {
+    if (!preAlarmLoopActive || !preAlarmEnabled || !visualAlarmAudioEnabled) return;
+
+    if (!activePreAlarmClip || activePreAlarmClip.paused || activePreAlarmClip.ended) {
+      playPreAlarmBeep();
+    }
+  }, 900);
+}
+
+function startPreAlarmBeeping() {
+  if (preAlarmLoopActive) {
+    scheduleNextPreAlarmClip();
+    return;
+  }
+
+  preAlarmLoopActive = true;
+  playPreAlarmBeep();
+  scheduleNextPreAlarmClip();
+}
+
+function stopPreAlarmBeeping() {
+  preAlarmLoopActive = false;
+  preAlarmFallbackArmed = false;
+
+  if (preAlarmLoopTimeout) {
+    window.clearTimeout(preAlarmLoopTimeout);
+    preAlarmLoopTimeout = null;
+  }
+
+  if (preAlarmWatchdogTimer) {
+    window.clearInterval(preAlarmWatchdogTimer);
+    preAlarmWatchdogTimer = null;
+  }
+
+  if (activePreAlarmClip) {
+    try {
+      activePreAlarmClip.pause();
+      activePreAlarmClip.currentTime = 0;
+    } catch (error) {
+      console.warn("Active pre-alarm audio could not be stopped.", error);
+    }
+    activePreAlarmClip = null;
+  }
+
+  if (preAlarmAudio) {
+    try {
+      preAlarmAudio.pause();
+      preAlarmAudio.currentTime = 0;
+    } catch (error) {
+      console.warn("Pre-alarm audio could not be stopped.", error);
+    }
+  }
+
+  if (preAlarmBeepTimer) {
+    clearInterval(preAlarmBeepTimer);
+    preAlarmBeepTimer = null;
+  }
+}
+
+function activateVisualAlarm(hour, minute, minuteKey, second) {
+  document.body.classList.add("visual-alarm-active");
+  playVisualAlarmEntryBeep(minuteKey);
+
+  if (second >= 30) {
+    playVisualAlarmHalfMinuteBeep(minuteKey);
+  }
+}
+
+function deactivateVisualAlarm() {
+  document.body.classList.remove("visual-alarm-active");
+}
+
+function checkVisualAlarmTrigger() {
+  const nowSeconds = secondsSinceMidnightForMalaysia();
+  const hour = Math.floor(nowSeconds / 3600) % 24;
+  const minute = Math.floor((nowSeconds % 3600) / 60);
+  const second = nowSeconds % 60;
+  const alarmMinutes = buildVisualAlarmScheduleForHour(hour);
+  const minuteText = String(minute).padStart(2, "0");
+  const minuteKey = String(hour).padStart(2, "0") + ":" + minuteText;
+  const shouldAlarm = alarmMinutes.includes(minuteText);
+
+  if (shouldAlarm) {
+    visualAlarmActiveMinuteKey = minuteKey;
+    activateVisualAlarm(hour, minute, minuteKey, second);
+  } else {
+    if (visualAlarmActiveMinuteKey) {
+      visualAlarmActiveMinuteKey = "";
+    }
+
+    deactivateVisualAlarm();
+  }
+
+  checkSelectedPreAlarm();
+}
+
+
+function updateVisualAlarmSoundToggle() {
+  const toggle = document.getElementById("alarmSoundToggle");
+  if (!toggle) return;
+  toggle.checked = visualAlarmSoundEnabled;
+}
+
+function initVisualAlarmSoundToggle() {
+  const toggle = document.getElementById("alarmSoundToggle");
+  if (!toggle) return;
+
+  updateVisualAlarmSoundToggle();
+
+  toggle.addEventListener("change", function () {
+    visualAlarmSoundEnabled = toggle.checked;
+    localStorage.setItem(VISUAL_ALARM_SOUND_KEY, visualAlarmSoundEnabled ? "true" : "false");
+
+    if (visualAlarmSoundEnabled) {
+      unlockVisualAlarmAudio();
+    }
+  });
+}
+
+function secondsSinceMidnightForMalaysia() {
+  const parts = new Intl.DateTimeFormat("en-GB", {
+    timeZone: "Asia/Kuala_Lumpur",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    hour12: false
+  }).formatToParts(new Date());
+
+  const hour = Number(parts.find(part => part.type === "hour")?.value || "0");
+  const minute = Number(parts.find(part => part.type === "minute")?.value || "0");
+  const second = Number(parts.find(part => part.type === "second")?.value || "0");
+
+  return hour * 3600 + minute * 60 + second;
+}
+
+function timeKeyToSeconds(timeKey) {
+  const parts = String(timeKey || "").split(":").map(Number);
+  if (parts.length < 2 || parts.some(Number.isNaN)) return null;
+  return parts[0] * 3600 + parts[1] * 60 + (parts[2] || 0);
+}
+
+function formatTimeKeyWithSeconds(timeKey) {
+  const parts = String(timeKey || "").split(":");
+  if (parts.length < 2) return "None selected";
+  return parts[0].padStart(2, "0") + ":" + parts[1].padStart(2, "0") + ":00";
+}
+
+function formatPreAlarmStart(timeKey) {
+  const targetSeconds = timeKeyToSeconds(timeKey);
+  if (targetSeconds === null) return "—";
+
+  const startSeconds = (targetSeconds - 35 + 86400) % 86400;
+  const hour = Math.floor(startSeconds / 3600);
+  const minute = Math.floor((startSeconds % 3600) / 60);
+  const second = startSeconds % 60;
+
+  return (
+    String(hour).padStart(2, "0") +
+    ":" +
+    String(minute).padStart(2, "0") +
+    ":" +
+    String(second).padStart(2, "0")
+  );
+}
+
+function secondsToTimeKey(seconds) {
+  const normalized = ((seconds % 86400) + 86400) % 86400;
+  const hour = Math.floor(normalized / 3600);
+  const minute = Math.floor((normalized % 3600) / 60);
+  const second = normalized % 60;
+
+  return (
+    String(hour).padStart(2, "0") +
+    ":" +
+    String(minute).padStart(2, "0") +
+    ":" +
+    String(second).padStart(2, "0")
+  );
+}
+
+function getNextShinyAlarmTimeKey() {
+  const nowSeconds = secondsSinceMidnightForMalaysia();
+
+  for (let offsetHour = 0; offsetHour <= 24; offsetHour++) {
+    const candidateHour = Math.floor((nowSeconds + offsetHour * 3600) / 3600) % 24;
+    const alarmMinutes = buildVisualAlarmScheduleForHour(candidateHour);
+
+    for (let i = 0; i < alarmMinutes.length; i++) {
+      const alarmMinute = Number(alarmMinutes[i]);
+      if (Number.isNaN(alarmMinute)) continue;
+
+      const candidateSeconds = candidateHour * 3600 + alarmMinute * 60;
+      const adjustedCandidate = candidateSeconds < nowSeconds
+        ? candidateSeconds + 86400
+        : candidateSeconds;
+
+      if (adjustedCandidate >= nowSeconds) {
+        return secondsToTimeKey(adjustedCandidate);
+      }
+    }
+  }
+
+  return "";
+}
+
+function updateAlarmSummaryLabels() {
+  const nextShinyLabel = document.getElementById("nextShinyMinuteLabel");
+  const nextPreAlarmLabel = document.getElementById("nextPreAlarmLabel");
+  const nextShinyTime = getNextShinyAlarmTimeKey();
+
+  if (nextShinyLabel) {
+    nextShinyLabel.textContent = nextShinyTime || "—";
+  }
+
+  if (nextPreAlarmLabel) {
+    nextPreAlarmLabel.textContent = selectedPreAlarmTarget
+      ? formatPreAlarmStart(selectedPreAlarmTarget)
+      : "Selected none";
+  }
+}
+
+function updatePreAlarmStatus() {
+  const status = document.getElementById("preAlarmStatus");
+  const toggle = document.getElementById("preAlarmToggle");
+
+  if (toggle) {
+    toggle.checked = preAlarmEnabled;
+  }
+
+  if (!status) return;
+
+  updateAlarmSummaryLabels();
+
+  if (!selectedPreAlarmTarget) {
+    status.textContent = preAlarmEnabled ? "Choose a minute below." : "Off";
+    return;
+  }
+
+  status.textContent = preAlarmEnabled ? "Selected" : "Off";
+}
+
+function selectPreAlarmTarget(timeKey) {
+  selectedPreAlarmTarget = timeKey;
+  preAlarmSilencedKey = "";
+  localStorage.setItem(PRE_ALARM_TARGET_KEY, selectedPreAlarmTarget);
+  updatePreAlarmStatus();
+  updateVisualAlarmPreview();
+  build();
+}
+
+function initPreAlarmToggle() {
+  const toggle = document.getElementById("preAlarmToggle");
+  if (!toggle) return;
+
+  updatePreAlarmStatus();
+
+  toggle.addEventListener("change", function () {
+    preAlarmEnabled = toggle.checked;
+    localStorage.setItem(PRE_ALARM_ENABLED_KEY, preAlarmEnabled ? "true" : "false");
+
+    if (!preAlarmEnabled) {
+      preAlarmSilencedKey = selectedPreAlarmTarget || preAlarmSilencedKey;
+      stopPreAlarmBeeping();
+    } else {
+      preAlarmSilencedKey = "";
+      unlockVisualAlarmAudio();
+    }
+
+    updatePreAlarmStatus();
+  });
+}
+
+function checkSelectedPreAlarm() {
+  if (!preAlarmEnabled || !selectedPreAlarmTarget) {
+    stopPreAlarmBeeping();
+    return;
+  }
+
+  const targetSeconds = timeKeyToSeconds(selectedPreAlarmTarget);
+  if (targetSeconds === null) {
+    stopPreAlarmBeeping();
+    return;
+  }
+
+  const nowSeconds = secondsSinceMidnightForMalaysia();
+  const startSeconds = (targetSeconds - 35 + 86400) % 86400;
+
+  let inWindow = false;
+
+  if (startSeconds <= targetSeconds) {
+    inWindow = nowSeconds >= startSeconds && nowSeconds < targetSeconds;
+  } else {
+    inWindow = nowSeconds >= startSeconds || nowSeconds < targetSeconds;
+  }
+
+  if (inWindow && preAlarmSilencedKey !== selectedPreAlarmTarget) {
+    preAlarmActiveKey = selectedPreAlarmTarget;
+    document.body.classList.add("prealarm-active");
+    startPreAlarmBeeping();
+    return;
+  }
+
+  if (!inWindow) {
+    if (preAlarmActiveKey === selectedPreAlarmTarget) {
+      preAlarmSilencedKey = "";
+    }
+
+    preAlarmActiveKey = "";
+  }
+
+  document.body.classList.remove("prealarm-active");
+  stopPreAlarmBeeping();
+}
+
+
+document.addEventListener("pointerdown", unlockVisualAlarmAudio, { once: true });
+document.addEventListener("keydown", unlockVisualAlarmAudio, { once: true });
+
+
+function updateVisualAlarmPreview() {
+  const listEl = document.getElementById("alarmPreviewList");
+  const metaEl = document.getElementById("alarmPreviewMeta");
+
+  if (!listEl || !metaEl) return;
+
+  const { hour, minute } = getMalaysiaHourMinuteParts();
+  const alarmMinutes = buildVisualAlarmScheduleForHour(hour);
+
+  metaEl.textContent = "";
+  metaEl.hidden = true;
+  updateAlarmSummaryLabels();
+
+  if (!alarmMinutes.length) {
+    listEl.innerHTML = '<span class="alarm-empty">No alarm minutes found for this hour/key.</span>';
+    return;
+  }
+
+  const nextAlarmMinute = alarmMinutes.find((alarmMinute) => {
+    return Number(alarmMinute) >= minute;
+  });
+
+  listEl.innerHTML = alarmMinutes
+    .map((alarmMinute) => {
+      const timeKey = String(hour).padStart(2, "0") + ":" + alarmMinute;
+      const isCurrent = Number(alarmMinute) === minute;
+      const isSelected = selectedPreAlarmTarget === timeKey;
+      const isNextAvailable = nextAlarmMinute === alarmMinute;
+
+      return '<button type="button" class="alarm-minute' +
+        (isCurrent ? ' current' : '') +
+        (isSelected ? ' selected' : '') +
+        (isNextAvailable ? ' next-available' : '') +
+        '" data-alarm-time="' + timeKey + '">' +
+        timeKey +
+      '</button>';
+    })
+    .join("");
+
+  listEl.querySelectorAll("[data-alarm-time]").forEach((button) => {
+    button.addEventListener("click", function () {
+      selectPreAlarmTarget(button.dataset.alarmTime);
+    });
+  });
+
+  updatePreAlarmStatus();
+}
+
+
+initHours();
+initVisualAlarmSoundToggle();
+initPreAlarmToggle();
+initAlarmVolumeControl();
+initPokemonList();
+build();
+updateMalaysiaClock();
+setInterval(updateMalaysiaClock, 1000);
+setInterval(updateVisualAlarmPreview, 1000);
+setInterval(checkVisualAlarmTrigger, 1000);
+updateVisualAlarmPreview();
+checkVisualAlarmTrigger();
+
+})();
+  </script>
+</body>
+</html>

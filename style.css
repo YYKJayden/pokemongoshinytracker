@@ -1,0 +1,5756 @@
+:root {
+  --bg: #f3f4f6;
+  --surface: rgba(255, 255, 255, 0.9);
+  --border: rgba(17, 24, 39, 0.08);
+
+  --text-1: #111827;
+  --text-2: #4b5563;
+  --text-3: #6b7280;
+
+  --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+
+  --shiny-1: #fff7bf;
+  --shiny-2: #ffe27a;
+
+  --locked-bg: #e5e7eb;
+  --unreleased-bg: #cfd4dc;
+
+  --raid-bg: rgba(239, 68, 68, 0.12);
+  --raid-text: #b91c1c;
+  --raid-border: rgba(239, 68, 68, 0.22);
+
+  --hatch-bg: rgba(245, 158, 11, 0.14);
+  --hatch-text: #b45309;
+  --hatch-border: rgba(245, 158, 11, 0.24);
+
+  --wild-bg: rgba(34, 197, 94, 0.14);
+  --wild-text: #15803d;
+  --wild-border: rgba(34, 197, 94, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text-1);
+  padding: 24px;
+}
+
+/* ---------------- TOP ---------------- */
+
+.topbar {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  margin-bottom: 20px;
+  align-items: stretch;
+}
+
+.title-group,
+.progress-card,
+.toolbar,
+.list-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.list-wrap {
+  height: 100vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding-bottom: 130px;
+  scrollbar-gutter: stable;
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(17, 24, 39, 0.06) 1px, transparent 0);
+  background-size: 18px 18px;
+}
+
+.title-group h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-2);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+/* ---------------- PROGRESS ---------------- */
+
+.progress-card {
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 20px;
+}
+
+.progress-label {
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+}
+
+.progress-value {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.progress-bar-track {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  border-radius: 999px;
+}
+
+.progress-rank {
+  margin: 10px 0 0;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+/* ---------------- REGION PROGRESS ---------------- */
+
+.region-progress-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.region-card {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 12px;
+  text-align: center;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.region-card:hover {
+  transform: translateY(-2px);
+}
+
+.region-card:focus-visible {
+  outline: 2px solid rgba(17, 24, 39, 0.35);
+  outline-offset: 3px;
+}
+
+.region-card.tier-casual {
+  border-color: rgba(252, 165, 165, 0.9);
+  background: rgba(252, 165, 165, 0.12);
+}
+
+.region-card.tier-getting {
+  border-color: rgba(251, 146, 60, 0.9);
+  background: rgba(251, 146, 60, 0.12);
+}
+
+.region-card.tier-respectable {
+  border-color: rgba(250, 204, 21, 0.95);
+  background: rgba(250, 204, 21, 0.12);
+}
+
+.region-card.tier-true {
+  border-color: rgba(134, 239, 172, 0.95);
+  background: rgba(134, 239, 172, 0.14);
+}
+
+.region-card.tier-completionist {
+  border-color: rgba(34, 197, 94, 0.95);
+  background: rgba(34, 197, 94, 0.16);
+}
+
+.region-card.tier-casual .region-percent,
+.region-card.tier-casual .region-count {
+  color: #ef4444;
+}
+
+.region-card.tier-getting .region-percent,
+.region-card.tier-getting .region-count {
+  color: #ea580c;
+}
+
+.region-card.tier-respectable .region-percent,
+.region-card.tier-respectable .region-count {
+  color: #ca8a04;
+}
+
+.region-card.tier-true .region-percent,
+.region-card.tier-true .region-count {
+  color: #16a34a;
+}
+
+.region-card.tier-completionist .region-percent,
+.region-card.tier-completionist .region-count {
+  color: #15803d;
+}
+
+.region-name {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.region-count {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 800;
+  color: var(--text-1);
+  line-height: 1.1;
+}
+
+.region-percent {
+  margin: 5px 0 0;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-2);
+}
+
+.region-scroll-target {
+  animation: regionTargetPulse 1.1s ease;
+}
+
+@keyframes regionTargetPulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(17, 24, 39, 0.2);
+  }
+
+  35% {
+    box-shadow: 0 0 0 6px rgba(17, 24, 39, 0.12);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(17, 24, 39, 0);
+  }
+}
+
+/* ---------------- TOOLBAR ---------------- */
+
+.toolbar {
+  margin-bottom: 16px;
+}
+
+#searchInput {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  margin-bottom: 10px;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.controls-left,
+.controls-right {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.controls button {
+  position: relative;
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: white;
+  cursor: pointer;
+}
+
+.controls button.active {
+  background: rgba(17, 24, 39, 0.05);
+  box-shadow: inset 0 0 0 1px rgba(17, 24, 39, 0.2);
+}
+
+.icon-btn {
+  width: 36px;
+}
+
+.icon-btn.active {
+  background: rgba(17, 24, 39, 0.1);
+}
+
+.controls button.active::after {
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: -5px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.85);
+}
+
+#compactViewBtn.active::after {
+  display: none !important;
+}
+
+/* ---------------- DEX NUMBER TOGGLE ---------------- */
+
+.ios-toggle-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.ios-toggle-wrap input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.ios-toggle {
+  width: 46px;
+  height: 26px;
+  border-radius: 999px;
+  background: #d1d5db;
+  border: 1px solid rgba(17, 24, 39, 0.08);
+  padding: 2px;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ios-toggle-thumb {
+  display: block;
+  width: 20px;
+  height: 20px;
+  border-radius: 999px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.22);
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.ios-toggle-wrap input:checked + .ios-toggle {
+  background: #22c55e;
+}
+
+.ios-toggle-wrap input:checked + .ios-toggle .ios-toggle-thumb {
+  transform: translateX(20px);
+}
+
+.ios-toggle-wrap input:focus-visible + .ios-toggle {
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.22);
+}
+
+/* ---------------- GRID ---------------- */
+
+#pokemonList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 14px;
+}
+
+/* ---------------- CARD ---------------- */
+
+.pokemon-card {
+  position: relative;
+  will-change: transform, opacity;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 12px;
+  background: white;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.22s ease, box-shadow 0.22s ease;
+}
+
+.pokemon-card:hover {
+  transform: translateY(-2px);
+}
+
+.pokemon-card.shiny {
+  background: linear-gradient(180deg, var(--shiny-1), var(--shiny-2));
+}
+
+.pokemon-card.locked {
+  background: var(--locked-bg);
+  cursor: not-allowed;
+}
+
+.pokemon-card.unreleased {
+  background: var(--unreleased-bg);
+  cursor: not-allowed;
+}
+
+.pokemon-card.locked .pokemon-sprite,
+.pokemon-card.unreleased .pokemon-sprite {
+  opacity: 0.5;
+}
+
+.pokemon-card.locked:hover,
+.pokemon-card.unreleased:hover {
+  transform: none;
+}
+
+.pokemon-card.meta-highlight {
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.18);
+}
+
+
+/* ---------------- CURSOR POKÉMON NAME ---------------- */
+
+.cursor-pokemon-name {
+  position: fixed;
+  z-index: 9999;
+  max-width: min(240px, calc(100vw - 24px));
+  padding: 7px 10px;
+  border-radius: 8px;
+  background: rgba(17, 24, 39, 0.96);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 750;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translate3d(12px, 14px, 0);
+  transition: none;
+}
+
+.cursor-pokemon-name.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+@media (hover: none) {
+  .cursor-pokemon-name {
+    display: none;
+  }
+}
+
+/* ---------------- SPRITE ---------------- */
+
+.pokemon-sprite {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 8px;
+  display: block;
+  transition: transform 0.28s ease-in-out;
+}
+
+.pokemon-card:hover .pokemon-sprite {
+  transform: scale(1.1);
+}
+
+.pokemon-card.locked:hover .pokemon-sprite,
+.pokemon-card.unreleased:hover .pokemon-sprite {
+  transform: none;
+}
+
+.pokemon-name {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-1);
+}
+
+.pokemon-status {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-2);
+}
+
+/* ---------------- META BADGE ---------------- */
+
+.meta-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  border: 0;
+  opacity: 1;
+  visibility: visible;
+  display: inline-block;
+  z-index: 2;
+}
+
+.pokemon-card .meta-badge {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+.meta-badge.raid {
+  background: var(--raid-bg);
+  color: var(--raid-text);
+  border-color: var(--raid-border);
+}
+
+.meta-badge.hatch {
+  background: var(--hatch-bg);
+  color: var(--hatch-text);
+  border-color: var(--hatch-border);
+}
+
+.meta-badge.wild {
+  background: var(--wild-bg);
+  color: var(--wild-text);
+  border-color: var(--wild-border);
+}
+
+.meta-badge.lure {
+  background: rgba(59, 130, 246, 0.14);
+  color: #1d4ed8;
+  border-color: rgba(59, 130, 246, 0.28);
+}
+
+/* ---------------- DEX NUMBER BADGE ---------------- */
+
+.dex-number-badge {
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  background: transparent;
+  color: #111827;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---------------- FLOATING SAVE ---------------- */
+
+.floating-save-panel {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 18px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+}
+
+.floating-icon-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.floating-icon-btn svg {
+  width: 20px;
+  height: 20px;
+  fill: #111827;
+}
+
+/* ---------------- COMPACT ---------------- */
+
+body.compact-view #pokemonList {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+body.compact-view .pokemon-name,
+body.compact-view .pokemon-status {
+  display: none;
+}
+
+body.compact-view .pokemon-sprite {
+  width: 70px;
+  height: 70px;
+}
+
+body.compact-view .dex-number-badge {
+  top: 5px;
+  left: 5px;
+  min-width: 34px;
+  padding: 3px 4px;
+  font-size: 7px;
+}
+
+/* ---------------- EVENT COUNTDOWN BADGE ---------------- */
+
+.event-countdown-badge {
+  position: absolute;
+  right: 8px;
+  bottom: 8px;
+  z-index: 3;
+  padding: 4px 7px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.9);
+  color: white;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+body.compact-view .event-countdown-badge {
+  right: 4px;
+  bottom: 4px;
+  padding: 2px 4px;
+  font-size: 7px;
+}
+
+/* ---------------- MOBILE ---------------- */
+
+@media (max-width: 640px) {
+  body {
+    padding: 14px;
+  }
+
+  .topbar {
+    grid-template-columns: 1fr;
+  }
+
+  .region-progress-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .region-card {
+    padding: 10px 8px;
+  }
+
+  .region-count {
+    font-size: 15px;
+  }
+
+  .controls {
+    gap: 10px;
+  }
+
+  .controls-left {
+    flex-wrap: wrap;
+  }
+
+  .ios-toggle-wrap {
+    height: 36px;
+  }
+
+  /* NON COMPACT → 3 PER ROW */
+  #pokemonList {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .pokemon-card {
+    padding: 8px;
+  }
+
+  .pokemon-sprite {
+    width: 70px;
+    height: 70px;
+  }
+
+  .pokemon-name {
+    font-size: 11px;
+  }
+
+  .pokemon-status {
+    font-size: 10px;
+  }
+
+  .dex-number-badge {
+    top: 6px;
+    left: 6px;
+    min-width: 36px;
+    padding: 3px 4px;
+    font-size: 7.5px;
+  }
+
+  .event-countdown-badge {
+    right: 5px;
+    bottom: 5px;
+    padding: 3px 5px;
+    font-size: 7px;
+  }
+
+  /* COMPACT → 5 PER ROW */
+  body.compact-view #pokemonList {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  body.compact-view .pokemon-card {
+    padding: 4px;
+  }
+
+  body.compact-view .pokemon-sprite {
+    width: 40px;
+    height: 40px;
+  }
+
+  body.compact-view .meta-badge {
+    top: 6px;
+    right: 6px;
+    padding: 2px 4px;
+    font-size: 7px;
+    border-radius: 999px;
+    transform: none;
+  }
+
+  body.compact-view .dex-number-badge {
+    top: 4px;
+    left: 4px;
+    min-width: 30px;
+    padding: 2px 3px;
+    font-size: 6.5px;
+  }
+}
+
+/* ---------------- SINGLE APP SHELL ---------------- */
+
+:root {
+  --toolset-dark-bg: #0f1115;
+  --toolset-dark-panel: #171a21;
+  --toolset-dark-soft: #1f2430;
+  --toolset-dark-border: #2d3442;
+  --toolset-dark-text: #f3f5f7;
+  --toolset-dark-muted: #9aa3b2;
+  --toolset-green: #4dff88;
+  --toolset-red: #ff5c5c;
+}
+
+.toolset-nav {
+  width: min(1180px, 100%);
+  margin: 0 auto 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  padding: 10px;
+  backdrop-filter: blur(12px);
+}
+
+.toolset-nav-left,
+.toolset-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.toolset-brand,
+.progress-label,
+.eyebrow,
+.region-name,
+.shiny-checker-panel .section-title,
+.shiny-checker-panel label,
+.shiny-checker-panel .wheel-label,
+.shiny-checker-panel .clock-label {
+  margin: 0 0 8px;
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  color: var(--text-3);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.toolset-brand {
+  margin: 0;
+  padding: 0 8px;
+}
+
+.toolset-tab {
+  min-height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  padding: 0 12px;
+  border: 1px solid var(--border);
+  background: rgba(255,255,255,.76);
+  color: var(--text-1);
+  font: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.toolset-tab.active {
+  border-color: rgba(77, 255, 136, 0.55);
+  box-shadow: inset 0 0 0 1px rgba(77, 255, 136, 0.25);
+}
+
+.toolset-theme-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 36px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toolset-theme-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.toolset-ios-toggle {
+  width: 50px;
+  height: 28px;
+  border-radius: 999px;
+  background: #d1d5db;
+  border: 1px solid rgba(17, 24, 39, 0.10);
+  padding: 2px;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.toolset-ios-toggle-thumb {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.22);
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.toolset-theme-toggle input:checked + .toolset-ios-toggle {
+  background: var(--toolset-green);
+  border-color: rgba(77, 255, 136, 0.45);
+  box-shadow: 0 0 0 3px rgba(77, 255, 136, 0.16);
+}
+
+.toolset-theme-toggle input:checked + .toolset-ios-toggle .toolset-ios-toggle-thumb {
+  transform: translateX(22px);
+}
+
+.app-view[hidden] {
+  display: none !important;
+}
+
+/* ---------------- DARK MODE ---------------- */
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+}
+
+html[data-theme="dark"] body {
+  --bg: var(--toolset-dark-bg);
+  --surface: var(--toolset-dark-panel);
+  --border: var(--toolset-dark-border);
+  --text-1: var(--toolset-dark-text);
+  --text-2: var(--toolset-dark-muted);
+  --text-3: #778296;
+  --shadow: 0 18px 50px rgba(0,0,0,0.28);
+
+  --locked-bg: #252b36;
+  --unreleased-bg: #202632;
+
+  --shiny-1: rgba(255, 226, 122, 0.22);
+  --shiny-2: rgba(255, 247, 191, 0.14);
+
+  --raid-bg: rgba(255, 92, 92, 0.16);
+  --raid-text: #ff8a8a;
+  --raid-border: rgba(255, 92, 92, 0.34);
+
+  --hatch-bg: rgba(245, 158, 11, 0.16);
+  --hatch-text: #fbbf24;
+  --hatch-border: rgba(245, 158, 11, 0.34);
+
+  --wild-bg: rgba(77, 255, 136, 0.14);
+  --wild-text: #4dff88;
+  --wild-border: rgba(77, 255, 136, 0.28);
+
+  background: radial-gradient(circle at top, #1a2030 0, var(--toolset-dark-bg) 42%);
+  color: var(--toolset-dark-text);
+}
+
+html[data-theme="dark"] .list-wrap {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.055) 1px, transparent 0),
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  background-size: 18px 18px, auto;
+}
+
+html[data-theme="dark"] .title-group,
+html[data-theme="dark"] .progress-card,
+html[data-theme="dark"] .toolbar,
+html[data-theme="dark"] .list-wrap,
+html[data-theme="dark"] .toolset-nav,
+html[data-theme="dark"] .shiny-checker-panel .card,
+html[data-theme="dark"] .shiny-checker-panel .checker-title-card,
+html[data-theme="dark"] .shiny-checker-panel .checker-key-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)), var(--toolset-dark-panel);
+  border-color: var(--toolset-dark-border);
+}
+
+html[data-theme="dark"] #searchInput,
+html[data-theme="dark"] input,
+html[data-theme="dark"] .pokemon-card,
+html[data-theme="dark"] .region-card,
+html[data-theme="dark"] .controls button,
+html[data-theme="dark"] .floating-icon-btn,
+html[data-theme="dark"] .toolset-tab {
+  background: #10131a;
+  color: var(--toolset-dark-text);
+  border-color: var(--toolset-dark-border);
+}
+
+html[data-theme="dark"] .pokemon-card.shiny {
+  background: linear-gradient(180deg, rgba(255, 226, 122, 0.28), rgba(255, 247, 191, 0.16));
+}
+
+html[data-theme="dark"] .pokemon-name,
+html[data-theme="dark"] .dex-number-badge,
+html[data-theme="dark"] .floating-icon-btn svg {
+  color: var(--toolset-dark-text);
+  fill: var(--toolset-dark-text);
+}
+
+html[data-theme="dark"] .progress-bar-track,
+html[data-theme="dark"] .ios-toggle,
+html[data-theme="dark"] .toolset-ios-toggle {
+  background: #10131a;
+  border-color: var(--toolset-dark-border);
+}
+
+html[data-theme="dark"] .toolset-ios-toggle-thumb {
+  background: #f3f5f7;
+}
+
+html[data-theme="dark"] .floating-save-panel {
+  background: rgba(23, 26, 33, 0.58);
+  border-color: var(--toolset-dark-border);
+}
+
+/* ---------------- TRACKER HEADER COPY ---------------- */
+
+.title-group h1,
+.shiny-checker-panel .checker-title-card h1 {
+  margin: 0 0 10px;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: var(--text-1);
+}
+
+.title-group .subtitle,
+.shiny-checker-panel .checker-title-card .subtitle {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-2);
+}
+
+@media (max-width: 640px) {
+  .toolset-nav {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .toolset-nav-left,
+  .toolset-nav-right {
+    width: 100%;
+  }
+
+  .toolset-tab {
+    flex: 1;
+  }
+
+  .toolset-theme-toggle {
+    margin-left: auto;
+  }
+}
+
+/* ---------------- SHINY CHECKER INTEGRATED STYLES ---------------- */
+
+.shiny-checker-panel  { box-sizing:border-box; }
+.shiny-checker-panel } { font-size:clamp(24px,5vw,42px); line-height:1; margin:0 0 8px; letter-spacing:-.04em; }
+.shiny-checker-panel } { color:var(--muted); margin:0 0 22px; font-size:14px; }
+.shiny-checker-panel } {
+  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.01)),var(--panel);
+  border:1px solid var(--line); border-radius:16px; padding:16px; box-shadow:0 18px 50px rgba(0,0,0,.25); margin-bottom:14px;
+}
+.shiny-checker-panel } {
+  display:grid;
+  gap:12px;
+}
+.shiny-checker-panel } {
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  align-items:end;
+}
+.shiny-checker-panel } {
+  display:grid;
+  grid-template-columns:minmax(190px,240px) 1fr;
+  gap:12px;
+  align-items:stretch;
+}
+.shiny-checker-panel } {
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:10px;
+  align-items:end;
+}
+.shiny-checker-panel } { display:grid; gap:7px; color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.08em; font-weight:800; }
+.shiny-checker-panel } {
+  width:100%; border:1px solid var(--line); border-radius:12px; background:var(--input); color:var(--text);
+  padding:12px 13px; font:inherit; outline:none;
+}
+.shiny-checker-panel } { border-color:var(--green); box-shadow:0 0 0 3px rgba(77,255,136,.12); }
+.shiny-checker-panel } { cursor:pointer; background:var(--text); color:#090b10; font-weight:900; border:none; white-space:nowrap; min-width:76px; }
+.shiny-checker-panel } { display:none; color:var(--red); margin:12px 0 0; font-size:13px; }
+.shiny-checker-panel } { display:grid; gap:7px; }
+.shiny-checker-panel } {
+  height:112px;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--input);
+  display:grid;
+  grid-template-columns:42px 1fr 42px;
+  align-items:center;
+  overflow:hidden;
+}
+.shiny-checker-panel } {
+  height:100%;
+  border:0;
+  border-radius:0;
+  background:var(--input);
+  color:var(--muted);
+  font-size:22px;
+  font-weight:900;
+  padding:0;
+}
+.shiny-checker-panel } {
+  background:var(--input);
+  color:var(--text);
+}
+.shiny-checker-panel } { height:100%; display:grid; grid-template-rows:1fr 40px 1fr; align-items:center; text-align:center; position:relative; min-width:0; }
+.shiny-checker-panel } {
+  content:"";
+  position:absolute;
+  left:8px;
+  right:8px;
+  top:36px;
+  height:40px;
+  border-top:1px solid rgba(77,255,136,.45);
+  border-bottom:1px solid rgba(77,255,136,.45);
+  background:transparent;
+  border-radius:10px;
+}
+.shiny-checker-panel } { position:relative; z-index:2; display:grid; place-items:center; min-width:0; font-weight:900; font-variant-numeric:tabular-nums; user-select:none; line-height:1; white-space:nowrap; }
+.shiny-checker-panel } { color:var(--muted); font-size:12px; opacity:.72; }
+.shiny-checker-panel } { color:var(--text); font-size:18px; letter-spacing:-.02em; }
+.shiny-checker-panel } { margin:0 0 12px; font-size:15px; letter-spacing:-.01em; }
+.shiny-checker-panel } { width:100%; overflow:hidden; padding-bottom:0; }
+.shiny-checker-panel } { display:grid; gap:8px; width:100%; }
+.shiny-checker-panel } {
+  display:grid;
+  grid-template-columns:repeat(20, minmax(0,1fr));
+  gap:clamp(2px, .7vw, 6px);
+  align-items:center;
+  width:100%;
+}
+.shiny-checker-panel } { display:none; }
+.shiny-checker-panel } {
+  width:100%;
+  aspect-ratio: .85 / 1;
+  min-width:0;
+  display:grid;
+  place-items:center;
+  border:1px solid var(--line);
+  background:var(--soft);
+  border-radius:clamp(5px, 1.4vw, 9px);
+  font-size:clamp(12px, 3.45vw, 20px);
+  font-weight:900;
+  font-variant-numeric:tabular-nums;
+  position:relative;
+  color:var(--text);
+}
+.shiny-checker-panel } { border-color:var(--green); background:var(--green-soft); box-shadow:0 0 0 2px rgba(77,255,136,.22),0 0 18px rgba(77,255,136,.18); }
+.shiny-checker-panel } { border-color:var(--poke); background:var(--poke-soft); box-shadow:0 0 0 2px rgba(255,92,92,.28),0 0 18px rgba(255,92,92,.22); }
+.shiny-checker-panel } {
+  border-color:var(--green);
+  background:linear-gradient(135deg,rgba(77,255,136,.30),rgba(255,92,92,.30));
+  box-shadow:0 0 0 2px rgba(77,255,136,.30),0 0 0 4px rgba(255,92,92,.22),0 0 22px rgba(77,255,136,.20),0 0 22px rgba(255,92,92,.22);
+}
+.shiny-checker-panel } { display:grid; grid-template-columns:1fr auto; gap:12px; align-items:center; }
+.shiny-checker-panel } { min-width:128px; border-radius:14px; background:var(--soft); border:1px solid var(--line); padding:12px; text-align:center; }
+.shiny-checker-panel } { font-size:30px; font-weight:950; line-height:1; font-variant-numeric:tabular-nums; }
+.shiny-checker-panel } { margin-top:6px; font-size:12px; color:var(--muted); font-weight:900; }
+.shiny-checker-panel } {
+  display:grid;
+  gap:8px;
+  text-align:center;
+  align-content:center;
+  min-height:112px;
+}
+.shiny-checker-panel } {
+  color:var(--muted);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+  font-weight:900;
+}
+.shiny-checker-panel } {
+  font-size:clamp(28px, 7vw, 48px);
+  line-height:1;
+  font-weight:950;
+  letter-spacing:-0.05em;
+  font-variant-numeric:tabular-nums;
+}
+.shiny-checker-panel } {
+  color:var(--muted);
+  font-size:13px;
+  font-weight:800;
+}
+.shiny-checker-panel } {
+  .time-row { grid-template-columns:1fr; }
+.shiny-checker-panel } { grid-template-columns:1fr; }
+.shiny-checker-panel } { grid-template-columns:1fr auto; }
+.shiny-checker-panel } { padding:12px; }
+}
+.shiny-checker-panel } {
+  color-scheme: light;
+}
+.shiny-checker-panel } {
+  background: rgba(255, 255, 255, 0.92) !important;
+  border-color: rgba(17, 24, 39, 0.08) !important;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08) !important;
+}
+.shiny-checker-panel } {
+  color: #6b7280 !important;
+}
+.shiny-checker-panel } {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-color: rgba(17, 24, 39, 0.10) !important;
+}
+.shiny-checker-panel } {
+  background: #f9fafb !important;
+}
+.shiny-checker-panel } {
+  background: #111827;
+  color: #ffffff;
+}
+.shiny-checker-panel } {
+  color: #9ca3af !important;
+}
+.shiny-checker-panel } {
+  color: #111827 !important;
+}
+.shiny-checker-panel } {
+  border-color: #16a34a !important;
+  background: rgba(34, 197, 94, 0.16) !important;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.18), 0 0 18px rgba(34, 197, 94, 0.12) !important;
+}
+.shiny-checker-panel } {
+  border-color: #ef4444 !important;
+  background: rgba(239, 68, 68, 0.16) !important;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.18), 0 0 18px rgba(239, 68, 68, 0.12) !important;
+}
+.shiny-checker-panel } {
+  border-color: #16a34a !important;
+  background: linear-gradient(135deg, rgba(34, 197, 94, 0.24), rgba(239, 68, 68, 0.22)) !important;
+  box-shadow:
+    0 0 0 2px rgba(34, 197, 94, 0.20),
+    0 0 0 4px rgba(239, 68, 68, 0.14),
+    0 0 20px rgba(34, 197, 94, 0.10),
+    0 0 20px rgba(239, 68, 68, 0.10) !important;
+}
+.shiny-checker-panel } {
+  background: rgba(23, 26, 33, 0.86) !important;
+}
+
+
+/* Checker alignment overrides */
+.shiny-checker-panel {
+  --panel:#ffffff;
+  --soft:#f9fafb;
+  --line:rgba(17,24,39,0.10);
+  --text:#111827;
+  --muted:#6b7280;
+  --green:#16a34a;
+  --poke:#ef4444;
+  --green-soft:rgba(34,197,94,.16);
+  --poke-soft:rgba(239,68,68,.16);
+  --input:#ffffff;
+  color: var(--text-1);
+}
+
+html[data-theme="dark"] .shiny-checker-panel {
+  --panel:#171a21;
+  --soft:#1f2430;
+  --line:#2d3442;
+  --text:#f3f5f7;
+  --muted:#9aa3b2;
+  --green:#4dff88;
+  --poke:#ff5c5c;
+  --green-soft:rgba(77,255,136,.16);
+  --poke-soft:rgba(255,92,92,.20);
+  --input:#10131a;
+  color: var(--toolset-dark-text);
+}
+
+.shiny-checker-panel main {
+  width: min(1180px, 100%);
+  margin: 0 auto;
+}
+
+.shiny-checker-panel .checker-topbar {
+  display: grid;
+  grid-template-columns: 1fr minmax(260px, 320px);
+  gap: 16px;
+  margin-bottom: 14px;
+  align-items: stretch;
+}
+
+.shiny-checker-panel .checker-title-card,
+.shiny-checker-panel .checker-key-card,
+.shiny-checker-panel .card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: var(--shadow);
+}
+
+.shiny-checker-panel .checker-key-card .key-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.shiny-checker-panel .checker-key-card input {
+  width: 100%;
+  min-width: 0;
+  height: 44px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+.shiny-checker-panel .checker-key-card button {
+  height: 44px;
+}
+
+.shiny-checker-panel .time-wheel {
+  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+  padding: 0 !important;
+}
+
+.shiny-checker-panel .wheel-btn {
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 112px !important;
+  min-height: 112px !important;
+  padding: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  line-height: 1 !important;
+  text-align: center !important;
+}
+
+.shiny-checker-panel .wheel-face,
+.shiny-checker-panel .wheel-display {
+  width: 100%;
+  min-width: 0;
+  text-align: center;
+}
+
+.shiny-checker-panel .section-title {
+  margin: 0 0 12px;
+}
+
+.shiny-checker-panel input,
+.shiny-checker-panel button {
+  font-family: Arial, sans-serif;
+}
+
+@media(max-width:640px) {
+  .shiny-checker-panel .checker-topbar {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+}
+
+
+/* ---------------- SHINY CHECKER DISPLAY REPAIR ---------------- */
+/* This block intentionally overrides only Shiny Checker layout/display.
+   It does not change chain generation, hour highlight, or Pokémon highlight logic. */
+
+.shiny-checker-panel {
+  --checker-panel: var(--surface);
+  --checker-soft: #f9fafb;
+  --checker-line: rgba(17, 24, 39, 0.10);
+  --checker-text: var(--text-1);
+  --checker-muted: var(--text-3);
+  --checker-input: #ffffff;
+  --checker-green: #16a34a;
+  --checker-red: #ef4444;
+}
+
+html[data-theme="dark"] .shiny-checker-panel {
+  --checker-panel: var(--toolset-dark-panel);
+  --checker-soft: var(--toolset-dark-soft);
+  --checker-line: var(--toolset-dark-border);
+  --checker-text: var(--toolset-dark-text);
+  --checker-muted: var(--toolset-dark-muted);
+  --checker-input: #10131a;
+  --checker-green: #4dff88;
+  --checker-red: #ff5c5c;
+}
+
+/* Main frame */
+.shiny-checker-panel main {
+  width: min(1180px, 100%) !important;
+  margin: 0 auto !important;
+  display: block !important;
+}
+
+.shiny-checker-panel .checker-topbar {
+  display: grid !important;
+  grid-template-columns: 1fr minmax(260px, 320px) !important;
+  gap: 16px !important;
+  margin-bottom: 14px !important;
+  align-items: stretch !important;
+}
+
+.shiny-checker-panel .checker-title-card,
+.shiny-checker-panel .checker-key-card,
+.shiny-checker-panel .card {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 20px !important;
+  padding: 20px !important;
+  box-shadow: var(--shadow) !important;
+}
+
+html[data-theme="dark"] .shiny-checker-panel .checker-title-card,
+html[data-theme="dark"] .shiny-checker-panel .checker-key-card,
+html[data-theme="dark"] .shiny-checker-panel .card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.01)), var(--toolset-dark-panel) !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+.shiny-checker-panel .checker-key-card .key-row,
+.shiny-checker-panel .pokedex-input-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  align-items: end !important;
+}
+
+.shiny-checker-panel input {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 44px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--checker-line) !important;
+  background: var(--checker-input) !important;
+  color: var(--checker-text) !important;
+  padding: 0 12px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 14px !important;
+  outline: none !important;
+}
+
+.shiny-checker-panel .checker-key-card input {
+  text-align: center !important;
+  font-size: 20px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.08em !important;
+  font-variant-numeric: tabular-nums !important;
+}
+
+.shiny-checker-panel button {
+  min-width: 76px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  border: 0 !important;
+  background: var(--text-1) !important;
+  color: var(--surface) !important;
+  padding: 0 12px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 13px !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+}
+
+html[data-theme="dark"] .shiny-checker-panel button {
+  background: var(--toolset-dark-text) !important;
+  color: #090b10 !important;
+}
+
+/* Time + clock row */
+.shiny-checker-panel .time-row {
+  display: grid !important;
+  grid-template-columns: minmax(220px, 280px) 1fr !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+}
+
+.shiny-checker-panel .wheel-field {
+  display: grid !important;
+  gap: 7px !important;
+}
+
+/* Rebuild knob from scratch */
+.shiny-checker-panel .time-wheel {
+  height: 112px !important;
+  width: 100% !important;
+  border: 1px solid var(--checker-line) !important;
+  border-radius: 18px !important;
+  background: var(--checker-input) !important;
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+  align-items: stretch !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+.shiny-checker-panel .wheel-btn {
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 112px !important;
+  min-height: 112px !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  background: var(--checker-input) !important;
+  color: var(--checker-muted) !important;
+  display: grid !important;
+  place-items: center !important;
+  line-height: 1 !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+
+.shiny-checker-panel .wheel-face {
+  height: 112px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  display: grid !important;
+  grid-template-rows: 1fr 40px 1fr !important;
+  align-items: center !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.shiny-checker-panel .wheel-face::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 8px !important;
+  right: 8px !important;
+  top: 36px !important;
+  height: 40px !important;
+  border-top: 1px solid rgba(77, 255, 136, 0.45) !important;
+  border-bottom: 1px solid rgba(77, 255, 136, 0.45) !important;
+  background: transparent !important;
+  border-radius: 10px !important;
+  pointer-events: none !important;
+}
+
+.shiny-checker-panel .wheel-display {
+  position: relative !important;
+  z-index: 2 !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  text-align: center !important;
+  font-weight: 900 !important;
+  font-variant-numeric: tabular-nums !important;
+  user-select: none !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  color: var(--checker-muted) !important;
+}
+
+.shiny-checker-panel .wheel-display.current {
+  color: var(--checker-text) !important;
+  font-size: 18px !important;
+  letter-spacing: -0.02em !important;
+}
+
+.shiny-checker-panel .wheel-display.side {
+  color: var(--checker-muted) !important;
+  font-size: 12px !important;
+  opacity: 0.72 !important;
+}
+
+.shiny-checker-panel .clock-card {
+  display: grid !important;
+  gap: 8px !important;
+  text-align: center !important;
+  align-content: center !important;
+  min-height: 112px !important;
+}
+
+.shiny-checker-panel .clock-time {
+  font-size: clamp(28px, 5vw, 46px) !important;
+  line-height: 1 !important;
+  font-weight: 950 !important;
+  letter-spacing: -0.04em !important;
+  font-variant-numeric: tabular-nums !important;
+  color: var(--checker-text) !important;
+}
+
+.shiny-checker-panel .clock-date,
+.shiny-checker-panel .dex-name {
+  color: var(--text-2) !important;
+  font-size: 12px !important;
+}
+
+/* Chain: exactly 20 horizontal cells per row */
+.shiny-checker-panel .chain-wrap {
+  width: 100% !important;
+  overflow: hidden !important;
+  padding-bottom: 0 !important;
+}
+
+.shiny-checker-panel .stack {
+  display: grid !important;
+  gap: 8px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+.shiny-checker-panel .row {
+  display: grid !important;
+  grid-template-columns: repeat(20, minmax(0, 1fr)) !important;
+  gap: clamp(2px, 0.7vw, 6px) !important;
+  align-items: center !important;
+  width: 100% !important;
+}
+
+.shiny-checker-panel .row-label {
+  display: none !important;
+}
+
+.shiny-checker-panel .cell {
+  width: 100% !important;
+  aspect-ratio: 0.85 / 1 !important;
+  min-width: 0 !important;
+  height: auto !important;
+  display: grid !important;
+  place-items: center !important;
+  border: 1px solid var(--checker-line) !important;
+  background: var(--checker-soft) !important;
+  border-radius: clamp(5px, 1.4vw, 9px) !important;
+  font-size: clamp(12px, 3.45vw, 20px) !important;
+  font-weight: 900 !important;
+  font-variant-numeric: tabular-nums !important;
+  position: relative !important;
+  color: var(--checker-text) !important;
+}
+
+.shiny-checker-panel .cell.hit-hour {
+  border-color: var(--checker-green) !important;
+  background: rgba(77, 255, 136, 0.16) !important;
+  box-shadow: 0 0 0 2px rgba(77,255,136,.22), 0 0 18px rgba(77,255,136,.18) !important;
+}
+
+.shiny-checker-panel .cell.hit-pokemon {
+  border-color: var(--checker-red) !important;
+  background: rgba(255, 92, 92, 0.18) !important;
+  box-shadow: 0 0 0 2px rgba(255,92,92,.22), 0 0 18px rgba(255,92,92,.18) !important;
+}
+
+.shiny-checker-panel .cell.hit-hour.hit-pokemon {
+  border-color: var(--checker-green) !important;
+  background: linear-gradient(135deg, rgba(77,255,136,.30), rgba(255,92,92,.30)) !important;
+  box-shadow:
+    0 0 0 2px rgba(77,255,136,.30),
+    0 0 0 4px rgba(255,92,92,.18),
+    0 0 22px rgba(77,255,136,.20),
+    0 0 22px rgba(255,92,92,.18) !important;
+}
+
+.shiny-checker-panel .pokedex-grid {
+  display: grid !important;
+  grid-template-columns: 1fr auto !important;
+  gap: 12px !important;
+  align-items: center !important;
+}
+
+.shiny-checker-panel .dex-result {
+  min-width: 128px !important;
+  border-radius: 14px !important;
+  background: var(--checker-soft) !important;
+  border: 1px solid var(--checker-line) !important;
+  padding: 12px !important;
+  text-align: center !important;
+}
+
+.shiny-checker-panel .dex-no {
+  font-size: 28px !important;
+  font-weight: 950 !important;
+  line-height: 1 !important;
+  font-variant-numeric: tabular-nums !important;
+  color: var(--checker-text) !important;
+}
+
+/* Labels aligned with tracker progress label */
+.shiny-checker-panel .section-title,
+.shiny-checker-panel label,
+.shiny-checker-panel .wheel-label,
+.shiny-checker-panel .clock-label,
+.shiny-checker-panel .progress-label {
+  margin: 0 0 8px !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 12px !important;
+  color: var(--text-3) !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  line-height: 1.2 !important;
+  font-weight: 700 !important;
+}
+
+@media (max-width: 640px) {
+  .shiny-checker-panel .checker-topbar,
+  .shiny-checker-panel .time-row,
+  .shiny-checker-panel .pokedex-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .shiny-checker-panel .checker-title-card,
+  .shiny-checker-panel .checker-key-card,
+  .shiny-checker-panel .card {
+    padding: 16px !important;
+  }
+
+  .shiny-checker-panel .pokedex-input-row {
+    grid-template-columns: 1fr auto !important;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------- KNOB RESTORE + DARK BAR FIX + POKEDEX SIMPLIFY ---------------- */
+
+/* Restore target-hour knob arrows to left/right positions. */
+.shiny-checker-panel .time-wheel {
+  height: 112px !important;
+  width: 100% !important;
+  border: 1px solid var(--checker-line) !important;
+  border-radius: 18px !important;
+  display: grid !important;
+  grid-template-columns: 44px minmax(0, 1fr) 44px !important;
+  grid-template-rows: 1fr !important;
+  align-items: stretch !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  background: var(--checker-input) !important;
+}
+
+.shiny-checker-panel .wheel-btn {
+  width: 44px !important;
+  min-width: 44px !important;
+  height: 112px !important;
+  min-height: 112px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  background: var(--checker-input) !important;
+  color: var(--checker-muted) !important;
+  box-shadow: none !important;
+  line-height: 1 !important;
+  font-size: 22px !important;
+  font-weight: 900 !important;
+}
+
+.shiny-checker-panel .wheel-face {
+  height: 112px !important;
+  min-height: 112px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+  display: grid !important;
+  grid-template-rows: 1fr 40px 1fr !important;
+  align-items: center !important;
+  justify-items: center !important;
+  text-align: center !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: var(--checker-input) !important;
+  box-shadow: none !important;
+}
+
+.shiny-checker-panel .wheel-display {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: grid !important;
+  place-items: center !important;
+  text-align: center !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+.shiny-checker-panel .wheel-display.current {
+  color: var(--checker-text) !important;
+  font-size: 18px !important;
+  font-weight: 900 !important;
+}
+
+.shiny-checker-panel .wheel-display.side {
+  color: var(--checker-muted) !important;
+  font-size: 12px !important;
+  opacity: 0.72 !important;
+}
+
+/* Dark-mode-only white bar fix:
+   force every internal part of the knob to the same dark input background. */
+html[data-theme="dark"] .shiny-checker-panel .time-wheel,
+html[data-theme="dark"] .shiny-checker-panel .wheel-btn,
+html[data-theme="dark"] .shiny-checker-panel .wheel-face,
+html[data-theme="dark"] .shiny-checker-panel .wheel-display {
+  background: #10131a !important;
+  background-color: #10131a !important;
+  box-shadow: none !important;
+}
+
+/* Remove all old knob overlays/guide bars. */
+.shiny-checker-panel .time-wheel::before,
+.shiny-checker-panel .time-wheel::after,
+.shiny-checker-panel .wheel-btn::before,
+.shiny-checker-panel .wheel-btn::after,
+.shiny-checker-panel .wheel-face::before,
+.shiny-checker-panel .wheel-face::after,
+.shiny-checker-panel .wheel-display::before,
+.shiny-checker-panel .wheel-display::after,
+.shiny-checker-panel .wheel-display.current::before,
+.shiny-checker-panel .wheel-display.current::after {
+  display: none !important;
+  content: none !important;
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  background: transparent !important;
+  background-color: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  outline: 0 !important;
+}
+
+/* Pokédex checker: no separate Pokémon Name label, input + Go only. */
+.shiny-checker-panel .pokedex-input-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  align-items: end !important;
+}
+
+.shiny-checker-panel #pokemonInput {
+  margin: 0 !important;
+  height: 44px !important;
+}
+
+.shiny-checker-panel #pokemonGoBtn {
+  align-self: end !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  margin: 0 !important;
+  transform: none !important;
+}
+
+
+/* ---------------- TRACKER DARK MODE POLISH ---------------- */
+/* More pleasing shiny-caught gold in dark mode. */
+html[data-theme="dark"] .pokemon-card.shiny {
+  background:
+    radial-gradient(circle at top, rgba(255, 245, 180, 0.34), transparent 58%),
+    linear-gradient(180deg, rgba(250, 204, 21, 0.42), rgba(180, 120, 18, 0.30)) !important;
+  border-color: rgba(250, 204, 21, 0.48) !important;
+  box-shadow:
+    0 0 0 1px rgba(250, 204, 21, 0.18),
+    0 12px 28px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.10) !important;
+}
+
+html[data-theme="dark"] .pokemon-card.shiny .pokemon-name {
+  color: #fff7bf !important;
+}
+
+html[data-theme="dark"] .pokemon-card.shiny .pokemon-status {
+  color: rgba(255, 247, 191, 0.78) !important;
+}
+
+/* Make compact-view icon visible in dark mode. */
+html[data-theme="dark"] #compactViewBtn svg,
+html[data-theme="dark"] .icon-btn svg {
+  fill: var(--toolset-dark-text) !important;
+  stroke: var(--toolset-dark-text) !important;
+}
+
+html[data-theme="dark"] #compactViewBtn,
+html[data-theme="dark"] .icon-btn {
+  background: #10131a !important;
+  border-color: var(--toolset-dark-border) !important;
+  color: var(--toolset-dark-text) !important;
+}
+
+html[data-theme="dark"] #compactViewBtn.active,
+html[data-theme="dark"] .icon-btn.active {
+  background: rgba(77, 255, 136, 0.12) !important;
+  border-color: rgba(77, 255, 136, 0.34) !important;
+}
+
+
+/* ---------------- MOBILE CHECKER WINDOW SPACING FIX ---------------- */
+/* Desktop layout is left untouched. This only restores clean vertical rhythm
+   for the Shiny Checker windows on smaller viewports. */
+
+@media (max-width: 760px) {
+  .shiny-checker-panel main {
+    display: grid !important;
+    gap: 14px !important;
+  }
+
+  .shiny-checker-panel .checker-topbar,
+  .shiny-checker-panel main > .card {
+    margin: 0 !important;
+  }
+
+  .shiny-checker-panel .time-row {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    gap: 14px !important;
+  }
+
+  .shiny-checker-panel .card,
+  .shiny-checker-panel .checker-title-card,
+  .shiny-checker-panel .checker-key-card {
+    border-radius: 18px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  .shiny-checker-panel main {
+    gap: 12px !important;
+  }
+
+  .shiny-checker-panel .time-row {
+    gap: 12px !important;
+  }
+}
+
+
+/* ---------------- SHINY CHECKER VISUAL ALARM PREVIEW - PASS 1 ---------------- */
+
+.shiny-checker-panel .alarm-preview-card {
+  display: grid;
+  gap: 10px;
+}
+
+.shiny-checker-panel .alarm-preview-meta {
+  font-size: 12px;
+  line-height: 1.35;
+  color: var(--text-2);
+  font-weight: 700;
+}
+
+.shiny-checker-panel .alarm-preview-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.shiny-checker-panel .alarm-minute {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 32px;
+  padding: 0 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--checker-soft, #f9fafb);
+  color: var(--text-1);
+  font-size: 12px;
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+}
+
+.shiny-checker-panel .alarm-minute.current {
+  border-color: var(--toolset-green);
+  background: rgba(77, 255, 136, 0.16);
+  box-shadow: 0 0 0 2px rgba(77, 255, 136, 0.16);
+}
+
+.shiny-checker-panel .alarm-empty {
+  color: var(--text-2);
+  font-size: 13px;
+  font-weight: 700;
+}
+
+html[data-theme="dark"] .shiny-checker-panel .alarm-minute {
+  background: #10131a;
+  color: var(--toolset-dark-text);
+  border-color: var(--toolset-dark-border);
+}
+
+
+/* ---------------- VISUAL ALARM — CSS ONLY, LAYOUT-SAFE ---------------- */
+/* Pure CSS alarm visual. No image, no borders, no transforms on app content. */
+
+.visual-alarm-banner {
+  display: none !important;
+}
+
+body.visual-alarm-active {
+  background-color: #090b18 !important;
+  background-image:
+    radial-gradient(circle at 14% 18%, rgba(82, 255, 146, 0.36), transparent 12%),
+    radial-gradient(circle at 78% 20%, rgba(151, 91, 255, 0.48), transparent 24%),
+    radial-gradient(circle at 58% 40%, rgba(54, 95, 255, 0.40), transparent 28%),
+    radial-gradient(circle at 22% 78%, rgba(31, 83, 221, 0.38), transparent 26%),
+    radial-gradient(circle at 82% 78%, rgba(0, 255, 157, 0.26), transparent 18%),
+    linear-gradient(135deg, #050611 0%, #0c1230 38%, #170b35 68%, #050611 100%) !important;
+  background-size: 130% 130%, 150% 150%, 170% 170%, 160% 160%, 140% 140%, 100% 100% !important;
+  animation: shinySpaceBreath 1.18s cubic-bezier(.45,0,.2,1) infinite !important;
+}
+
+html:not([data-theme="dark"]) body.visual-alarm-active {
+  background-color: #fff7fb !important;
+  background-image:
+    radial-gradient(circle at 12% 20%, rgba(255, 45, 85, 0.58), transparent 18%),
+    radial-gradient(circle at 76% 18%, rgba(255, 204, 0, 0.58), transparent 20%),
+    radial-gradient(circle at 24% 78%, rgba(52, 199, 89, 0.54), transparent 22%),
+    radial-gradient(circle at 80% 76%, rgba(0, 122, 255, 0.50), transparent 22%),
+    radial-gradient(circle at 52% 50%, rgba(175, 82, 222, 0.48), transparent 26%),
+    linear-gradient(135deg, #fff3f8 0%, #fff7c2 30%, #e8fff0 56%, #eaf3ff 78%, #f8ecff 100%) !important;
+  background-size: 140% 140%, 135% 135%, 145% 145%, 150% 150%, 160% 160%, 100% 100% !important;
+  animation: shinyRainbowBreath 1.18s cubic-bezier(.45,0,.2,1) infinite !important;
+}
+
+body.visual-alarm-active::before {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  background-image:
+    radial-gradient(circle, rgba(255,255,255,.92) 0 1px, transparent 1.8px),
+    radial-gradient(circle, rgba(255,255,255,.55) 0 1px, transparent 1.6px),
+    linear-gradient(118deg, transparent 0 36%, rgba(55,255,149,.0) 43%, rgba(55,255,149,.70) 46%, rgba(213,255,229,.88) 48%, rgba(55,255,149,.36) 51%, transparent 58%);
+  background-size: 118px 118px, 176px 176px, 210% 210%;
+  background-position: 0 0, 42px 18px, 0% 50%;
+  opacity: .62;
+  mix-blend-mode: screen;
+  animation: shinyLightningNatural 1.48s cubic-bezier(.22,.61,.36,1) infinite;
+}
+
+html:not([data-theme="dark"]) body.visual-alarm-active::before {
+  background-image:
+    linear-gradient(112deg, transparent 0 32%, rgba(255,255,255,0) 40%, rgba(255,255,255,.74) 45%, rgba(255,255,255,.95) 47%, rgba(255,255,255,.42) 52%, transparent 60%),
+    radial-gradient(circle at 18% 26%, rgba(255,255,255,.62), transparent 14%),
+    radial-gradient(circle at 76% 28%, rgba(255,255,255,.42), transparent 16%);
+  background-size: 210% 210%, 100% 100%, 100% 100%;
+  opacity: .52;
+  animation: shinyLightningNatural 1.48s cubic-bezier(.22,.61,.36,1) infinite;
+}
+
+body.visual-alarm-active::after {
+  content: none !important;
+  display: none !important;
+}
+
+body.visual-alarm-active .app-view:not([hidden]),
+body.visual-alarm-active .floating-save-panel {
+  position: relative;
+  z-index: 2;
+}
+
+@keyframes shinySpaceBreath {
+  0% { background-position: 0% 48%, 100% 18%, 48% 42%, 12% 100%, 88% 88%, 50% 50%; filter: saturate(1.04) brightness(1); }
+  42% { background-position: 18% 42%, 86% 28%, 58% 36%, 20% 84%, 78% 78%, 50% 50%; filter: saturate(1.42) brightness(1.18); }
+  65% { background-position: 14% 46%, 92% 24%, 54% 40%, 16% 92%, 84% 84%, 50% 50%; filter: saturate(1.22) brightness(1.08); }
+  100% { background-position: 0% 48%, 100% 18%, 48% 42%, 12% 100%, 88% 88%, 50% 50%; filter: saturate(1.04) brightness(1); }
+}
+
+@keyframes shinyRainbowBreath {
+  0% { background-position: 0% 40%, 100% 20%, 20% 88%, 84% 84%, 50% 50%, 50% 50%; filter: saturate(1.02) brightness(1); }
+  45% { background-position: 16% 50%, 86% 28%, 28% 78%, 76% 74%, 58% 42%, 50% 50%; filter: saturate(1.35) brightness(1.12); }
+  68% { background-position: 10% 46%, 92% 24%, 24% 84%, 80% 80%, 54% 46%, 50% 50%; filter: saturate(1.16) brightness(1.06); }
+  100% { background-position: 0% 40%, 100% 20%, 20% 88%, 84% 84%, 50% 50%, 50% 50%; filter: saturate(1.02) brightness(1); }
+}
+
+@keyframes shinyLightningNatural {
+  0%, 100% { background-position: 0 0, 42px 18px, 0% 50%; opacity: .20; }
+  18% { opacity: .36; }
+  36% { background-position: 5px 3px, 38px 20px, 48% 50%; opacity: .90; }
+  48% { opacity: .38; }
+  62% { background-position: 10px 6px, 34px 24px, 78% 50%; opacity: .78; }
+  78% { opacity: .26; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body.visual-alarm-active,
+  html:not([data-theme="dark"]) body.visual-alarm-active,
+  body.visual-alarm-active::before {
+    animation-duration: 2.6s !important;
+  }
+}
+
+/* ---------------- ALARM SOUND IOS TOGGLE ---------------- */
+
+.shiny-checker-panel .alarm-sound-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+html[data-theme="dark"] .shiny-checker-panel .alarm-sound-row {
+  background: #10131a;
+  border-color: var(--toolset-dark-border);
+}
+
+.shiny-checker-panel .alarm-sound-label {
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-3);
+}
+
+.shiny-checker-panel .alarm-sound-toggle {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  height: 28px;
+  margin: 0 !important;
+  cursor: pointer;
+  user-select: none;
+}
+
+.shiny-checker-panel .alarm-sound-toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.shiny-checker-panel .alarm-ios-toggle {
+  width: 50px;
+  height: 28px;
+  border-radius: 999px;
+  background: #d1d5db;
+  border: 1px solid rgba(17, 24, 39, 0.10);
+  padding: 2px;
+  transition: background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.shiny-checker-panel .alarm-ios-toggle-thumb {
+  display: block;
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.22);
+  transform: translateX(0);
+  transition: transform 0.2s ease;
+}
+
+.shiny-checker-panel .alarm-sound-toggle input:checked + .alarm-ios-toggle {
+  background: var(--toolset-green);
+  border-color: rgba(77, 255, 136, 0.45);
+  box-shadow: 0 0 0 3px rgba(77, 255, 136, 0.16);
+}
+
+.shiny-checker-panel .alarm-sound-toggle input:checked + .alarm-ios-toggle .alarm-ios-toggle-thumb {
+  transform: translateX(22px);
+}
+
+html[data-theme="dark"] .shiny-checker-panel .alarm-ios-toggle {
+  background: #1f2430;
+  border-color: var(--toolset-dark-border);
+}
+
+html[data-theme="dark"] .shiny-checker-panel .alarm-sound-toggle input:checked + .alarm-ios-toggle {
+  background: var(--toolset-green);
+}
+
+
+/* ---------------- 35S SELECTED PRE-ALARM + ONE-SHOT MINUTE BEEP ---------------- */
+
+.shiny-checker-panel .prealarm-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.46);
+}
+
+html[data-theme="dark"] .shiny-checker-panel .prealarm-row {
+  background: #10131a;
+  border-color: var(--toolset-dark-border);
+}
+
+.shiny-checker-panel .prealarm-status {
+  margin-top: 4px;
+  color: var(--text-2);
+  font-size: 12px;
+  line-height: 1.35;
+  font-weight: 700;
+}
+
+.shiny-checker-panel .alarm-minute {
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.shiny-checker-panel .alarm-minute.selected {
+  border-color: var(--toolset-red);
+  background: rgba(255, 92, 92, 0.16);
+  box-shadow: 0 0 0 2px rgba(255, 92, 92, 0.16);
+}
+
+body.prealarm-active .shiny-checker-panel .prealarm-row {
+  border-color: var(--toolset-red);
+  box-shadow: 0 0 0 2px rgba(255, 92, 92, 0.18), 0 0 22px rgba(255, 92, 92, 0.18);
+  animation: preAlarmPulse 0.85s ease-in-out infinite;
+}
+
+@keyframes preAlarmPulse {
+  0%, 100% {
+    transform: translateY(0);
+    filter: brightness(1);
+  }
+  50% {
+    transform: translateY(-1px);
+    filter: brightness(1.18);
+  }
+}
+
+
+/* ---------------- SELECTED ALARM TIME CHAIN HIGHLIGHT ---------------- */
+
+.shiny-checker-panel .cell.hit-selected-time {
+  border-color: #facc15 !important;
+  background: rgba(250, 204, 21, 0.24) !important;
+  box-shadow:
+    0 0 0 2px rgba(250, 204, 21, 0.22),
+    0 0 18px rgba(250, 204, 21, 0.18) !important;
+}
+
+.shiny-checker-panel .cell.hit-hour.hit-selected-time {
+  border-color: var(--checker-green) !important;
+  background: linear-gradient(135deg, rgba(77,255,136,.30), rgba(250,204,21,.34)) !important;
+  box-shadow:
+    0 0 0 2px rgba(77,255,136,.26),
+    0 0 0 4px rgba(250,204,21,.16),
+    0 0 20px rgba(77,255,136,.18),
+    0 0 20px rgba(250,204,21,.16) !important;
+}
+
+.shiny-checker-panel .cell.hit-pokemon.hit-selected-time {
+  border-color: #facc15 !important;
+  background: linear-gradient(135deg, rgba(255,92,92,.28), rgba(250,204,21,.34)) !important;
+  box-shadow:
+    0 0 0 2px rgba(255,92,92,.18),
+    0 0 0 4px rgba(250,204,21,.16),
+    0 0 18px rgba(250,204,21,.18) !important;
+}
+
+.shiny-checker-panel .cell.hit-hour.hit-pokemon.hit-selected-time {
+  border-color: #facc15 !important;
+  background: linear-gradient(135deg, rgba(77,255,136,.28), rgba(255,92,92,.22), rgba(250,204,21,.36)) !important;
+  box-shadow:
+    0 0 0 2px rgba(77,255,136,.22),
+    0 0 0 4px rgba(255,92,92,.14),
+    0 0 0 6px rgba(250,204,21,.12),
+    0 0 22px rgba(250,204,21,.18) !important;
+}
+
+
+/* ---------------- ALARM CHIP NEXT + SELECTED STATES ---------------- */
+
+/* The next available alarm timestamp gets a red border.
+   If the current minute is a shiny timestamp, that current chip is the next-available chip. */
+.shiny-checker-panel .alarm-minute.next-available {
+  border-color: var(--toolset-red) !important;
+  box-shadow:
+    0 0 0 2px rgba(255, 92, 92, 0.24),
+    0 0 18px rgba(255, 92, 92, 0.16) !important;
+}
+
+/* Manually selected 35s pre-alarm timestamp fills yellow. */
+.shiny-checker-panel .alarm-minute.selected {
+  background: rgba(250, 204, 21, 0.82) !important;
+  border-color: rgba(250, 204, 21, 0.98) !important;
+  color: #111827 !important;
+  box-shadow:
+    0 0 0 2px rgba(250, 204, 21, 0.22),
+    0 0 18px rgba(250, 204, 21, 0.16) !important;
+}
+
+/* If selected chip is also the next timestamp, keep both meanings visible:
+   yellow fill + red outer border/glow. */
+.shiny-checker-panel .alarm-minute.selected.next-available {
+  border-color: var(--toolset-red) !important;
+  box-shadow:
+    0 0 0 2px rgba(255, 92, 92, 0.35),
+    0 0 0 5px rgba(250, 204, 21, 0.18),
+    0 0 20px rgba(255, 92, 92, 0.18) !important;
+}
+
+
+/* ---------------- STRONGER NEXT TIMESTAMP RED BORDER ---------------- */
+
+.shiny-checker-panel .alarm-minute.next-available {
+  border-color: #ff1f3d !important;
+  border-width: 3px !important;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.55),
+    0 0 0 6px rgba(255, 31, 61, 0.36),
+    0 0 22px rgba(255, 31, 61, 0.48),
+    0 0 38px rgba(255, 31, 61, 0.30) !important;
+  transform: translateY(-1px);
+}
+
+html[data-theme="dark"] .shiny-checker-panel .alarm-minute.next-available {
+  border-color: #ff3b55 !important;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.35),
+    0 0 0 6px rgba(255, 59, 85, 0.42),
+    0 0 24px rgba(255, 59, 85, 0.62),
+    0 0 44px rgba(255, 59, 85, 0.34) !important;
+}
+
+.shiny-checker-panel .alarm-minute.selected.next-available {
+  background: rgba(250, 204, 21, 0.88) !important;
+  border-color: #ff1f3d !important;
+  border-width: 3px !important;
+  color: #111827 !important;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.55),
+    0 0 0 6px rgba(255, 31, 61, 0.42),
+    0 0 22px rgba(255, 31, 61, 0.50),
+    0 0 34px rgba(250, 204, 21, 0.30) !important;
+}
+
+/* ---------------- EVENTS CAROUSEL PASS ---------------- */
+.event-carousel-panel {
+  overflow: hidden;
+  height: 0;
+  opacity: 0;
+  transform: translateY(-8px);
+  transition:
+    height 0.28s ease,
+    opacity 0.2s ease,
+    transform 0.28s ease;
+}
+
+.event-carousel-panel.open {
+  height: var(--event-carousel-height, auto);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.event-carousel-track {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  padding: 12px 2px 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.event-card {
+  flex: 0 0 min(260px, 78vw);
+  min-height: 128px;
+  text-align: left;
+  scroll-snap-align: start;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--text-1);
+  box-shadow: 0 8px 22px rgba(15, 23, 42, 0.06);
+  padding: 14px;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-2px);
+}
+
+.event-card.selected {
+  border-color: rgba(245, 158, 11, 0.72);
+  background: linear-gradient(180deg, rgba(255, 247, 191, 0.88), rgba(255, 226, 122, 0.68));
+  box-shadow: 0 0 0 2px rgba(245, 158, 11, 0.2), 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.event-card-eyebrow,
+.event-card-meta,
+.event-card-count,
+.event-carousel-empty {
+  margin: 0;
+}
+
+.event-card-eyebrow {
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  color: var(--text-3);
+  text-transform: uppercase;
+}
+
+.event-card-title {
+  margin: 7px 0 8px;
+  color: var(--text-1);
+  font-size: 14px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.event-card-meta {
+  color: var(--text-2);
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.event-card-count {
+  margin-top: 10px;
+  display: inline-flex;
+  width: fit-content;
+  padding: 5px 8px;
+  border-radius: 999px;
+  background: rgba(17, 24, 39, 0.08);
+  color: var(--text-1);
+  font-size: 10px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.event-carousel-empty {
+  padding: 12px 2px 4px;
+  color: var(--text-2);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.meta-badge.research {
+  background: rgba(168, 85, 247, 0.14);
+  color: #7e22ce;
+  border-color: rgba(168, 85, 247, 0.28);
+}
+
+.meta-badge.max {
+  background: rgba(14, 165, 233, 0.14);
+  color: #0369a1;
+  border-color: rgba(14, 165, 233, 0.28);
+}
+
+html[data-theme="dark"] .event-card {
+  background: #10131a;
+  border-color: var(--toolset-dark-border);
+}
+
+html[data-theme="dark"] .event-card.selected {
+  background: linear-gradient(180deg, rgba(255, 204, 0, 0.24), rgba(255, 149, 0, 0.16));
+  border-color: rgba(255, 204, 0, 0.55);
+}
+
+html[data-theme="dark"] .event-card-count {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+html[data-theme="dark"] .meta-badge.research {
+  color: #d8b4fe;
+  background: rgba(168, 85, 247, 0.18);
+  border-color: rgba(168, 85, 247, 0.38);
+}
+
+html[data-theme="dark"] .meta-badge.max {
+  color: #7dd3fc;
+  background: rgba(14, 165, 233, 0.18);
+  border-color: rgba(14, 165, 233, 0.38);
+}
+
+/* The Shiny Checker no longer uses the blocking banner. Keep only the bright
+   background pulse and vibration effect during shiny-available minutes. */
+.visual-alarm-banner {
+  display: none !important;
+}
+
+body.visual-alarm-active::before {
+  background:
+    linear-gradient(45deg, rgba(255,45,85,0.30), transparent 32%),
+    linear-gradient(135deg, transparent 48%, rgba(52,199,89,0.32), transparent 65%),
+    radial-gradient(circle at 80% 20%, rgba(255,204,0,0.40), transparent 28%),
+    radial-gradient(circle at 20% 80%, rgba(0,122,255,0.34), transparent 30%) !important;
+  opacity: 1 !important;
+}
+
+@media (max-width: 640px) {
+  .event-card {
+    flex-basis: min(230px, 82vw);
+    min-height: 120px;
+    padding: 12px;
+  }
+}
+
+html[data-theme="dark"] .list-wrap {
+  background-image:
+    radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.055) 1px, transparent 0),
+    linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  background-size: 18px 18px, auto;
+}
+
+
+/* ---------------- TRACKER APP SHELL LAYOUT ---------------- */
+
+body.tracker-app-shell-active {
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body.tracker-app-shell-active .toolset-nav {
+  flex: 0 0 auto;
+}
+
+body.tracker-app-shell-active #trackerView {
+  height: calc(100dvh - 86px);
+  min-height: 0;
+  overflow: hidden;
+}
+
+body.tracker-app-shell-active #trackerView .app-shell {
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+body.tracker-app-shell-active #trackerView .topbar,
+body.tracker-app-shell-active #trackerView .toolbar {
+  flex: 0 0 auto;
+}
+
+body.tracker-app-shell-active #trackerView .list-wrap {
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+body.tracker-app-shell-active #trackerView #pokemonList {
+  padding-bottom: 24px;
+}
+
+@media (max-width: 640px) {
+  body.tracker-app-shell-active {
+    padding-bottom: 0;
+  }
+
+  body.tracker-app-shell-active #trackerView {
+    height: calc(100dvh - 96px);
+  }
+}
+
+/* ---------------- COLLAPSIBLE REGION COMPLETION ---------------- */
+
+.progress-rank-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.progress-rank-row .progress-rank {
+  margin: 0;
+  flex: 1 1 auto;
+}
+
+.progress-card .region-completion-toggle {
+  flex: 0 0 auto;
+}
+
+.region-completion-wrap {
+  flex: 0 0 auto;
+  margin: 0 0 10px;
+}
+
+.region-completion-toggle {
+  width: 32px;
+  height: 32px;
+  min-height: 32px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.76);
+  color: var(--text-1);
+  padding: 0;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+
+.region-completion-toggle:hover,
+.region-completion-toggle.open {
+  background: rgba(255, 255, 255, 0.96);
+  border-color: rgba(17, 24, 39, 0.16);
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+}
+
+.region-completion-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 18px;
+  font-weight: 900;
+  line-height: 1;
+  transform: translateY(-1px) rotate(0deg);
+  transition: transform 0.25s ease;
+}
+
+.region-completion-toggle.open .region-completion-chevron {
+  transform: translateY(1px) rotate(180deg);
+}
+
+.region-completion-panel {
+  height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transform: translateY(-6px);
+  border: 0 solid transparent;
+  border-radius: 18px;
+  background: transparent;
+  transition:
+    height 0.28s ease,
+    opacity 0.2s ease,
+    transform 0.28s ease,
+    padding 0.28s ease,
+    margin 0.28s ease,
+    border-color 0.2s ease,
+    background 0.2s ease;
+}
+
+.region-completion-panel.open {
+  height: calc(var(--region-completion-height, 0px) + 24px);
+  opacity: 1;
+  transform: translateY(0);
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.region-completion-panel .region-progress-grid {
+  margin: 0;
+}
+
+html[data-theme="dark"] .region-completion-toggle {
+  background: rgba(255, 255, 255, 0.045);
+  border-color: var(--toolset-dark-border);
+}
+
+html[data-theme="dark"] .region-completion-toggle:hover,
+html[data-theme="dark"] .region-completion-toggle.open {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(77, 255, 136, 0.28);
+}
+
+html[data-theme="dark"] .region-completion-panel.open {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+}
+
+@media (max-width: 640px) {
+  .progress-rank-row {
+    gap: 8px;
+  }
+
+  .region-completion-toggle {
+    width: 30px;
+    height: 30px;
+    min-height: 30px;
+  }
+
+  .region-completion-panel.open {
+    height: calc(var(--region-completion-height, 0px) + 20px);
+    padding: 10px;
+  }
+}
+
+/* ---------------- VISUAL CLEANUP PASS: REGION SVG / COMPACT FILTER ROW / EVENT CARDS ---------------- */
+.region-completion-toggle {
+  width: 34px;
+  height: 34px;
+  min-height: 34px;
+}
+
+.region-completion-chevron {
+  width: 18px;
+  height: 18px;
+  display: block;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transform: rotate(0deg);
+  transition: transform 0.25s ease;
+}
+
+.region-completion-toggle.open .region-completion-chevron {
+  transform: rotate(180deg);
+}
+
+.region-completion-panel.open {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  box-shadow: var(--shadow) !important;
+  backdrop-filter: blur(12px);
+}
+
+html[data-theme="dark"] .region-completion-panel.open {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02)) !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+body.visual-alarm-active .region-completion-panel.open {
+  background: var(--surface) !important;
+  border-color: var(--border) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+.tracker-filter-row {
+  display: grid;
+  grid-template-columns: minmax(220px, 1fr) auto;
+  gap: 10px;
+  align-items: center;
+}
+
+.tracker-filter-row .search-wrap {
+  min-width: 0;
+}
+
+.tracker-filter-row #searchInput {
+  margin-bottom: 0;
+}
+
+.tracker-filter-row .controls {
+  justify-content: flex-end;
+  gap: 8px;
+  min-width: max-content;
+}
+
+.tracker-filter-row .controls-left,
+.tracker-filter-row .controls-right {
+  gap: 8px;
+}
+
+.tracker-filter-row .controls button {
+  height: 40px;
+  white-space: nowrap;
+}
+
+.event-card {
+  position: relative;
+  padding: 14px 14px 13px;
+  min-height: 104px;
+}
+
+.event-card.selected {
+  border-color: rgba(34, 197, 94, 0.78) !important;
+  background: linear-gradient(180deg, rgba(220, 252, 231, 0.96), rgba(187, 247, 208, 0.78)) !important;
+  box-shadow: 0 0 0 2px rgba(34, 197, 94, 0.22), 0 10px 26px rgba(15, 23, 42, 0.08) !important;
+}
+
+.event-card-live-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(34, 197, 94, 0.16);
+  color: #15803d;
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.event-card-title {
+  padding-right: 48px;
+  margin-top: 0 !important;
+}
+
+.event-card-count {
+  display: none !important;
+}
+
+html[data-theme="dark"] .event-card.selected {
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.22), rgba(34, 197, 94, 0.12)) !important;
+  border-color: rgba(77, 255, 136, 0.58) !important;
+  box-shadow: 0 0 0 2px rgba(77, 255, 136, 0.16), 0 10px 26px rgba(0, 0, 0, 0.20) !important;
+}
+
+html[data-theme="dark"] .event-card-live-badge {
+  color: #4dff88;
+  background: rgba(77, 255, 136, 0.13);
+  border-color: rgba(77, 255, 136, 0.30);
+}
+
+@media (max-width: 720px) {
+  .tracker-filter-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .tracker-filter-row .controls {
+    width: 100%;
+    min-width: 0;
+    justify-content: space-between;
+  }
+
+  .tracker-filter-row .controls-left {
+    flex: 1 1 auto;
+  }
+
+  .tracker-filter-row .controls-left button {
+    flex: 1 1 auto;
+  }
+
+  .tracker-filter-row .controls-right {
+    flex: 0 0 auto;
+  }
+}
+
+/* ---------------- COMPACT TOOLBAR + RETIRED LARGE GRID PASS ---------------- */
+.tracker-filter-row {
+  display: flex !important;
+  grid-template-columns: none !important;
+  align-items: center !important;
+  gap: 8px !important;
+  width: 100%;
+}
+
+.tracker-filter-row .search-wrap {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.tracker-filter-row .controls {
+  flex: 0 0 auto;
+  display: flex !important;
+  align-items: center;
+  justify-content: flex-end !important;
+  min-width: 0 !important;
+  gap: 3px !important;
+}
+
+.tracker-filter-row .controls-left {
+  display: flex !important;
+  flex: 0 0 auto !important;
+  gap: 6px !important;
+  min-width: 0;
+}
+
+.tracker-filter-row .controls button {
+  height: 34px !important;
+  min-height: 34px !important;
+  padding: 0 9px !important;
+  border-radius: 10px !important;
+  font-size: 11px !important;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.tracker-filter-row #searchInput {
+  height: 34px !important;
+  min-height: 34px !important;
+  margin-bottom: 0 !important;
+  font-size: 12px;
+}
+
+#compactViewBtn,
+.tracker-filter-row .controls-right:empty {
+  display: none !important;
+}
+
+/* Retire the old larger card view: compact grid is now the permanent default. */
+#pokemonList,
+body.compact-view #pokemonList {
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)) !important;
+  gap: 10px !important;
+}
+
+.pokemon-name,
+.pokemon-status,
+body.compact-view .pokemon-name,
+body.compact-view .pokemon-status {
+  display: none !important;
+}
+
+.pokemon-sprite,
+body.compact-view .pokemon-sprite {
+  width: 70px !important;
+  height: 70px !important;
+}
+
+.dex-number-badge,
+body.compact-view .dex-number-badge {
+  top: 5px !important;
+  left: 5px !important;
+  min-width: 34px !important;
+  padding: 3px 4px !important;
+  font-size: 7px !important;
+}
+
+.event-card-status-badge,
+.event-card-live-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 22px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  text-transform: uppercase;
+  pointer-events: none;
+}
+
+.event-card-status-badge.live,
+.event-card-live-badge {
+  background: rgba(34, 197, 94, 0.16);
+  color: #15803d;
+  border: 1px solid rgba(34, 197, 94, 0.28);
+}
+
+.event-card-status-badge.upcoming {
+  background: rgba(59, 130, 246, 0.14);
+  color: #1d4ed8;
+  border: 1px solid rgba(59, 130, 246, 0.28);
+}
+
+html[data-theme="dark"] .event-card-status-badge.live,
+html[data-theme="dark"] .event-card-live-badge {
+  color: #4dff88;
+  background: rgba(77, 255, 136, 0.13);
+  border-color: rgba(77, 255, 136, 0.30);
+}
+
+html[data-theme="dark"] .event-card-status-badge.upcoming {
+  color: #93c5fd;
+  background: rgba(59, 130, 246, 0.16);
+  border-color: rgba(147, 197, 253, 0.28);
+}
+
+@media (max-width: 720px) {
+  .tracker-filter-row {
+    flex-wrap: nowrap !important;
+    gap: 6px !important;
+  }
+
+  .tracker-filter-row .controls {
+    width: auto !important;
+    justify-content: flex-end !important;
+  }
+
+  .tracker-filter-row .controls-left {
+    flex: 0 0 auto !important;
+    gap: 5px !important;
+  }
+
+  .tracker-filter-row .controls-left button,
+  .tracker-filter-row .controls button {
+    flex: 0 0 auto !important;
+    padding: 0 7px !important;
+    font-size: 10px !important;
+    letter-spacing: -0.01em;
+  }
+
+  .tracker-filter-row #searchInput {
+    padding: 0 9px !important;
+    font-size: 11px !important;
+  }
+
+  #pokemonList,
+  body.compact-view #pokemonList {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+
+  .pokemon-card,
+  body.compact-view .pokemon-card {
+    padding: 4px !important;
+  }
+
+  .pokemon-sprite,
+  body.compact-view .pokemon-sprite {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+@media (max-width: 380px) {
+  .tracker-filter-row .controls-left button,
+  .tracker-filter-row .controls button {
+    padding: 0 5px !important;
+    font-size: 9px !important;
+  }
+}
+
+
+/* ---------------- SQUARE CARD + LIVE-BADGE + SPACING REGRESSION FIX ---------------- */
+/* Remove leftover vertical air between the top progress row and toolbar when region pane is closed. */
+.region-completion-wrap {
+  margin: 0 !important;
+  padding: 0 !important;
+  flex: 0 0 auto;
+}
+
+.region-completion-panel[hidden],
+.region-completion-panel:not(.open) {
+  height: 0 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-width: 0 !important;
+  box-shadow: none !important;
+  opacity: 0 !important;
+}
+
+.region-completion-panel.open {
+  margin: 0 0 8px !important;
+}
+
+body.tracker-app-shell-active #trackerView .topbar {
+  margin-bottom: 8px !important;
+}
+
+body.tracker-app-shell-active #trackerView .toolbar {
+  margin-bottom: 8px !important;
+}
+
+/* Permanent compact grid should stay square-ish, not rectangular. */
+#pokemonList,
+body.compact-view #pokemonList {
+  grid-template-columns: repeat(auto-fill, minmax(86px, 1fr)) !important;
+  gap: 8px !important;
+  align-items: start;
+}
+
+.pokemon-card,
+body.compact-view .pokemon-card {
+  aspect-ratio: 1 / 1 !important;
+  min-height: 0 !important;
+  padding: 6px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  overflow: hidden;
+}
+
+.pokemon-sprite,
+body.compact-view .pokemon-sprite {
+  width: min(70%, 64px) !important;
+  height: min(70%, 64px) !important;
+  margin: 0 !important;
+  object-fit: contain;
+}
+
+.dex-number-badge,
+body.compact-view .dex-number-badge {
+  top: 5px !important;
+  left: 6px !important;
+  min-width: auto !important;
+  padding: 0 !important;
+  background: transparent !important;
+}
+
+.meta-badge,
+body.compact-view .meta-badge {
+  top: 5px !important;
+  right: 5px !important;
+  padding: 2px 4px !important;
+  font-size: 7px !important;
+  line-height: 1 !important;
+}
+
+.event-countdown-badge,
+body.compact-view .event-countdown-badge {
+  right: 5px !important;
+  bottom: 5px !important;
+  padding: 2px 4px !important;
+  font-size: 7px !important;
+}
+
+@media (max-width: 720px) {
+  #pokemonList,
+  body.compact-view #pokemonList {
+    grid-template-columns: repeat(5, minmax(0, 1fr)) !important;
+    gap: 6px !important;
+  }
+
+  .pokemon-card,
+  body.compact-view .pokemon-card {
+    padding: 4px !important;
+  }
+
+  .pokemon-sprite,
+  body.compact-view .pokemon-sprite {
+    width: min(68%, 44px) !important;
+    height: min(68%, 44px) !important;
+  }
+}
+
+@media (min-width: 900px) {
+  #pokemonList,
+  body.compact-view #pokemonList {
+    grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)) !important;
+  }
+}
+
+/* ---------------- NAV REMOVAL + INTERNAL TOOL SWITCH ---------------- */
+.toolset-nav {
+  display: none !important;
+}
+
+.toolset-card-switch {
+  margin-top: 14px;
+  min-height: 34px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  color: var(--text-1);
+  padding: 0 12px;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+}
+
+.toolset-card-switch:hover {
+  transform: translateY(-1px);
+  border-color: rgba(34, 197, 94, 0.38);
+  box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+}
+
+.toolset-card-switch:focus-visible {
+  outline: 2px solid rgba(34, 197, 94, 0.42);
+  outline-offset: 3px;
+}
+
+.toolset-card-switch svg {
+  width: 15px;
+  height: 15px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+html[data-theme="dark"] .toolset-card-switch {
+  background: rgba(255, 255, 255, 0.055);
+  color: var(--toolset-dark-text);
+}
+
+/* Tracker app shell can now use the space previously occupied by the top nav. */
+body.tracker-app-shell-active #trackerView {
+  height: calc(100dvh - 48px);
+}
+
+@media (max-width: 640px) {
+  body.tracker-app-shell-active #trackerView {
+    height: calc(100dvh - 28px);
+  }
+}
+
+/* ---------------- FLOATING SAVE / THEME PANEL ---------------- */
+.floating-theme-btn .theme-icon {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.floating-theme-btn .theme-icon-moon {
+  display: none;
+}
+
+html[data-theme="dark"] .floating-theme-btn .theme-icon-sun {
+  display: none;
+}
+
+html[data-theme="dark"] .floating-theme-btn .theme-icon-moon {
+  display: block;
+}
+
+body.checker-page-active .floating-save-panel {
+  left: auto;
+  right: 20px;
+  bottom: 20px;
+}
+
+body.checker-page-active .floating-save-only,
+body.checker-page-active #importFileInput {
+  display: none !important;
+}
+
+body.checker-page-active .floating-save-panel {
+  padding: 8px;
+}
+
+html[data-theme="dark"] .floating-theme-btn {
+  color: var(--toolset-dark-text);
+}
+
+
+/* ---------------- ICON SWITCH + SPRITE SIZE + THEME ICON FIX ---------------- */
+.title-group,
+.shiny-checker-panel .checker-title-card {
+  position: relative;
+}
+
+.toolset-card-switch {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  margin: 0 !important;
+  width: 38px !important;
+  height: 38px !important;
+  min-height: 38px !important;
+  padding: 0 !important;
+  border-radius: 13px !important;
+  gap: 0 !important;
+}
+
+.toolset-card-switch span {
+  display: none !important;
+}
+
+.toolset-card-switch svg {
+  width: 19px !important;
+  height: 19px !important;
+}
+
+.pokemon-sprite,
+body.compact-view .pokemon-sprite {
+  width: 70% !important;
+  height: 70% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.dex-number-badge,
+body.compact-view .dex-number-badge {
+  left: 9px !important;
+}
+
+@media (max-width: 720px) {
+  .pokemon-sprite,
+  body.compact-view .pokemon-sprite {
+    width: 70% !important;
+    height: 70% !important;
+    max-width: none !important;
+    max-height: none !important;
+  }
+
+  .dex-number-badge,
+  body.compact-view .dex-number-badge {
+    left: 7px !important;
+  }
+}
+
+/* In light mode, show moon because tapping switches to dark. In dark mode, show sun because tapping switches to light. */
+.floating-theme-btn .theme-icon-sun {
+  display: none !important;
+}
+
+.floating-theme-btn .theme-icon-moon {
+  display: block !important;
+}
+
+html[data-theme="dark"] .floating-theme-btn .theme-icon-sun {
+  display: block !important;
+}
+
+html[data-theme="dark"] .floating-theme-btn .theme-icon-moon {
+  display: none !important;
+}
+
+body.checker-page-active .floating-save-panel {
+  left: 20px !important;
+  right: auto !important;
+}
+
+
+/* ---------------- FINAL TRACKER POLISH: SPACING, DENSE GRID, FLOAT VISIBILITY ---------------- */
+body.tracker-app-shell-active #trackerView .topbar {
+  gap: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.mini-grid-btn {
+  width: 34px !important;
+  min-width: 34px !important;
+  padding: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.mini-grid-btn svg {
+  width: 17px;
+  height: 17px;
+  fill: currentColor;
+}
+
+html[data-theme="dark"] .mini-grid-btn svg {
+  fill: var(--toolset-dark-text) !important;
+}
+
+body.ultra-grid-view #pokemonList {
+  grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+  gap: 6px !important;
+}
+
+body.ultra-grid-view .pokemon-card {
+  aspect-ratio: 1 / 1 !important;
+  padding: 3px !important;
+}
+
+body.ultra-grid-view .pokemon-sprite {
+  width: 70% !important;
+  height: 70% !important;
+  max-width: none !important;
+  max-height: none !important;
+}
+
+.dex-number-badge,
+body.compact-view .dex-number-badge,
+body.ultra-grid-view .dex-number-badge {
+  left: 13px !important;
+}
+
+@media (max-width: 720px) {
+  body.ultra-grid-view #pokemonList {
+    grid-template-columns: repeat(8, minmax(0, 1fr)) !important;
+    gap: 4px !important;
+  }
+
+  body.ultra-grid-view .pokemon-card {
+    padding: 2px !important;
+  }
+
+  body.ultra-grid-view .pokemon-sprite {
+    width: 70% !important;
+    height: 70% !important;
+  }
+
+  .dex-number-badge,
+  body.compact-view .dex-number-badge,
+  body.ultra-grid-view .dex-number-badge {
+    left: 10px !important;
+  }
+}
+
+.pokemon-list-reflowing .pokemon-card {
+  will-change: transform, opacity;
+}
+
+.toolset-card-switch svg {
+  width: 20px !important;
+  height: 20px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 1.9 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+.floating-save-panel {
+  z-index: 5030 !important;
+}
+
+body.visual-alarm-active .floating-save-panel {
+  z-index: 5030 !important;
+  position: fixed !important;
+  background: rgba(255, 255, 255, 0.74) !important;
+  border-color: rgba(255, 255, 255, 0.78) !important;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.25), 0 16px 36px rgba(0, 0, 0, 0.25) !important;
+}
+
+html[data-theme="dark"] body.visual-alarm-active .floating-save-panel {
+  background: rgba(15, 17, 21, 0.82) !important;
+  border-color: rgba(255, 255, 255, 0.28) !important;
+}
+
+body.visual-alarm-active .floating-icon-btn {
+  background: rgba(255, 255, 255, 0.96) !important;
+  color: #111827 !important;
+}
+
+html[data-theme="dark"] body.visual-alarm-active .floating-icon-btn {
+  background: rgba(31, 36, 48, 0.96) !important;
+  color: var(--toolset-dark-text) !important;
+}
+
+/* ---------------- NIGHT MODE GREEN SHINY + REGION + SELECTED DOT POLISH ---------------- */
+/* In dark mode, caught shiny cards use the same green language as the selected event. */
+html[data-theme="dark"] .pokemon-card.shiny {
+  background:
+    radial-gradient(circle at top, rgba(77, 255, 136, 0.24), transparent 58%),
+    linear-gradient(180deg, rgba(34, 197, 94, 0.24), rgba(16, 185, 129, 0.13)) !important;
+  border-color: rgba(77, 255, 136, 0.56) !important;
+  box-shadow:
+    0 0 0 1px rgba(77, 255, 136, 0.16),
+    0 12px 28px rgba(0, 0, 0, 0.30),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08) !important;
+}
+
+html[data-theme="dark"] .pokemon-card.shiny .pokemon-name {
+  color: #d9ffe7 !important;
+}
+
+html[data-theme="dark"] .pokemon-card.shiny .pokemon-status {
+  color: rgba(217, 255, 231, 0.76) !important;
+}
+
+/* Dark-mode region cards keep their tier identity instead of becoming flat dark cards. */
+html[data-theme="dark"] .region-card.tier-casual {
+  border-color: rgba(248, 113, 113, 0.58) !important;
+  background: linear-gradient(180deg, rgba(248, 113, 113, 0.18), rgba(127, 29, 29, 0.10)) !important;
+}
+
+html[data-theme="dark"] .region-card.tier-casual .region-percent,
+html[data-theme="dark"] .region-card.tier-casual .region-count {
+  color: #fca5a5 !important;
+}
+
+html[data-theme="dark"] .region-card.tier-getting {
+  border-color: rgba(251, 146, 60, 0.58) !important;
+  background: linear-gradient(180deg, rgba(251, 146, 60, 0.18), rgba(124, 45, 18, 0.10)) !important;
+}
+
+html[data-theme="dark"] .region-card.tier-getting .region-percent,
+html[data-theme="dark"] .region-card.tier-getting .region-count {
+  color: #fdba74 !important;
+}
+
+html[data-theme="dark"] .region-card.tier-respectable {
+  border-color: rgba(250, 204, 21, 0.58) !important;
+  background: linear-gradient(180deg, rgba(250, 204, 21, 0.18), rgba(113, 63, 18, 0.10)) !important;
+}
+
+html[data-theme="dark"] .region-card.tier-respectable .region-percent,
+html[data-theme="dark"] .region-card.tier-respectable .region-count {
+  color: #fde68a !important;
+}
+
+html[data-theme="dark"] .region-card.tier-true {
+  border-color: rgba(134, 239, 172, 0.58) !important;
+  background: linear-gradient(180deg, rgba(134, 239, 172, 0.18), rgba(20, 83, 45, 0.10)) !important;
+}
+
+html[data-theme="dark"] .region-card.tier-true .region-percent,
+html[data-theme="dark"] .region-card.tier-true .region-count {
+  color: #bbf7d0 !important;
+}
+
+html[data-theme="dark"] .region-card.tier-completionist {
+  border-color: rgba(77, 255, 136, 0.62) !important;
+  background: linear-gradient(180deg, rgba(77, 255, 136, 0.19), rgba(20, 83, 45, 0.12)) !important;
+}
+
+html[data-theme="dark"] .region-card.tier-completionist .region-percent,
+html[data-theme="dark"] .region-card.tier-completionist .region-count {
+  color: #4dff88 !important;
+}
+
+/* Events / Unregistered selected red dot sits centered on the top-right border. */
+.controls button.active::after {
+  left: auto !important;
+  right: -4px !important;
+  top: -4px !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 999px !important;
+  background: #ef4444 !important;
+  box-shadow: 0 0 0 2px var(--surface), 0 0 0 3px rgba(239, 68, 68, 0.20) !important;
+}
+
+html[data-theme="dark"] .controls button.active::after {
+  box-shadow: 0 0 0 2px #10131a, 0 0 0 3px rgba(255, 92, 92, 0.28) !important;
+}
+
+
+/* ---------------- UNIFIED TOOL PAGE VISUAL SYSTEM ----------------
+   Single source for Shiny Dex + Shiny Tracking shell spacing, card sizing,
+   switch buttons, floating controls, and hour wheel alignment.
+   This replaces the older Shiny Tracking patch stack. */
+:root {
+  --tool-page-max: 1180px;
+  --tool-page-gap: 16px;
+  --tool-page-pad: 24px;
+  --tool-card-pad: 20px;
+  --tool-card-radius: 20px;
+  --tool-switch-size: 38px;
+}
+
+body.checker-page-active {
+  min-height: 100dvh !important;
+  height: auto !important;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  padding: var(--tool-page-pad) !important;
+  background: var(--bg) !important;
+}
+
+#trackerView .app-shell,
+body.checker-page-active #checkerView main {
+  width: min(var(--tool-page-max), 100%) !important;
+  margin-inline: auto !important;
+}
+
+body.checker-page-active #checkerView main {
+  display: grid !important;
+  gap: var(--tool-page-gap) !important;
+  align-content: start !important;
+}
+
+body.checker-page-active #checkerView .checker-topbar {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 320px) !important;
+  gap: var(--tool-page-gap) !important;
+  align-items: stretch !important;
+  margin: 0 !important;
+}
+
+body.checker-page-active #checkerView .checker-title-card,
+body.checker-page-active #checkerView .checker-key-card,
+body.checker-page-active #checkerView .card {
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--tool-card-radius) !important;
+  box-shadow: var(--shadow) !important;
+  padding: var(--tool-card-pad) !important;
+  color: var(--text-1) !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .checker-title-card,
+html[data-theme="dark"] body.checker-page-active #checkerView .checker-key-card,
+html[data-theme="dark"] body.checker-page-active #checkerView .card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.025)) !important;
+  border-color: var(--toolset-dark-border) !important;
+  color: var(--toolset-dark-text) !important;
+}
+
+body.checker-page-active #checkerView .section-title {
+  margin: 0 0 10px !important;
+}
+
+body.checker-page-active #checkerView .checker-key-card .key-row,
+body.checker-page-active #checkerView .pokedex-input-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  gap: 10px !important;
+  align-items: center !important;
+}
+
+body.checker-page-active #checkerView input {
+  height: 44px !important;
+  min-width: 0 !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--border) !important;
+  background: #ffffff !important;
+  color: var(--text-1) !important;
+  padding: 0 12px !important;
+  font-family: Arial, sans-serif !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView input {
+  background: #10131a !important;
+  color: var(--toolset-dark-text) !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+body.checker-page-active #checkerView button:not(.toolset-card-switch):not(.floating-icon-btn):not(.alarm-minute) {
+  height: 44px !important;
+  min-height: 44px !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--border) !important;
+  background: #ffffff !important;
+  color: var(--text-1) !important;
+  padding: 0 12px !important;
+  font-family: Arial, sans-serif !important;
+  font-weight: 800 !important;
+  cursor: pointer !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView button:not(.toolset-card-switch):not(.floating-icon-btn):not(.alarm-minute) {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-color: rgba(255,255,255,0.22) !important;
+}
+
+.title-group,
+#checkerView .checker-title-card {
+  position: relative !important;
+}
+
+.toolset-card-switch,
+body.checker-page-active .toolset-card-switch {
+  position: absolute !important;
+  top: 14px !important;
+  right: 14px !important;
+  width: var(--tool-switch-size) !important;
+  height: var(--tool-switch-size) !important;
+  min-width: var(--tool-switch-size) !important;
+  min-height: var(--tool-switch-size) !important;
+  max-width: var(--tool-switch-size) !important;
+  max-height: var(--tool-switch-size) !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border-radius: 13px !important;
+  border: 1px solid var(--border) !important;
+  background: rgba(255, 255, 255, 0.78) !important;
+  color: #111827 !important;
+  box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08) !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  line-height: 1 !important;
+}
+
+html[data-theme="dark"] .toolset-card-switch,
+html[data-theme="dark"] body.checker-page-active .toolset-card-switch {
+  background: #ffffff !important;
+  color: #111827 !important;
+  border-color: rgba(255,255,255,0.22) !important;
+}
+
+.toolset-card-switch svg,
+.toolset-card-switch svg * {
+  width: 20px !important;
+  height: 20px !important;
+  fill: none !important;
+  stroke: currentColor !important;
+  stroke-width: 2 !important;
+  stroke-linecap: round !important;
+  stroke-linejoin: round !important;
+}
+
+/* Floating control panel: same bottom-left anchor in both tools. */
+.floating-save-panel,
+body.checker-page-active .floating-save-panel,
+body.visual-alarm-active .floating-save-panel,
+html[data-theme="dark"] body.visual-alarm-active .floating-save-panel {
+  position: fixed !important;
+  left: 20px !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 20px !important;
+  z-index: 10080 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  padding: 10px !important;
+  transform: none !important;
+  animation: none !important;
+}
+
+body.checker-page-active .floating-save-only,
+body.checker-page-active #importFileInput {
+  display: none !important;
+}
+
+body.visual-alarm-active .floating-save-panel {
+  background: rgba(255,255,255,0.82) !important;
+  border-color: rgba(255,255,255,0.72) !important;
+}
+
+html[data-theme="dark"] body.visual-alarm-active .floating-save-panel {
+  background: rgba(15,17,21,0.86) !important;
+  border-color: rgba(255,255,255,0.28) !important;
+}
+
+/* In light mode show moon; in dark mode show sun. */
+.floating-theme-btn .theme-icon-sun { display: none !important; }
+.floating-theme-btn .theme-icon-moon { display: block !important; }
+html[data-theme="dark"] .floating-theme-btn .theme-icon-sun { display: block !important; }
+html[data-theme="dark"] .floating-theme-btn .theme-icon-moon { display: none !important; }
+
+/* Target-hour row: compact side-by-side, with centered selected hour. */
+body.checker-page-active #checkerView .time-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(180px, 0.9fr) !important;
+  gap: var(--tool-page-gap) !important;
+  align-items: stretch !important;
+}
+
+body.checker-page-active #checkerView .wheel-field {
+  display: grid !important;
+  grid-template-rows: auto 1fr !important;
+  gap: 8px !important;
+  min-width: 0 !important;
+}
+
+body.checker-page-active #checkerView .clock-label {
+  display: none !important;
+}
+
+body.checker-page-active #checkerView .time-wheel,
+#checkerView .time-wheel {
+  width: 100% !important;
+  height: 86px !important;
+  min-height: 86px !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) !important;
+  align-items: stretch !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  border-radius: 18px !important;
+  border: 1px solid var(--border) !important;
+  background: #ffffff !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .time-wheel,
+html[data-theme="dark"] #checkerView .time-wheel {
+  background: #10131a !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+body.checker-page-active #checkerView .wheel-btn,
+#checkerView .wheel-btn {
+  display: none !important;
+}
+
+body.checker-page-active #checkerView .wheel-face,
+#checkerView .wheel-face {
+  width: 100% !important;
+  height: 86px !important;
+  min-height: 86px !important;
+  display: grid !important;
+  grid-template-rows: 1fr 38px 1fr !important;
+  align-items: center !important;
+  justify-items: center !important;
+  text-align: center !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+body.checker-page-active #checkerView .wheel-face::before,
+#checkerView .wheel-face::before {
+  content: "" !important;
+  position: absolute !important;
+  left: 10px !important;
+  right: 10px !important;
+  top: 50% !important;
+  height: 38px !important;
+  transform: translateY(-50%) !important;
+  border-top: 1px solid rgba(77,255,136,0.45) !important;
+  border-bottom: 1px solid rgba(77,255,136,0.45) !important;
+  border-radius: 10px !important;
+  pointer-events: none !important;
+}
+
+body.checker-page-active #checkerView .wheel-display,
+#checkerView .wheel-display {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 100% !important;
+  min-height: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+  font-weight: 900 !important;
+  font-variant-numeric: tabular-nums !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+  position: relative !important;
+  z-index: 2 !important;
+}
+
+body.checker-page-active #checkerView .wheel-display.current,
+#checkerView .wheel-display.current {
+  color: var(--text-1) !important;
+  font-size: 19px !important;
+  letter-spacing: -0.02em !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .wheel-display.current,
+html[data-theme="dark"] #checkerView .wheel-display.current {
+  color: #ffffff !important;
+}
+
+body.checker-page-active #checkerView .wheel-display.side,
+#checkerView .wheel-display.side {
+  color: var(--text-3) !important;
+  font-size: 12px !important;
+  opacity: 0.72 !important;
+}
+
+body.checker-page-active #checkerView .clock-card {
+  display: grid !important;
+  align-content: center !important;
+  justify-items: center !important;
+  min-width: 0 !important;
+  border-radius: 18px !important;
+  border: 1px solid var(--border) !important;
+  background: rgba(255,255,255,0.62) !important;
+  padding: 10px !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .clock-card {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+body.checker-page-active #checkerView .clock-time {
+  font-size: clamp(22px, 3.2vw, 34px) !important;
+  line-height: 1 !important;
+  color: var(--text-1) !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .clock-time {
+  color: #ffffff !important;
+}
+
+body.checker-page-active #checkerView .clock-date {
+  margin-top: 5px !important;
+  font-size: 11px !important;
+  color: var(--text-3) !important;
+}
+
+/* Alarm preview: timestamp-only labels. */
+body.checker-page-active #checkerView .alarm-preview-card {
+  display: grid !important;
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: 10px !important;
+}
+
+body.checker-page-active #checkerView .alarm-preview-card .section-title,
+body.checker-page-active #checkerView .alarm-preview-list {
+  grid-column: 1 / -1 !important;
+}
+
+body.checker-page-active #checkerView .alarm-preview-meta {
+  display: none !important;
+}
+
+body.checker-page-active #checkerView .alarm-sound-row,
+body.checker-page-active #checkerView .prealarm-row {
+  min-width: 0 !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 16px !important;
+  background: rgba(255,255,255,0.58) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 8px !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .alarm-sound-row,
+html[data-theme="dark"] body.checker-page-active #checkerView .prealarm-row {
+  background: rgba(255,255,255,0.04) !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+body.checker-page-active #checkerView .alarm-sound-label,
+body.checker-page-active #checkerView #nextShinyMinuteLabel,
+body.checker-page-active #checkerView #nextPreAlarmLabel {
+  margin: 0 !important;
+  color: var(--text-1) !important;
+  font-size: 14px !important;
+  font-weight: 900 !important;
+  letter-spacing: 0.02em !important;
+  line-height: 1.2 !important;
+  text-transform: none !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .alarm-sound-label,
+html[data-theme="dark"] body.checker-page-active #checkerView #nextShinyMinuteLabel,
+html[data-theme="dark"] body.checker-page-active #checkerView #nextPreAlarmLabel {
+  color: #ffffff !important;
+}
+
+body.checker-page-active #checkerView .prealarm-status {
+  color: var(--text-3) !important;
+  font-size: 10px !important;
+}
+
+/* Dark-mode region titles stay readable. */
+html[data-theme="dark"] .region-card .region-name {
+  color: #ffffff !important;
+}
+
+@media (max-width: 680px) {
+  :root {
+    --tool-page-pad: 14px;
+    --tool-page-gap: 12px;
+    --tool-card-pad: 14px;
+  }
+
+  body.checker-page-active #checkerView .checker-topbar,
+  body.checker-page-active #checkerView .time-row,
+  body.checker-page-active #checkerView .alarm-preview-card {
+    grid-template-columns: 1fr !important;
+  }
+
+  .floating-save-panel,
+  body.checker-page-active .floating-save-panel,
+  body.visual-alarm-active .floating-save-panel,
+  html[data-theme="dark"] body.visual-alarm-active .floating-save-panel {
+    left: 12px !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  }
+}
+
+
+/* ---------------- FINAL UNIFICATION: MATCH TOP CARD DIMENSIONS + OPAQUE TRACKING PANELS ----------------
+   One visual rule for the two primary top cards on both pages:
+   Shiny Dex: Toolset + Progress
+   Shiny Tracking: Toolset + Key
+*/
+#trackerView .topbar,
+body.checker-page-active #checkerView .checker-topbar {
+  grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  gap: var(--tool-page-gap, 16px) !important;
+  align-items: stretch !important;
+}
+
+#trackerView .title-group,
+#trackerView .progress-card,
+body.checker-page-active #checkerView .checker-title-card,
+body.checker-page-active #checkerView .checker-key-card {
+  width: 100% !important;
+  min-width: 0 !important;
+  min-height: 148px !important;
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--border) !important;
+  border-radius: var(--tool-card-radius, 20px) !important;
+  padding: var(--tool-card-pad, 20px) !important;
+  box-shadow: var(--shadow) !important;
+}
+
+#trackerView .progress-card {
+  justify-content: flex-start !important;
+}
+
+body.checker-page-active #checkerView .checker-key-card .key-row {
+  margin-top: auto !important;
+}
+
+/* Shiny Tracking panel backgrounds should be real panels, not translucent layers.
+   This prevents the shiny-minute background from bleeding through cards. */
+body.checker-page-active #checkerView .checker-title-card,
+body.checker-page-active #checkerView .checker-key-card,
+body.checker-page-active #checkerView .card,
+body.checker-page-active #checkerView .clock-card,
+body.checker-page-active #checkerView .time-wheel,
+body.checker-page-active #checkerView .alarm-sound-row,
+body.checker-page-active #checkerView .prealarm-row {
+  background: #ffffff !important;
+  border-color: var(--border) !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .checker-title-card,
+html[data-theme="dark"] body.checker-page-active #checkerView .checker-key-card,
+html[data-theme="dark"] body.checker-page-active #checkerView .card,
+html[data-theme="dark"] body.checker-page-active #checkerView .clock-card,
+html[data-theme="dark"] body.checker-page-active #checkerView .time-wheel,
+html[data-theme="dark"] body.checker-page-active #checkerView .alarm-sound-row,
+html[data-theme="dark"] body.checker-page-active #checkerView .prealarm-row {
+  background: var(--toolset-dark-panel) !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+/* During shiny minute, keep the layout and panel paint stable.
+   The page can still vibrate/glow, but cards stay opaque and readable. */
+body.visual-alarm-active #checkerView .checker-title-card,
+body.visual-alarm-active #checkerView .checker-key-card,
+body.visual-alarm-active #checkerView .card,
+body.visual-alarm-active #checkerView .clock-card,
+body.visual-alarm-active #checkerView .time-wheel,
+body.visual-alarm-active #checkerView .alarm-sound-row,
+body.visual-alarm-active #checkerView .prealarm-row {
+  background: #ffffff !important;
+  border-color: rgba(17, 24, 39, 0.12) !important;
+  color: #111827 !important;
+}
+
+html[data-theme="dark"] body.visual-alarm-active #checkerView .checker-title-card,
+html[data-theme="dark"] body.visual-alarm-active #checkerView .checker-key-card,
+html[data-theme="dark"] body.visual-alarm-active #checkerView .card,
+html[data-theme="dark"] body.visual-alarm-active #checkerView .clock-card,
+html[data-theme="dark"] body.visual-alarm-active #checkerView .time-wheel,
+html[data-theme="dark"] body.visual-alarm-active #checkerView .alarm-sound-row,
+html[data-theme="dark"] body.visual-alarm-active #checkerView .prealarm-row {
+  background: var(--toolset-dark-panel) !important;
+  border-color: var(--toolset-dark-border) !important;
+  color: var(--toolset-dark-text) !important;
+}
+
+/* Keep current time/date tab visually consistent with the hour knob. */
+body.checker-page-active #checkerView .clock-card {
+  min-height: 86px !important;
+  border-radius: 18px !important;
+}
+
+/* Keep the primary pair side-by-side on both pages.
+   Shiny Dex: Toolset + Progress
+   Shiny Tracking: Toolset + Key
+   Do not stack on mobile; shrink padding/type instead so switching pages keeps the same silhouette. */
+@media (max-width: 720px) {
+  #trackerView .topbar,
+  body.checker-page-active #checkerView .checker-topbar {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  #trackerView .title-group,
+  #trackerView .progress-card,
+  body.checker-page-active #checkerView .checker-title-card,
+  body.checker-page-active #checkerView .checker-key-card {
+    min-height: 126px !important;
+    padding: 12px !important;
+  }
+
+  #trackerView .title-group h1,
+  body.checker-page-active #checkerView .checker-title-card h1 {
+    font-size: 21px !important;
+    line-height: 1.05 !important;
+  }
+
+  #trackerView .subtitle,
+  body.checker-page-active #checkerView .checker-title-card .subtitle {
+    font-size: 11px !important;
+    line-height: 1.25 !important;
+  }
+
+  #trackerView .progress-value,
+  body.checker-page-active #checkerView .checker-key-card .progress-value {
+    font-size: 18px !important;
+  }
+}
+
+
+/* FINAL: top tool cards stay side-by-side everywhere. */
+#trackerView .topbar,
+body.checker-page-active #checkerView .checker-topbar {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+}
+
+@media (max-width: 640px) {
+  #trackerView .topbar,
+  body.checker-page-active #checkerView .checker-topbar {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  #trackerView .title-group,
+  #trackerView .progress-card,
+  body.checker-page-active #checkerView .checker-title-card,
+  body.checker-page-active #checkerView .checker-key-card {
+    min-height: 122px !important;
+    padding: 12px !important;
+  }
+}
+
+/* ---------------- SHINY-MINUTE VISUAL RESET ----------------
+   The shiny-minute page/background effect is intentionally disabled.
+   This keeps all page layout and the floating theme/save panel stable until
+   the visual alarm is rebuilt from scratch. */
+body.visual-alarm-active,
+body.visual-alarm-active .toolset-nav,
+body.visual-alarm-active .app-view:not([hidden]),
+body.visual-alarm-active #checkerView .checker-title-card,
+body.visual-alarm-active #checkerView .checker-key-card,
+body.visual-alarm-active #checkerView .card,
+body.visual-alarm-active #checkerView .clock-card,
+body.visual-alarm-active #checkerView .time-wheel,
+body.visual-alarm-active #checkerView .alarm-sound-row,
+body.visual-alarm-active #checkerView .prealarm-row,
+body.visual-alarm-active #checkerView .cell {
+  animation: none !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+body.visual-alarm-active::before,
+body.visual-alarm-active::after {
+  content: none !important;
+  display: none !important;
+  animation: none !important;
+  background: none !important;
+  opacity: 0 !important;
+}
+
+.visual-alarm-banner {
+  display: none !important;
+}
+
+/* Floating panel single source of truth: fixed bottom-left in every view,
+   unaffected by checker mode, shiny minute, or mobile layout. */
+.floating-save-panel,
+body.checker-page-active .floating-save-panel,
+body.visual-alarm-active .floating-save-panel,
+html[data-theme="dark"] .floating-save-panel,
+html[data-theme="dark"] body.checker-page-active .floating-save-panel,
+html[data-theme="dark"] body.visual-alarm-active .floating-save-panel {
+  position: fixed !important;
+  left: max(20px, env(safe-area-inset-left)) !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: max(20px, env(safe-area-inset-bottom)) !important;
+  z-index: 10080 !important;
+  transform: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 640px) {
+  .floating-save-panel,
+  body.checker-page-active .floating-save-panel,
+  body.visual-alarm-active .floating-save-panel,
+  html[data-theme="dark"] .floating-save-panel,
+  html[data-theme="dark"] body.checker-page-active .floating-save-panel,
+  html[data-theme="dark"] body.visual-alarm-active .floating-save-panel {
+    left: max(12px, env(safe-area-inset-left)) !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  }
+}
+
+/* ---------------- SHINY-MINUTE VISUAL REBUILD V2: CSS ONLY ----------------
+   No image assets. This imitates the uploaded space/rainbow palette with pure CSS.
+   It only paints behind the app and never moves controls/cards/floating panel. */
+body.visual-alarm-active {
+  position: relative !important;
+  overflow-x: hidden !important;
+}
+
+body.visual-alarm-active::before,
+body.visual-alarm-active::after {
+  content: "" !important;
+  display: block !important;
+  position: fixed !important;
+  inset: 0 !important;
+  pointer-events: none !important;
+  transform: none !important;
+  z-index: 0 !important;
+}
+
+body.visual-alarm-active > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark mode: synthetic nebula + starfield. */
+html[data-theme="dark"] body.visual-alarm-active {
+  background:
+    radial-gradient(circle at 48% 38%, rgba(17, 24, 39, 0.35), transparent 28%),
+    linear-gradient(135deg, #020617 0%, #050816 44%, #08112c 100%) !important;
+}
+
+html[data-theme="dark"] body.visual-alarm-active::before {
+  opacity: 0.96 !important;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(255,255,255,0.95) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 24% 63%, rgba(255,255,255,0.72) 0 1px, transparent 1.6px),
+    radial-gradient(circle at 58% 22%, rgba(255,255,255,0.88) 0 1px, transparent 1.7px),
+    radial-gradient(circle at 80% 72%, rgba(255,255,255,0.78) 0 1px, transparent 1.8px),
+    radial-gradient(circle at 73% 18%, rgba(139,92,246,0.48), transparent 23%),
+    radial-gradient(ellipse at 78% 24%, rgba(99,102,241,0.46), transparent 30%),
+    radial-gradient(ellipse at 28% 68%, rgba(37,99,235,0.42), transparent 33%),
+    radial-gradient(ellipse at 54% 42%, rgba(124,58,237,0.32), transparent 38%),
+    linear-gradient(120deg, rgba(8,13,35,0.95), rgba(5,8,22,0.88));
+  background-size:
+    180px 180px,
+    240px 240px,
+    210px 210px,
+    260px 260px,
+    auto, auto, auto, auto, auto;
+  filter: saturate(1.45) contrast(1.12) brightness(0.92);
+  animation: shinySpaceNebulaBlink 1.2s ease-in-out infinite;
+}
+
+/* Bright green thunder layer, CSS only. */
+html[data-theme="dark"] body.visual-alarm-active::after {
+  opacity: 0.85 !important;
+  mix-blend-mode: screen;
+  background:
+    linear-gradient(116deg, transparent 0 18%, rgba(77,255,136,0) 19.2%, rgba(77,255,136,0.95) 20.1%, rgba(232,255,241,0.98) 20.45%, rgba(77,255,136,0) 21.4%, transparent 22% 100%),
+    linear-gradient(42deg, transparent 0 62%, rgba(77,255,136,0) 63%, rgba(77,255,136,0.82) 64%, rgba(235,255,242,0.96) 64.35%, rgba(77,255,136,0) 65.5%, transparent 66% 100%),
+    linear-gradient(156deg, transparent 0 38%, rgba(77,255,136,0) 39%, rgba(77,255,136,0.62) 40%, rgba(240,255,245,0.78) 40.25%, rgba(77,255,136,0) 41.4%, transparent 42% 100%),
+    radial-gradient(circle at 72% 22%, rgba(77,255,136,0.38), transparent 26%),
+    radial-gradient(circle at 40% 60%, rgba(77,255,136,0.18), transparent 36%);
+  filter: drop-shadow(0 0 20px rgba(77,255,136,0.95));
+  animation: shinyGreenThunderBlink 0.62s steps(2, end) infinite;
+}
+
+/* Light mode: bright rainbow alarm field. */
+html[data-theme="light"] body.visual-alarm-active {
+  background: #fff7ff !important;
+}
+
+html[data-theme="light"] body.visual-alarm-active::before {
+  opacity: 0.95 !important;
+  background:
+    radial-gradient(circle at 14% 20%, rgba(255, 45, 128, 0.72), transparent 32%),
+    radial-gradient(circle at 84% 20%, rgba(0, 145, 255, 0.68), transparent 34%),
+    radial-gradient(circle at 50% 88%, rgba(255, 214, 10, 0.76), transparent 38%),
+    radial-gradient(circle at 72% 74%, rgba(52, 199, 89, 0.58), transparent 34%),
+    linear-gradient(135deg, rgba(255, 77, 109, 0.38), rgba(122, 92, 255, 0.34), rgba(77, 255, 136, 0.31), rgba(255, 221, 87, 0.36));
+  filter: saturate(1.45) brightness(1.04);
+  animation: shinyRainbowBlink 0.95s ease-in-out infinite;
+}
+
+html[data-theme="light"] body.visual-alarm-active::after {
+  opacity: 0.38 !important;
+  mix-blend-mode: screen;
+  background:
+    linear-gradient(115deg, transparent 0 18%, rgba(255,255,255,0.0) 19%, rgba(255,255,255,0.92) 20%, rgba(77,255,136,0.76) 20.4%, rgba(255,255,255,0.0) 22%, transparent 23% 100%),
+    linear-gradient(48deg, transparent 0 58%, rgba(255,255,255,0.0) 59%, rgba(255,255,255,0.88) 60%, rgba(0,122,255,0.62) 60.5%, rgba(255,255,255,0.0) 62%, transparent 63% 100%);
+  filter: drop-shadow(0 0 18px rgba(255,255,255,0.88));
+  animation: shinyRainbowThunderBlink 0.7s steps(2, end) infinite;
+}
+
+@keyframes shinySpaceNebulaBlink {
+  0%, 100% { opacity: 0.72; filter: saturate(1.15) contrast(1.05) brightness(0.82); }
+  42% { opacity: 1; filter: saturate(1.65) contrast(1.18) brightness(1.02); }
+  56% { opacity: 0.82; }
+}
+
+@keyframes shinyGreenThunderBlink {
+  0%, 100% { opacity: 0.25; }
+  10% { opacity: 1; }
+  18% { opacity: 0.22; }
+  34% { opacity: 0.92; }
+  62% { opacity: 0.30; }
+  76% { opacity: 1; }
+}
+
+@keyframes shinyRainbowBlink {
+  0%, 100% { opacity: 0.62; filter: saturate(1.15) brightness(1.0); }
+  48% { opacity: 1; filter: saturate(1.7) brightness(1.08); }
+}
+
+@keyframes shinyRainbowThunderBlink {
+  0%, 100% { opacity: 0.22; }
+  18% { opacity: 0.62; }
+  32% { opacity: 0.16; }
+  56% { opacity: 0.68; }
+  80% { opacity: 0.30; }
+}
+
+/* The floating panel must always stay above the visual alarm. */
+.floating-save-panel,
+body.visual-alarm-active .floating-save-panel,
+html[data-theme="dark"] body.visual-alarm-active .floating-save-panel,
+html[data-theme="light"] body.visual-alarm-active .floating-save-panel {
+  position: fixed !important;
+  left: max(20px, env(safe-area-inset-left)) !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: max(20px, env(safe-area-inset-bottom)) !important;
+  z-index: 10080 !important;
+  transform: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (max-width: 640px) {
+  .floating-save-panel,
+  body.visual-alarm-active .floating-save-panel,
+  html[data-theme="dark"] body.visual-alarm-active .floating-save-panel,
+  html[data-theme="light"] body.visual-alarm-active .floating-save-panel {
+    left: max(12px, env(safe-area-inset-left)) !important;
+    bottom: max(12px, env(safe-area-inset-bottom)) !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   SHINY MINUTE VISUAL RESET — CSS background only, no image, no border.
+   The effect lives behind the app panes and never transforms layout.
+------------------------------------------------------------------ */
+body.visual-alarm-active,
+body.visual-alarm-active .toolset-nav,
+body.visual-alarm-active .app-view:not([hidden]),
+body.visual-alarm-active #checkerView .checker-title-card,
+body.visual-alarm-active #checkerView .checker-key-card,
+body.visual-alarm-active #checkerView .card,
+body.visual-alarm-active #checkerView .cell {
+  animation: none !important;
+  filter: none !important;
+  transform: none !important;
+}
+
+body.visual-alarm-active::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+
+body.visual-alarm-active::before {
+  content: "" !important;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 0 !important;
+  pointer-events: none !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  opacity: 1 !important;
+  mix-blend-mode: normal !important;
+  transform: none !important;
+}
+
+body.visual-alarm-active .app-view:not([hidden]),
+body.visual-alarm-active .floating-save-panel {
+  position: relative;
+  z-index: 2 !important;
+}
+
+body.visual-alarm-active .floating-save-panel {
+  position: fixed !important;
+  left: 20px !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: 20px !important;
+  z-index: 10080 !important;
+}
+
+html[data-theme="dark"] body.visual-alarm-active {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(20, 30, 82, 0.95), transparent 31%),
+    radial-gradient(circle at 72% 12%, rgba(117, 74, 255, 0.72), transparent 28%),
+    radial-gradient(circle at 86% 68%, rgba(17, 91, 255, 0.72), transparent 33%),
+    radial-gradient(circle at 28% 82%, rgba(28, 49, 144, 0.88), transparent 34%),
+    linear-gradient(135deg, #030612 0%, #061038 38%, #160b38 66%, #02040d 100%) !important;
+  background-size: 150% 150%, 170% 170%, 190% 190%, 180% 180%, 240% 240% !important;
+  animation: shinySpaceDrift 5.5s ease-in-out infinite alternate !important;
+}
+
+html[data-theme="dark"] body.visual-alarm-active::before {
+  background:
+    linear-gradient(112deg, transparent 0 44%, rgba(111, 255, 121, 0.00) 45%, rgba(111, 255, 121, 0.88) 48%, rgba(209, 255, 214, 0.92) 49%, rgba(111, 255, 121, 0.72) 51%, transparent 55% 100%),
+    linear-gradient(64deg, transparent 0 61%, rgba(69, 255, 113, 0.00) 62%, rgba(69, 255, 113, 0.80) 65%, rgba(230, 255, 232, 0.90) 66%, transparent 70% 100%),
+    radial-gradient(circle at 18% 24%, rgba(255,255,255,0.72) 0 1px, transparent 2px),
+    radial-gradient(circle at 68% 32%, rgba(255,255,255,0.72) 0 1px, transparent 2px),
+    radial-gradient(circle at 41% 71%, rgba(255,255,255,0.56) 0 1px, transparent 2px),
+    radial-gradient(circle at 88% 78%, rgba(255,255,255,0.62) 0 1px, transparent 2px),
+    radial-gradient(circle at 50% 50%, rgba(85, 68, 255, 0.25), transparent 58%) !important;
+  background-size: 260% 260%, 220% 220%, 90px 90px, 130px 130px, 110px 110px, 155px 155px, 100% 100% !important;
+  animation: shinySpaceLightning 0.95s steps(2, end) infinite, shinySpaceStars 6s linear infinite !important;
+}
+
+html:not([data-theme="dark"]) body.visual-alarm-active {
+  background:
+    radial-gradient(circle at 14% 18%, rgba(255, 72, 162, 0.90), transparent 30%),
+    radial-gradient(circle at 78% 14%, rgba(255, 205, 55, 0.92), transparent 31%),
+    radial-gradient(circle at 20% 82%, rgba(0, 215, 120, 0.88), transparent 32%),
+    radial-gradient(circle at 84% 78%, rgba(48, 129, 255, 0.90), transparent 33%),
+    linear-gradient(135deg, #ff2d8d, #ffcc33, #24d66f, #2f80ff, #9b5cff, #ff2d8d) !important;
+  background-size: 160% 160%, 170% 170%, 180% 180%, 190% 190%, 360% 360% !important;
+  animation: shinyRainbowDrift 2.2s linear infinite !important;
+}
+
+html:not([data-theme="dark"]) body.visual-alarm-active::before {
+  background:
+    linear-gradient(112deg, transparent 0 43%, rgba(255,255,255,0.0) 44%, rgba(255,255,255,0.86) 48%, rgba(255,255,255,0.95) 49%, rgba(255,255,255,0.70) 51%, transparent 55% 100%),
+    linear-gradient(64deg, transparent 0 60%, rgba(255,255,255,0.0) 61%, rgba(255,255,255,0.70) 65%, transparent 70% 100%),
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.22), transparent 55%) !important;
+  background-size: 230% 230%, 210% 210%, 100% 100% !important;
+  animation: shinyRainbowFlash 0.85s steps(2, end) infinite !important;
+}
+
+@keyframes shinySpaceDrift {
+  0% { background-position: 0% 35%, 100% 0%, 70% 90%, 10% 100%, 0% 50%; }
+  100% { background-position: 100% 65%, 0% 60%, 20% 10%, 80% 0%, 100% 50%; }
+}
+
+@keyframes shinySpaceLightning {
+  0%, 100% { opacity: 0.32; filter: brightness(1.05) saturate(1.2); background-position: 0% 0%, 100% 0%, 0 0, 0 0, 0 0, 0 0, center; }
+  35% { opacity: 1; filter: brightness(1.75) saturate(1.75); }
+  55% { opacity: 0.42; filter: brightness(1.15) saturate(1.25); }
+  72% { opacity: 0.95; filter: brightness(1.62) saturate(1.55); }
+}
+
+@keyframes shinySpaceStars {
+  0% { background-position: 0% 0%, 100% 0%, 0 0, 0 0, 0 0, 0 0, center; }
+  100% { background-position: 100% 100%, 0% 100%, 90px 90px, 130px 130px, 110px 110px, 155px 155px, center; }
+}
+
+@keyframes shinyRainbowDrift {
+  0% { background-position: 0% 50%, 100% 0%, 0% 100%, 100% 100%, 0% 50%; }
+  100% { background-position: 100% 50%, 0% 100%, 100% 0%, 0% 0%, 100% 50%; }
+}
+
+@keyframes shinyRainbowFlash {
+  0%, 100% { opacity: 0.28; filter: brightness(1.05); background-position: 0% 0%, 100% 0%, center; }
+  40% { opacity: 0.92; filter: brightness(1.5); }
+  70% { opacity: 0.48; filter: brightness(1.2); }
+}
+
+/* ------------------------------------------------------------------
+   FINAL SHINY-MINUTE VISUAL OVERRIDE — no star layer, CSS only.
+   Dark mode keeps the space/green-thunder color scheme without dots.
+------------------------------------------------------------------ */
+html[data-theme="dark"] body.visual-alarm-active::before {
+  background:
+    linear-gradient(112deg, transparent 0 44%, rgba(111, 255, 121, 0.00) 45%, rgba(111, 255, 121, 0.88) 48%, rgba(209, 255, 214, 0.92) 49%, rgba(111, 255, 121, 0.72) 51%, transparent 55% 100%),
+    linear-gradient(64deg, transparent 0 61%, rgba(69, 255, 113, 0.00) 62%, rgba(69, 255, 113, 0.80) 65%, rgba(230, 255, 232, 0.90) 66%, transparent 70% 100%),
+    radial-gradient(circle at 18% 20%, rgba(66, 45, 178, 0.34), transparent 34%),
+    radial-gradient(circle at 78% 28%, rgba(37, 99, 235, 0.32), transparent 36%),
+    radial-gradient(circle at 45% 76%, rgba(124, 58, 237, 0.25), transparent 42%),
+    radial-gradient(circle at 52% 48%, rgba(85, 68, 255, 0.22), transparent 58%) !important;
+  background-size: 260% 260%, 220% 220%, 150% 150%, 170% 170%, 180% 180%, 100% 100% !important;
+  animation: shinySpaceLightningNoStars 1.05s cubic-bezier(.45,0,.25,1) infinite !important;
+}
+
+@keyframes shinySpaceLightningNoStars {
+  0%, 100% {
+    opacity: 0.34;
+    filter: brightness(1.02) saturate(1.18);
+    background-position: 0% 0%, 100% 0%, 0% 30%, 100% 20%, 40% 90%, center;
+  }
+  22% {
+    opacity: 0.92;
+    filter: brightness(1.55) saturate(1.55);
+  }
+  39% {
+    opacity: 0.48;
+    filter: brightness(1.15) saturate(1.22);
+  }
+  64% {
+    opacity: 1;
+    filter: brightness(1.7) saturate(1.7);
+    background-position: 68% 82%, 35% 70%, 80% 45%, 20% 80%, 70% 20%, center;
+  }
+  82% {
+    opacity: 0.42;
+    filter: brightness(1.1) saturate(1.2);
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   FINAL SMALL-SCREEN SIDE-BY-SIDE LOCK
+   Keep Target Hour and both alarm tiles side-by-side even on narrow screens.
+------------------------------------------------------------------ */
+body.checker-page-active #checkerView .time-row,
+body.checker-page-active #checkerView .alarm-preview-card {
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+}
+
+body.checker-page-active #checkerView .alarm-sound-row,
+body.checker-page-active #checkerView .prealarm-row {
+  min-width: 0 !important;
+}
+
+@media (max-width: 680px) {
+  body.checker-page-active #checkerView .time-row,
+  body.checker-page-active #checkerView .alarm-preview-card {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  body.checker-page-active #checkerView .wheel-field {
+    gap: 6px !important;
+  }
+
+  body.checker-page-active #checkerView .time-wheel,
+  body.checker-page-active #checkerView .wheel-face,
+  body.checker-page-active #checkerView .clock-card {
+    height: 78px !important;
+    min-height: 78px !important;
+  }
+
+  body.checker-page-active #checkerView .wheel-face {
+    grid-template-rows: 1fr 34px 1fr !important;
+  }
+
+  body.checker-page-active #checkerView .wheel-face::before {
+    height: 34px !important;
+    left: 7px !important;
+    right: 7px !important;
+  }
+
+  body.checker-page-active #checkerView .wheel-display.current {
+    font-size: 17px !important;
+  }
+
+  body.checker-page-active #checkerView .wheel-display.side {
+    font-size: 10px !important;
+  }
+
+  body.checker-page-active #checkerView .clock-time {
+    font-size: clamp(18px, 6vw, 24px) !important;
+  }
+
+  body.checker-page-active #checkerView .clock-date {
+    font-size: 9px !important;
+    line-height: 1.15 !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-row,
+  body.checker-page-active #checkerView .prealarm-row {
+    padding: 8px !important;
+    gap: 6px !important;
+    align-items: center !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-label,
+  body.checker-page-active #checkerView #nextShinyMinuteLabel,
+  body.checker-page-active #checkerView #nextPreAlarmLabel {
+    font-size: 12px !important;
+    line-height: 1.1 !important;
+    word-break: keep-all !important;
+  }
+
+  body.checker-page-active #checkerView .prealarm-status {
+    font-size: 8px !important;
+    line-height: 1.1 !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-toggle,
+  body.checker-page-active #checkerView .alarm-ios-toggle {
+    flex: 0 0 auto !important;
+  }
+}
+
+@media (max-width: 420px) {
+  body.checker-page-active #checkerView .time-row,
+  body.checker-page-active #checkerView .alarm-preview-card {
+    gap: 6px !important;
+  }
+
+  body.checker-page-active #checkerView .time-wheel,
+  body.checker-page-active #checkerView .wheel-face,
+  body.checker-page-active #checkerView .clock-card {
+    height: 72px !important;
+    min-height: 72px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-row,
+  body.checker-page-active #checkerView .prealarm-row {
+    padding: 7px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-label,
+  body.checker-page-active #checkerView #nextShinyMinuteLabel,
+  body.checker-page-active #checkerView #nextPreAlarmLabel {
+    font-size: 11px !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   TARGET HOUR ALIGNMENT FIX
+   Keep the title out of the grid flow so the wheel and clock cards
+   sit in the same tight row at every size.
+------------------------------------------------------------------ */
+body.checker-page-active #checkerView .card:has(.time-row) {
+  position: relative !important;
+  padding-top: calc(var(--tool-card-pad, 20px) + 34px) !important;
+}
+
+body.checker-page-active #checkerView .time-row {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+}
+
+body.checker-page-active #checkerView .wheel-field {
+  display: block !important;
+  min-width: 0 !important;
+  min-height: 0 !important;
+}
+
+body.checker-page-active #checkerView .wheel-label {
+  position: absolute !important;
+  left: var(--tool-card-pad, 20px) !important;
+  top: var(--tool-card-pad, 20px) !important;
+  margin: 0 !important;
+  line-height: 1 !important;
+}
+
+body.checker-page-active #checkerView .time-wheel,
+body.checker-page-active #checkerView .clock-card {
+  height: 96px !important;
+  min-height: 96px !important;
+}
+
+body.checker-page-active #checkerView .wheel-face {
+  height: 96px !important;
+  min-height: 96px !important;
+}
+
+@media (max-width: 680px) {
+  body.checker-page-active #checkerView .card:has(.time-row) {
+    padding-top: calc(var(--tool-card-pad, 14px) + 30px) !important;
+  }
+
+  body.checker-page-active #checkerView .time-row {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 8px !important;
+  }
+
+  body.checker-page-active #checkerView .wheel-label {
+    left: var(--tool-card-pad, 14px) !important;
+    top: var(--tool-card-pad, 14px) !important;
+  }
+
+  body.checker-page-active #checkerView .time-wheel,
+  body.checker-page-active #checkerView .wheel-face,
+  body.checker-page-active #checkerView .clock-card {
+    height: 82px !important;
+    min-height: 82px !important;
+  }
+}
+
+@media (max-width: 420px) {
+  body.checker-page-active #checkerView .time-row {
+    gap: 6px !important;
+  }
+
+  body.checker-page-active #checkerView .time-wheel,
+  body.checker-page-active #checkerView .wheel-face,
+  body.checker-page-active #checkerView .clock-card {
+    height: 76px !important;
+    min-height: 76px !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   CANONICAL ALARMS LAYOUT
+   Single source of truth for the Alarms card.
+   Row 1:  ALARMS                         − [volume slider] +
+   Row 2:  [shiny-minute alarm card]       [35s pre-alarm card]
+   Row 3:  [minute buttons]
+------------------------------------------------------------------ */
+body.checker-page-active #checkerView .alarm-preview-card {
+  display: block !important;
+  grid-template-columns: none !important;
+  grid-template-rows: none !important;
+  grid-auto-flow: row !important;
+  gap: 0 !important;
+  padding: var(--tool-card-pad, 20px) !important;
+}
+
+body.checker-page-active #checkerView .alarm-card-header {
+  width: 100% !important;
+  min-width: 0 !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 12px !important;
+  margin: 0 0 12px !important;
+  padding: 0 !important;
+}
+
+body.checker-page-active #checkerView .alarm-card-header .section-title {
+  margin: 0 !important;
+  line-height: 1 !important;
+  white-space: nowrap !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-control {
+  flex: 0 1 260px !important;
+  width: min(260px, 48vw) !important;
+  min-width: 150px !important;
+  max-width: 260px !important;
+  height: 28px !important;
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-end !important;
+  gap: 8px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-edge {
+  flex: 0 0 16px !important;
+  width: 16px !important;
+  height: 18px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: var(--text-3) !important;
+  font-family: Arial, sans-serif !important;
+  font-size: 15px !important;
+  font-weight: 900 !important;
+  line-height: 1 !important;
+  user-select: none !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .alarm-volume-edge {
+  color: #ffffff !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-control input[type="range"] {
+  flex: 1 1 auto !important;
+  width: auto !important;
+  min-width: 0 !important;
+  max-width: none !important;
+  margin: 0 !important;
+  accent-color: #22c55e !important;
+  cursor: pointer !important;
+}
+
+body.checker-page-active #checkerView .alarm-preview-meta {
+  display: none !important;
+}
+
+body.checker-page-active #checkerView .alarm-toggle-grid {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+  margin: 0 0 12px !important;
+}
+
+body.checker-page-active #checkerView .alarm-sound-row,
+body.checker-page-active #checkerView .prealarm-row {
+  width: 100% !important;
+  min-width: 0 !important;
+  height: 72px !important;
+  min-height: 72px !important;
+  margin: 0 !important;
+  padding: 8px 12px !important;
+  border: 1px solid var(--border) !important;
+  border-radius: 18px !important;
+  background: var(--surface) !important;
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  align-items: center !important;
+  gap: 10px !important;
+  order: initial !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+html[data-theme="dark"] body.checker-page-active #checkerView .alarm-sound-row,
+html[data-theme="dark"] body.checker-page-active #checkerView .prealarm-row {
+  background: var(--toolset-dark-panel) !important;
+  border-color: var(--toolset-dark-border) !important;
+}
+
+body.checker-page-active #checkerView .prealarm-row > div {
+  min-width: 0 !important;
+  display: grid !important;
+  align-content: center !important;
+  gap: 6px !important;
+}
+
+body.checker-page-active #checkerView .alarm-sound-label,
+body.checker-page-active #checkerView .prealarm-status {
+  min-width: 0 !important;
+  margin: 0 !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+body.checker-page-active #checkerView .alarm-sound-toggle {
+  justify-self: end !important;
+  flex: 0 0 auto !important;
+}
+
+body.checker-page-active #checkerView .alarm-preview-list {
+  margin: 0 !important;
+  grid-column: auto !important;
+  grid-row: auto !important;
+}
+
+@media (max-width: 520px) {
+  body.checker-page-active #checkerView .alarm-preview-card {
+    padding: var(--tool-card-pad, 14px) !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-card-header {
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-volume-control {
+    flex-basis: 150px !important;
+    width: 150px !important;
+    min-width: 128px !important;
+    gap: 5px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-toggle-grid {
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-row,
+  body.checker-page-active #checkerView .prealarm-row {
+    height: 64px !important;
+    min-height: 64px !important;
+    padding: 7px 8px !important;
+    border-radius: 16px !important;
+    gap: 6px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-label {
+    font-size: 12px !important;
+    line-height: 1.05 !important;
+  }
+
+  body.checker-page-active #checkerView .prealarm-status {
+    font-size: 9px !important;
+    line-height: 1.05 !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-ios-toggle {
+    width: 44px !important;
+    height: 26px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-ios-toggle-thumb {
+    width: 20px !important;
+    height: 20px !important;
+  }
+
+  body.checker-page-active #checkerView .alarm-sound-toggle input:checked + .alarm-ios-toggle .alarm-ios-toggle-thumb {
+    transform: translateX(18px) !important;
+  }
+}
+
+
+/* ------------------------------------------------------------------
+   FINAL SUBTLE POLISH PASS
+   1. Accurate alarm volume rocker hit/visual mapping.
+   2. Small-screen Region Completion opens as one horizontal row.
+------------------------------------------------------------------ */
+body.checker-page-active #checkerView .alarm-volume-control {
+  display: grid !important;
+  grid-template-columns: 16px minmax(96px, 1fr) 16px !important;
+  align-items: center !important;
+  column-gap: 8px !important;
+  justify-content: stretch !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-control input[type="range"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 100% !important;
+  height: 28px !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background: transparent !important;
+  cursor: pointer !important;
+  touch-action: pan-x !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-control input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, rgba(34,197,94,0.88), rgba(34,197,94,0.38)) !important;
+  border: 1px solid rgba(34,197,94,0.24) !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-control input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 999px !important;
+  border: 2px solid rgba(34,197,94,0.95) !important;
+  background: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(15,23,42,0.20) !important;
+  margin-top: -7px !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-control input[type="range"]::-moz-range-track {
+  height: 6px !important;
+  border-radius: 999px !important;
+  background: linear-gradient(90deg, rgba(34,197,94,0.88), rgba(34,197,94,0.38)) !important;
+  border: 1px solid rgba(34,197,94,0.24) !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-control input[type="range"]::-moz-range-thumb {
+  width: 18px !important;
+  height: 18px !important;
+  border-radius: 999px !important;
+  border: 2px solid rgba(34,197,94,0.95) !important;
+  background: #ffffff !important;
+  box-shadow: 0 3px 10px rgba(15,23,42,0.20) !important;
+}
+
+body.checker-page-active #checkerView .alarm-volume-edge {
+  justify-self: center !important;
+}
+
+@media (max-width: 640px) {
+  .region-completion-panel .region-progress-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+    grid-auto-flow: column !important;
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+    gap: 8px !important;
+    margin: 0 !important;
+    padding: 2px 2px 8px !important;
+    scroll-snap-type: x proximity !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .region-completion-panel .region-card {
+    flex: 0 0 132px !important;
+    width: 132px !important;
+    min-width: 132px !important;
+    scroll-snap-align: start !important;
+    padding: 10px 8px !important;
+  }
+
+  .region-completion-panel .region-progress-grid::-webkit-scrollbar {
+    height: 4px;
+  }
+
+  .region-completion-panel .region-progress-grid::-webkit-scrollbar-thumb {
+    background: rgba(107, 114, 128, 0.35);
+    border-radius: 999px;
+  }
+}
+
+
+/* ---------------- BRIGHT EVENT BADGES ---------------- */
+/* Higher contrast for dark event cards/backgrounds. */
+
+.meta-badge {
+  padding: 5px 9px;
+  border-width: 2px;
+  font-weight: 900;
+  text-shadow: none;
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.42),
+    0 6px 14px rgba(15, 23, 42, 0.16);
+}
+
+.meta-badge.raid {
+  background: #ff2f4f !important;
+  color: #ffffff !important;
+  border-color: #ffb3bf !important;
+}
+
+.meta-badge.mega {
+  background: #6d28d9 !important;
+  color: #ffffff !important;
+  border-color: #c4b5fd !important;
+}
+
+.meta-badge.hatch {
+  background: #ffb000 !important;
+  color: #111827 !important;
+  border-color: #ffe08a !important;
+}
+
+.meta-badge.wild {
+  background: #20d66b !important;
+  color: #052e16 !important;
+  border-color: #a7f3d0 !important;
+}
+
+.meta-badge.lure {
+  background: #2f7dff !important;
+  color: #ffffff !important;
+  border-color: #bfdbfe !important;
+}
+
+.meta-badge.research {
+  background: #a855f7 !important;
+  color: #ffffff !important;
+  border-color: #e9d5ff !important;
+}
+
+.meta-badge.max {
+  background: #14b8a6 !important;
+  color: #042f2e !important;
+  border-color: #99f6e4 !important;
+}
+
+html[data-theme="dark"] .meta-badge,
+body.dark-mode .meta-badge {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.52),
+    0 0 16px rgba(255, 255, 255, 0.12),
+    0 8px 18px rgba(0, 0, 0, 0.32);
+}
+
+
+/* ---------------- SHADOW EVENT BADGE ---------------- */
+
+.meta-badge.shadow {
+  background: #3b0764 !important;
+  color: #ffffff !important;
+  border-color: #d8b4fe !important;
+}
+
+
+
+
+
+
+/* ---------------- EVENT BADGES: NO OUTLINE / NO GLOW ---------------- */
+
+.meta-badge,
+.meta-badge.raid,
+.meta-badge.hatch,
+.meta-badge.wild,
+.meta-badge.lure,
+.meta-badge.research,
+.meta-badge.shadow,
+html[data-theme="dark"] .meta-badge,
+body.dark-mode .meta-badge {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: none !important;
+}
+
+
+
+/* ---------------- LEEK DUCK EVENTS ---------------- */
+
+/*
+  Region-Progress-style slide contract:
+  - ResizeObserver watches the inner event content.
+  - JS stores its full natural height in --leek-event-content-height.
+  - Outer panel transitions from 0 to that known height.
+  - There is no fade. The movement is height + translateY, matching the
+    Region Progress interaction.
+*/
+.leek-event-panel {
+  width: 100%;
+  box-sizing: border-box;
+  height: 0;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 0 13px;
+  border: 0 solid transparent;
+  border-radius: 16px;
+  background: transparent;
+  color: var(--text-1);
+  box-shadow: none;
+  transform: translateY(-6px);
+  transition:
+    height 0.28s ease,
+    transform 0.28s ease,
+    padding 0.28s ease,
+    margin 0.28s ease,
+    border-color 0.20s ease,
+    background 0.20s ease,
+    box-shadow 0.20s ease;
+}
+
+/*
+  The app shell is a fixed-height column flex layout. This drawer must not
+  participate in flex shrinking: its CSS-variable height is the source of
+  truth, while .list-wrap absorbs the remaining scrollable space.
+*/
+body.tracker-app-shell-active #trackerView .leek-event-panel {
+  flex: 0 0 auto;
+  min-height: 0;
+}
+
+.leek-event-panel[hidden] {
+  display: none;
+}
+
+/*
+  Offscreen final-card measurement template. It shares the same width and card
+  geometry but never occupies layout, receives clicks, or appears visually.
+*/
+.leek-event-measure {
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: -1;
+  overflow: visible;
+}
+
+.leek-event-panel.open {
+  /*
+    20px = 11px top + 7px bottom padding plus 1px top/bottom border.
+    Bottom padding is intentionally tighter so the panel ends closer to the
+    event-card row and the Pokédex below.
+  */
+  height: calc(var(--leek-event-content-height, 0px) + 20px);
+  margin: 0 auto 8px;
+  padding: 11px 13px 7px;
+  border: 1px solid var(--border);
+  background: var(--surface, rgba(255, 255, 255, 0.88));
+  box-shadow: 0 8px 28px rgba(15, 23, 42, 0.06);
+  transform: translateY(0);
+}
+
+.leek-event-panel-content {
+  position: relative;
+  min-width: 0;
+  overflow: visible;
+}
+
+.leek-event-measure .leek-event-panel-content {
+  width: 100%;
+}
+
+.leek-event-panel-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  min-height: 20px;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.leek-event-panel-title {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text-1);
+}
+
+.leek-event-panel-meta {
+  margin: 0;
+  min-height: 14px;
+  font-size: 11px;
+  color: var(--text-2);
+  text-align: right;
+}
+
+.leek-event-track {
+  display: flex;
+  gap: 9px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  overscroll-behavior-x: contain;
+  padding: 2px 2px 4px;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--text-2) 42%, transparent) transparent;
+}
+
+.leek-event-track::-webkit-scrollbar { height: 7px; }
+
+.leek-event-track::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--text-2) 38%, transparent);
+}
+
+.leek-event-card {
+  position: relative;
+  flex: 0 0 clamp(205px, 23vw, 272px);
+  display: grid;
+  grid-template-rows: 45px 32px;
+  row-gap: 4px;
+  height: 106px;
+  padding: 10px 12px;
+  box-sizing: border-box;
+  border: 1px solid var(--border);
+  border-radius: 13px;
+  background: var(--surface, #ffffff);
+  color: var(--text-1);
+  text-align: left;
+  cursor: pointer;
+  scroll-snap-align: start;
+  transition: transform 0.16s ease, box-shadow 0.16s ease, border-color 0.16s ease;
+}
+
+.leek-event-card:hover,
+.leek-event-card:focus-visible {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, #3b82f6 70%, var(--border));
+  box-shadow: 0 9px 20px rgba(15, 23, 42, 0.14);
+  outline: none;
+}
+
+.leek-event-card.selected {
+  border-color: color-mix(in srgb, #3b82f6 84%, var(--border));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, #3b82f6 36%, transparent);
+}
+
+/* Event status is carried by the card itself; no separate LIVE / UPCOMING pill. */
+.leek-event-card.live,
+.leek-event-card.live.selected {
+  border-color: #16a34a;
+  background: rgba(34, 197, 94, 0.16);
+  box-shadow:
+    0 0 0 2px rgba(34, 197, 94, 0.18),
+    0 0 18px rgba(34, 197, 94, 0.12);
+}
+
+.leek-event-card.upcoming,
+.leek-event-card.upcoming.selected {
+  border-color: #ca8a04;
+  background: rgba(250, 204, 21, 0.16);
+  box-shadow:
+    0 0 0 2px rgba(250, 204, 21, 0.18),
+    0 0 18px rgba(250, 204, 21, 0.12);
+}
+
+html[data-theme="dark"] .leek-event-card.live,
+html[data-theme="dark"] .leek-event-card.live.selected {
+  border-color: rgba(134, 239, 172, 0.58);
+  background: linear-gradient(180deg, rgba(134, 239, 172, 0.18), rgba(20, 83, 45, 0.10));
+  box-shadow:
+    0 0 0 2px rgba(77, 255, 136, 0.16),
+    0 0 18px rgba(77, 255, 136, 0.14);
+}
+
+html[data-theme="dark"] .leek-event-card.upcoming,
+html[data-theme="dark"] .leek-event-card.upcoming.selected {
+  border-color: rgba(250, 204, 21, 0.58);
+  background: linear-gradient(180deg, rgba(250, 204, 21, 0.18), rgba(113, 63, 18, 0.10));
+  box-shadow:
+    0 0 0 2px rgba(250, 204, 21, 0.16),
+    0 0 18px rgba(250, 204, 21, 0.14);
+}
+
+/* One shared selected-event dot glides between event-card borders. */
+.leek-event-selection-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  background: #ef4444;
+  box-shadow:
+    0 0 0 2px var(--surface),
+    0 0 0 3px rgba(239, 68, 68, 0.20);
+  opacity: 0;
+  pointer-events: none;
+  transform: translate3d(-9999px, -9999px, 0);
+  transition:
+    transform 170ms cubic-bezier(0.22, 0.82, 0.24, 1),
+    opacity 110ms ease;
+}
+
+.leek-event-selection-dot.is-visible {
+  opacity: 1;
+}
+
+.leek-event-selection-dot.is-instant {
+  transition: none;
+}
+
+html[data-theme="dark"] .leek-event-selection-dot {
+  box-shadow:
+    0 0 0 2px #10131a,
+    0 0 0 3px rgba(255, 92, 92, 0.28);
+}
+
+.leek-event-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 0;
+  gap: 8px;
+}
+
+.leek-event-category,
+.leek-event-status {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  height: 26px;
+  min-height: 26px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.leek-event-category {
+  width: fit-content;
+  max-width: calc(100% - 94px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: color-mix(in srgb, #3b82f6 13%, transparent);
+  color: color-mix(in srgb, #2563eb 84%, var(--text-1));
+}
+
+.leek-event-status {
+  width: fit-content;
+  background: color-mix(in srgb, var(--text-2) 12%, transparent);
+  color: var(--text-1);
+}
+
+.leek-event-status.live {
+  background: color-mix(in srgb, #10b981 18%, transparent);
+  color: color-mix(in srgb, #059669 84%, var(--text-1));
+}
+
+.leek-event-status.upcoming {
+  background: color-mix(in srgb, #f59e0b 20%, transparent);
+  color: color-mix(in srgb, #b45309 85%, var(--text-1));
+}
+
+.leek-event-title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--text-1);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 15px;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+.leek-event-time {
+  display: grid;
+  grid-template-rows: repeat(2, 14px);
+  align-content: start;
+  gap: 4px;
+  min-width: 0;
+  color: var(--text-2);
+  font-size: 10px;
+  line-height: 14px;
+}
+
+.leek-event-time-line {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leek-event-message {
+  flex: 0 0 100%;
+  margin: 0;
+  padding: 15px;
+  border: 1px dashed var(--border);
+  border-radius: 10px;
+  color: var(--text-2);
+  font-size: 12px;
+}
+
+.leek-event-skeleton {
+  border-color: color-mix(in srgb, var(--border) 84%, transparent);
+  cursor: default;
+  overflow: hidden;
+}
+
+.leek-skeleton-pill,
+.leek-skeleton-status,
+.leek-skeleton-title i,
+.leek-skeleton-time i {
+  display: block;
+  border-radius: 999px;
+  background: linear-gradient(
+    90deg,
+    color-mix(in srgb, var(--text-2) 8%, transparent),
+    color-mix(in srgb, var(--text-2) 16%, transparent),
+    color-mix(in srgb, var(--text-2) 8%, transparent)
+  );
+  background-size: 200% 100%;
+  animation: leek-skeleton-shimmer 1.25s linear infinite;
+}
+
+.leek-skeleton-pill { width: 86px; height: 26px; }
+.leek-skeleton-status { width: 66px; height: 26px; margin-left: auto; }
+.leek-skeleton-title { display: grid; align-content: center; gap: 5px; }
+.leek-skeleton-title i { height: 10px; width: 100%; }
+.leek-skeleton-title i:nth-child(2) { width: 86%; }
+.leek-skeleton-title i:nth-child(3) { width: 64%; }
+.leek-skeleton-time { display: grid; align-content: center; gap: 4px; }
+.leek-skeleton-time i { height: 10px; width: 78%; }
+.leek-skeleton-time i:last-child { width: 68%; }
+
+@keyframes leek-skeleton-shimmer {
+  to { background-position: -200% 0; }
+}
+
+body.dark-mode .leek-event-panel.open,
+html.dark .leek-event-panel.open,
+html[data-theme="dark"] .leek-event-panel.open {
+  background: color-mix(in srgb, var(--surface, #111827) 94%, #000000);
+  box-shadow: 0 9px 28px rgba(0, 0, 0, 0.26);
+}
+
+body.dark-mode .leek-event-card,
+html.dark .leek-event-card,
+html[data-theme="dark"] .leek-event-card {
+  background: color-mix(in srgb, var(--surface, #111827) 86%, #000000);
+}
+
+.meta-badge.egg-distance {
+  min-width: 0;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.cursor-pokemon-name {
+  position: fixed !important;
+  z-index: 2147483647 !important;
+  pointer-events: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .leek-event-panel {
+    transition: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .leek-event-panel {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .leek-event-panel.open {
+    /*
+      17px = 9px top + 6px bottom padding plus 1px top/bottom border.
+    */
+    height: calc(var(--leek-event-content-height, 0px) + 17px);
+    margin-bottom: 7px;
+    padding: 9px 10px 6px;
+  }
+
+  .leek-event-panel-head {
+    align-items: flex-start;
+    flex-direction: column;
+    min-height: 36px;
+    gap: 3px;
+  }
+
+  .leek-event-track {
+    gap: 7px;
+    padding-bottom: 4px;
+  }
+
+  .leek-event-card {
+    flex-basis: min(76vw, 246px);
+    height: 112px;
+    grid-template-rows: 48px 30px;
+    row-gap: 4px;
+    padding: 9px 10px;
+  }
+
+  .leek-event-title {
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+  }
+
+  .leek-event-time {
+    grid-template-rows: repeat(2, 13px);
+    line-height: 13px;
+  }
+}
+
+/* ---------------- LOCAL EVENT ROSTER ---------------- */
+.leek-event-roster {
+  margin-top: 10px;
+  max-height: 224px;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 10px;
+  border: 1px solid color-mix(in srgb, var(--border) 92%, transparent);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--surface, #ffffff) 78%, transparent);
+}
+
+.leek-event-roster-inner {
+  display: grid;
+  gap: 10px;
+}
+
+.leek-event-roster-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.leek-event-roster-head strong {
+  font-size: 11px;
+  color: var(--text-1);
+}
+
+.leek-event-roster-head span,
+.leek-event-roster-label,
+.leek-event-roster-empty {
+  margin: 0;
+  font-size: 10px;
+  color: var(--text-2);
+}
+
+.leek-event-roster-group {
+  display: grid;
+  gap: 5px;
+}
+
+.leek-event-roster-label {
+  font-weight: 800;
+  letter-spacing: .035em;
+  text-transform: uppercase;
+}
+
+.leek-event-roster-chips {
+  display: flex;
+  gap: 7px;
+  overflow-x: auto;
+  padding: 1px 1px 4px;
+  scrollbar-width: thin;
+}
+
+.leek-event-pokemon-chip {
+  position: relative;
+  flex: 0 0 auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  max-width: 155px;
+  min-height: 35px;
+  padding: 4px 8px 4px 4px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--surface, #ffffff) 94%, transparent);
+  color: var(--text-1);
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.leek-event-pokemon-chip img {
+  width: 27px;
+  height: 27px;
+  object-fit: contain;
+  flex: 0 0 auto;
+}
+
+.leek-event-pokemon-chip span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.leek-event-pokemon-chip.shiny-confirmed {
+  border-color: color-mix(in srgb, #f59e0b 48%, var(--border));
+  background: color-mix(in srgb, #fef3c7 48%, var(--surface, #ffffff));
+}
+
+.leek-event-pokemon-shiny {
+  position: absolute;
+  top: -5px;
+  right: -3px;
+  display: grid;
+  place-items: center;
+  width: 15px;
+  height: 15px;
+  border-radius: 999px;
+  background: #f59e0b;
+  color: #ffffff;
+  font-size: 10px;
+  font-style: normal;
+  line-height: 1;
+  box-shadow: 0 1px 4px rgba(15, 23, 42, .22);
+}
+
+.meta-badge.max {
+  background: rgba(168, 85, 247, 0.14);
+  color: #7e22ce;
+  border-color: rgba(168, 85, 247, 0.28);
+}
+
+body.dark-mode .leek-event-roster,
+html.dark .leek-event-roster,
+html[data-theme="dark"] .leek-event-roster {
+  background: color-mix(in srgb, var(--surface, #111827) 88%, #000000);
+}
+
+body.dark-mode .leek-event-pokemon-chip,
+html.dark .leek-event-pokemon-chip,
+html[data-theme="dark"] .leek-event-pokemon-chip {
+  background: color-mix(in srgb, var(--surface, #111827) 92%, #000000);
+}
+
+@media (max-width: 640px) {
+  .leek-event-roster { max-height: 210px; padding: 9px; }
+  .leek-event-pokemon-chip { max-width: 142px; }
+}
+
+/* ------------------------------------------------------------------
+   SHINY DEX UTILITY DRAWER
+   One position and one interaction model for both colour themes.
+   Pointer focus never pins the drawer open after the pointer leaves.
+------------------------------------------------------------------ */
+html body.tracker-app-shell-active:not(.checker-page-active) .floating-save-panel {
+  --utility-drawer-peek: 24px;
+  position: fixed !important;
+  left: max(0px, env(safe-area-inset-left, 0px)) !important;
+  right: auto !important;
+  top: auto !important;
+  bottom: max(20px, env(safe-area-inset-bottom, 0px)) !important;
+  box-sizing: border-box;
+  transform: translate3d(calc(-100% + var(--utility-drawer-peek)), 0, 0) !important;
+  transition: transform 200ms cubic-bezier(0.22, 1, 0.36, 1), box-shadow 160ms ease !important;
+  will-change: transform;
+  outline: none;
+}
+
+html body.tracker-app-shell-active:not(.checker-page-active) .floating-save-panel:hover,
+html body.tracker-app-shell-active:not(.checker-page-active) .floating-save-panel.utility-drawer-keyboard-open {
+  transform: translate3d(0, 0, 0) !important;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.22) !important;
+}
+
+@media (max-width: 640px) {
+  html body.tracker-app-shell-active:not(.checker-page-active) .floating-save-panel {
+    bottom: max(12px, env(safe-area-inset-bottom, 0px)) !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html body.tracker-app-shell-active:not(.checker-page-active) .floating-save-panel {
+    transition: none !important;
+  }
+}
+
+/* ------------------------------------------------------------------
+   CANONICAL SHINY DEX GRID DENSITIES
+   Compact and extra compact use paired column counts at every width.
+   This prevents both modes from resolving to the same grid and keeps
+   extra compact meaningfully denser on wide screens as well as mobile.
+------------------------------------------------------------------ */
+body.tracker-app-shell-active #trackerView .list-wrap {
+  container-name: shiny-dex-grid;
+  container-type: inline-size;
+}
+
+html body.tracker-app-shell-active.compact-view #pokemonList {
+  --dex-grid-columns: 5;
+  --dex-grid-gap: 6px;
+  --dex-card-padding: 4px;
+  --dex-sprite-size: 70%;
+  grid-template-columns: repeat(var(--dex-grid-columns), minmax(0, 1fr)) !important;
+  gap: var(--dex-grid-gap) !important;
+}
+
+html body.tracker-app-shell-active.compact-view.ultra-grid-view #pokemonList {
+  --dex-grid-columns: 8;
+  --dex-grid-gap: 4px;
+  --dex-card-padding: 2px;
+  --dex-sprite-size: 68%;
+}
+
+html body.tracker-app-shell-active.compact-view #pokemonList .pokemon-card {
+  padding: var(--dex-card-padding) !important;
+}
+
+html body.tracker-app-shell-active.compact-view #pokemonList .pokemon-sprite {
+  width: var(--dex-sprite-size) !important;
+  height: var(--dex-sprite-size) !important;
+}
+
+@container shiny-dex-grid (max-width: 340px) {
+  html body.tracker-app-shell-active.compact-view #pokemonList {
+    --dex-grid-columns: 4;
+  }
+
+  html body.tracker-app-shell-active.compact-view.ultra-grid-view #pokemonList {
+    --dex-grid-columns: 7;
+  }
+}
+
+@container shiny-dex-grid (min-width: 681px) {
+  html body.tracker-app-shell-active.compact-view #pokemonList {
+    --dex-grid-columns: 7;
+    --dex-grid-gap: 8px;
+    --dex-card-padding: 6px;
+  }
+
+  html body.tracker-app-shell-active.compact-view.ultra-grid-view #pokemonList {
+    --dex-grid-columns: 10;
+    --dex-grid-gap: 5px;
+    --dex-card-padding: 3px;
+  }
+}
+
+@container shiny-dex-grid (min-width: 800px) {
+  html body.tracker-app-shell-active.compact-view #pokemonList {
+    --dex-grid-columns: 9;
+  }
+
+  html body.tracker-app-shell-active.compact-view.ultra-grid-view #pokemonList {
+    --dex-grid-columns: 13;
+  }
+}
+
+@container shiny-dex-grid (min-width: 1050px) {
+  html body.tracker-app-shell-active.compact-view #pokemonList {
+    --dex-grid-columns: 11;
+  }
+
+  html body.tracker-app-shell-active.compact-view.ultra-grid-view #pokemonList {
+    --dex-grid-columns: 16;
+  }
+}
+
+@container shiny-dex-grid (min-width: 1400px) {
+  html body.tracker-app-shell-active.compact-view #pokemonList {
+    --dex-grid-columns: 14;
+  }
+
+  html body.tracker-app-shell-active.compact-view.ultra-grid-view #pokemonList {
+    --dex-grid-columns: 20;
+  }
+}
+
+@container shiny-dex-grid (min-width: 1800px) {
+  html body.tracker-app-shell-active.compact-view #pokemonList {
+    --dex-grid-columns: 18;
+  }
+
+  html body.tracker-app-shell-active.compact-view.ultra-grid-view #pokemonList {
+    --dex-grid-columns: 26;
+  }
+}

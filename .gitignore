@@ -1,0 +1,8 @@
+node_modules/
+backups/
+cache/
+reports/
+Archive.zip
+current-event-ui-after-fixes.zip
+.DS_Store
+__MACOSX/
