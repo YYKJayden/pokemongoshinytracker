@@ -1,0 +1,61 @@
+name: Refresh Pokemon GO events and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Sunday 08:17 Malaysia time (00:17 UTC)
+    - cron: '17 0 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pokemon-pages
+  cancel-in-progress: false
+
+jobs:
+  refresh-and-deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - name: Test event parser
+        run: |
+          npm run test:events-index
+          npm run test:event-parser
+          npm run test:shiny-refresh
+      - name: Refresh LeekDuck data
+        if: github.event_name != 'push'
+        run: |
+          npm run refresh:events
+          node --input-type=module -e 'import fs from "node:fs"; const d=JSON.parse(fs.readFileSync("data/leekduck-event-data.generated.json")); if (!d.eventCount || d.eventCount !== d.events.length || Date.now()-Date.parse(d.generatedAt)>3600000) process.exit(1); console.log(`Generated ${d.eventCount} events at ${d.generatedAt}`);'
+          git diff --check
+      - name: Save refreshed data
+        if: github.event_name != 'push'
+        run: |
+          git add data/leekduck-event-data.generated.js data/leekduck-event-data.generated.json data/leekduck-event-manifest.json
+          if ! git diff --cached --quiet; then
+            git -c user.name='github-actions[bot]' -c user.email='41898282+github-actions[bot]@users.noreply.github.com' commit -m 'Refresh Pokemon GO event data'
+            git push origin HEAD:main
+          fi
+      - uses: actions/configure-pages@v5
+      - name: Prepare site
+        run: |
+          mkdir _site
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='node_modules/' --exclude='cache/' --exclude='reports/' --exclude='scripts/' --exclude='tests/' --exclude='_site/' ./ _site/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
