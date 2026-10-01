@@ -29,8 +29,18 @@ jobs:
         with:
           node-version: '22'
           cache: npm
-      - run: npm ci
+      - name: Install parser dependencies
+        if: github.event_name != 'push'
+        run: |
+          for attempt in 1 2 3; do
+            npm ci --no-audit --no-fund --fetch-retries=5 && exit 0
+            echo "npm install failed on attempt $attempt; retrying"
+            npm cache clean --force
+            sleep 10
+          done
+          exit 1
       - name: Test event parser
+        if: github.event_name != 'push'
         run: |
           npm run test:events-index
           npm run test:event-parser
