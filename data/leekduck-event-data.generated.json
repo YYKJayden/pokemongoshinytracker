@@ -1,7 +1,7 @@
 {
-  "generatedAt": "2026-10-04T06:00:19.653Z",
+  "generatedAt": "2026-10-11T05:55:55.419Z",
   "source": "LeekDuck",
-  "eventCount": 32,
+  "eventCount": 27,
   "shinyAvailableIds": [
     0,
     3,
@@ -272,6 +272,8 @@
     944,
     945,
     957,
+    971,
+    972,
     973,
     977,
     996,
@@ -279,3522 +281,6 @@
     1019
   ],
   "events": [
-    {
-      "id": "patterns-of-the-wild-2026",
-      "name": "Patterns of the Wild",
-      "url": "https://leekduck.com/events/patterns-of-the-wild-2026/",
-      "start": "2026-10-02T12:00:00.000Z",
-      "end": "2026-10-02T12:00:00.000Z",
-      "listedStart": "2026-10-02T12:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "batik-shirt-pikachu__25",
-          "name": "Batik Shirt Pikachu",
-          "speciesId": 25,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm25.fTSHIRT_03.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            },
-            {
-              "type": "wild"
-            },
-            {
-              "type": "timed-research"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pikachu with a Special Background",
-              "headings": [
-                "Pikachu with a Special Background"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Timed Research > Timed Research Encounters",
-              "headings": [
-                "Timed Research",
-                "Timed Research Encounters"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Patterns of the Wild Timed Research",
-              "headings": [
-                "Patterns of the Wild Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Patterns of the Wild Timed Research",
-              "headings": [
-                "Patterns of the Wild Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Patterns of the Wild Timed Research",
-              "headings": [
-                "Patterns of the Wild Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "bellsprout__69",
-          "name": "Bellsprout",
-          "speciesId": 69,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_069_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "caterpie__10",
-          "name": "Caterpie",
-          "speciesId": 10,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_010_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "gloom__44",
-          "name": "Gloom",
-          "speciesId": 44,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_044_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "hoppip__187",
-          "name": "Hoppip",
-          "speciesId": 187,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_187_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "timed-research"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Timed Research > Timed Research Encounters",
-              "headings": [
-                "Timed Research",
-                "Timed Research Encounters"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "ledian__166",
-          "name": "Ledian",
-          "speciesId": 166,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_166_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "ledyba__165",
-          "name": "Ledyba",
-          "speciesId": 165,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_165_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "timed-research"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Timed Research > Timed Research Encounters",
-              "headings": [
-                "Timed Research",
-                "Timed Research Encounters"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "oddish__43",
-          "name": "Oddish",
-          "speciesId": 43,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_043_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "timed-research"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Timed Research > Timed Research Encounters",
-              "headings": [
-                "Timed Research",
-                "Timed Research Encounters"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "skiploom__188",
-          "name": "Skiploom",
-          "speciesId": 188,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_188_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "sunkern__191",
-          "name": "Sunkern",
-          "speciesId": 191,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_191_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "wurmple__265",
-          "name": "Wurmple",
-          "speciesId": 265,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_265_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          25,
-          69,
-          10,
-          44,
-          187,
-          166,
-          165,
-          43,
-          188,
-          191,
-          265
-        ],
-        "wild": [
-          25,
-          69,
-          10,
-          44,
-          187,
-          166,
-          165,
-          43,
-          188,
-          191,
-          265
-        ],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [
-          25,
-          187,
-          165,
-          43
-        ],
-        "shiny": [
-          25,
-          69,
-          10,
-          44,
-          187,
-          166,
-          165,
-          43,
-          188,
-          191,
-          265
-        ],
-        "shinyDebuts": [
-          25,
-          69,
-          10,
-          44,
-          187,
-          166,
-          165,
-          43,
-          188,
-          191,
-          265
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "gigantamax-cinderace-max-battle-day-2026",
-      "name": "Gigantamax Cinderace Max Battle Day",
-      "url": "https://leekduck.com/events/gigantamax-cinderace-max-battle-day-2026/",
-      "start": "2026-10-03T09:00:00.000Z",
-      "end": "2026-10-03T09:00:00.000Z",
-      "listedStart": "2026-10-03T09:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "gigantamax-cinderace__poke_capture_0815_000_mf_g_00000000_f_n",
-          "name": "Gigantamax Cinderace",
-          "speciesId": null,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0815_000_mf_g_00000000_f_n.png",
-          "methods": [
-            {
-              "type": "max-battle"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Featured Pokémon",
-              "headings": [
-                "Featured Pokémon"
-              ],
-              "method": {
-                "type": "max-battle"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "gigantamax-cinderace__815",
-          "name": "Gigantamax Cinderace",
-          "speciesId": 815,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm815.fGIGANTAMAX.s.icon.png",
-          "methods": [
-            {
-              "type": "max-battle"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "max-battle"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          815
-        ],
-        "wild": [],
-        "raid": [],
-        "maxBattle": [
-          815
-        ],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          815
-        ],
-        "shinyDebuts": [
-          815
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "harvest-festival-2026",
-      "name": "Harvest Festival 2026: Applin Picking",
-      "url": "https://leekduck.com/events/harvest-festival-2026/",
-      "start": "2026-10-05T12:00:00.000Z",
-      "end": "2026-10-05T12:00:00.000Z",
-      "listedStart": "2026-10-05T12:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "appletun__842",
-          "name": "Appletun",
-          "speciesId": 842,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm842.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny Debut",
-              "headings": [
-                "Shiny Debut"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "applin__840",
-          "name": "Applin",
-          "speciesId": 840,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm840.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            },
-            {
-              "type": "wild"
-            },
-            {
-              "type": "field-research"
-            },
-            {
-              "type": "timed-research"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Apples",
-              "headings": [
-                "Apples"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Encounters",
-              "headings": [
-                "Field Research Task Encounters"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Branching Timed Research",
-              "headings": [
-                "Branching Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Branching Timed Research > Flapple Path",
-              "headings": [
-                "Branching Timed Research",
-                "Flapple Path"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Branching Timed Research > Flapple Path",
-              "headings": [
-                "Branching Timed Research",
-                "Flapple Path"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Branching Timed Research > Appletun Path",
-              "headings": [
-                "Branching Timed Research",
-                "Appletun Path"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Branching Timed Research > Appletun Path",
-              "headings": [
-                "Branching Timed Research",
-                "Appletun Path"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Branching Timed Research > Dipplin Path",
-              "headings": [
-                "Branching Timed Research",
-                "Dipplin Path"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "page-reward",
-              "section": "Branching Timed Research > Dipplin Path",
-              "headings": [
-                "Branching Timed Research",
-                "Dipplin Path"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny Debut",
-              "headings": [
-                "Shiny Debut"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "arboliva__930",
-          "name": "Arboliva",
-          "speciesId": 930,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm930.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Increased Shiny Chance",
-              "headings": [
-                "Increased Shiny Chance"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "dipplin__1011",
-          "name": "Dipplin",
-          "speciesId": 1011,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm1011.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny Debut",
-              "headings": [
-                "Shiny Debut"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "dolliv__929",
-          "name": "Dolliv",
-          "speciesId": 929,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm929.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Increased Shiny Chance",
-              "headings": [
-                "Increased Shiny Chance"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "ekans__23",
-          "name": "Ekans",
-          "speciesId": 23,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_023_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Taken Over Spawns",
-              "headings": [
-                "Spawns",
-                "Taken Over Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "flapple__841",
-          "name": "Flapple",
-          "speciesId": 841,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm841.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny Debut",
-              "headings": [
-                "Shiny Debut"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "flower-crown-cottonee__546",
-          "name": "Flower Crown Cottonee",
-          "speciesId": 546,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm546.cSPRING_2024.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Apples",
-              "headings": [
-                "Apples"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "foongus__590",
-          "name": "Foongus",
-          "speciesId": 590,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_590_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "field-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Encounters",
-              "headings": [
-                "Field Research Task Encounters"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "hydrapple__1019",
-          "name": "Hydrapple",
-          "speciesId": 1019,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm1019.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny Debut",
-              "headings": [
-                "Shiny Debut"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "koffing__109",
-          "name": "Koffing",
-          "speciesId": 109,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_109_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Taken Over Spawns",
-              "headings": [
-                "Spawns",
-                "Taken Over Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "lechonk__915",
-          "name": "Lechonk",
-          "speciesId": 915,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm915.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            },
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Apples",
-              "headings": [
-                "Apples"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "magmar__126",
-          "name": "Magmar",
-          "speciesId": 126,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_126_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Taken Over Spawns",
-              "headings": [
-                "Spawns",
-                "Taken Over Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "numel__322",
-          "name": "Numel",
-          "speciesId": 322,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_322_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Taken Over Spawns",
-              "headings": [
-                "Spawns",
-                "Taken Over Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "shroomish__285",
-          "name": "Shroomish",
-          "speciesId": 285,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_285_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "skiddo__672",
-          "name": "Skiddo",
-          "speciesId": 672,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm672.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Apples",
-              "headings": [
-                "Apples"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "skwovet__819",
-          "name": "Skwovet",
-          "speciesId": 819,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm819.icon.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "field-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Encounters",
-              "headings": [
-                "Field Research Task Encounters"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "slugma__218",
-          "name": "Slugma",
-          "speciesId": 218,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_218_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Taken Over Spawns",
-              "headings": [
-                "Spawns",
-                "Taken Over Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "smoliv__928",
-          "name": "Smoliv",
-          "speciesId": 928,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm928.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            },
-            {
-              "type": "wild"
-            },
-            {
-              "type": "field-research"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Apples",
-              "headings": [
-                "Apples"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Encounters",
-              "headings": [
-                "Field Research Task Encounters"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Encounters",
-              "headings": [
-                "Field Research Task Encounters"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Increased Shiny Chance",
-              "headings": [
-                "Increased Shiny Chance"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "snorlax__143",
-          "name": "Snorlax",
-          "speciesId": 143,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_143_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          842,
-          840,
-          930,
-          1011,
-          929,
-          23,
-          841,
-          546,
-          590,
-          1019,
-          109,
-          915,
-          126,
-          322,
-          285,
-          672,
-          819,
-          218,
-          928,
-          143
-        ],
-        "wild": [
-          840,
-          23,
-          590,
-          109,
-          915,
-          126,
-          322,
-          285,
-          819,
-          218,
-          928,
-          143
-        ],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [
-          840,
-          590,
-          819,
-          928
-        ],
-        "shiny": [
-          842,
-          840,
-          930,
-          1011,
-          929,
-          23,
-          841,
-          546,
-          590,
-          1019,
-          109,
-          915,
-          126,
-          322,
-          285,
-          672,
-          819,
-          218,
-          928,
-          143
-        ],
-        "shinyDebuts": [
-          842,
-          840,
-          930,
-          1011,
-          929,
-          23,
-          841,
-          546,
-          590,
-          1019,
-          109,
-          915,
-          126,
-          322,
-          285,
-          672,
-          819,
-          218,
-          928,
-          143
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "harvest-festival-taken-over-2026",
-      "name": "Harvest Festival: Taken Over",
-      "url": "https://leekduck.com/events/harvest-festival-taken-over-2026/",
-      "start": "2026-10-05T12:00:00.000Z",
-      "end": "2026-10-05T12:00:00.000Z",
-      "listedStart": "2026-10-05T12:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "alolan-grimer__88",
-          "name": "Alolan Grimer",
-          "speciesId": 88,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_088_61.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Team GO Rocket Leaders",
-              "headings": [
-                "Team GO Rocket Leaders"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "applin__840",
-          "name": "Applin",
-          "speciesId": 840,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm840.icon.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Harvest Festival Spawns",
-              "headings": [
-                "Spawns",
-                "Harvest Festival Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "cubone__104",
-          "name": "Cubone",
-          "speciesId": 104,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_104_00.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Team GO Rocket Leaders",
-              "headings": [
-                "Team GO Rocket Leaders"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "ekans__23",
-          "name": "Ekans",
-          "speciesId": 23,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_023_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "fomantis__753",
-          "name": "Fomantis",
-          "speciesId": 753,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm753.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shadow > New Shadow Pokémon",
-              "headings": [
-                "Shadow",
-                "New Shadow Pokémon"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "foongus__590",
-          "name": "Foongus",
-          "speciesId": 590,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_590_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Harvest Festival Spawns",
-              "headings": [
-                "Spawns",
-                "Harvest Festival Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "grafaiai__945",
-          "name": "Grafaiai",
-          "speciesId": 945,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm945.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny Shroodle Debut",
-              "headings": [
-                "Shiny Shroodle Debut"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "koffing__109",
-          "name": "Koffing",
-          "speciesId": 109,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_109_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "lechonk__915",
-          "name": "Lechonk",
-          "speciesId": 915,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm915.icon.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Harvest Festival Spawns",
-              "headings": [
-                "Spawns",
-                "Harvest Festival Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "magmar__126",
-          "name": "Magmar",
-          "speciesId": 126,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_126_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "numel__322",
-          "name": "Numel",
-          "speciesId": 322,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_322_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "pancham__674",
-          "name": "Pancham",
-          "speciesId": 674,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_674_00.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Team GO Rocket Leaders",
-              "headings": [
-                "Team GO Rocket Leaders"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "sandygast__769",
-          "name": "Sandygast",
-          "speciesId": 769,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm769.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shadow > New Shadow Pokémon",
-              "headings": [
-                "Shadow",
-                "New Shadow Pokémon"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "shroodle__944",
-          "name": "Shroodle",
-          "speciesId": 944,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm944.s.icon.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny Shroodle Debut",
-              "headings": [
-                "Shiny Shroodle Debut"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "shroomish__285",
-          "name": "Shroomish",
-          "speciesId": 285,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_285_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Harvest Festival Spawns",
-              "headings": [
-                "Spawns",
-                "Harvest Festival Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "skwovet__819",
-          "name": "Skwovet",
-          "speciesId": 819,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm819.icon.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Harvest Festival Spawns",
-              "headings": [
-                "Spawns",
-                "Harvest Festival Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "slugma__218",
-          "name": "Slugma",
-          "speciesId": 218,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_218_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Increased Shiny Chance",
-              "headings": [
-                "Increased Shiny Chance"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "smoliv__928",
-          "name": "Smoliv",
-          "speciesId": 928,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm928.icon.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Harvest Festival Spawns",
-              "headings": [
-                "Spawns",
-                "Harvest Festival Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "snorlax__143",
-          "name": "Snorlax",
-          "speciesId": 143,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_143_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns > Harvest Festival Spawns",
-              "headings": [
-                "Spawns",
-                "Harvest Festival Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "wimpod__767",
-          "name": "Wimpod",
-          "speciesId": 767,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm767.icon.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shadow > New Shadow Pokémon",
-              "headings": [
-                "Shadow",
-                "New Shadow Pokémon"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "zekrom__644",
-          "name": "Zekrom",
-          "speciesId": 644,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_644_00.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Save Shadow Zekrom!",
-              "headings": [
-                "Save Shadow Zekrom!"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          88,
-          840,
-          104,
-          23,
-          753,
-          590,
-          945,
-          109,
-          915,
-          126,
-          322,
-          674,
-          769,
-          944,
-          285,
-          819,
-          218,
-          928,
-          143,
-          767,
-          644
-        ],
-        "wild": [
-          840,
-          23,
-          590,
-          109,
-          915,
-          126,
-          322,
-          285,
-          819,
-          218,
-          928,
-          143
-        ],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          88,
-          840,
-          104,
-          23,
-          753,
-          590,
-          945,
-          109,
-          915,
-          126,
-          322,
-          674,
-          769,
-          944,
-          285,
-          819,
-          218,
-          928,
-          143,
-          767,
-          644
-        ],
-        "shinyDebuts": [
-          88,
-          840,
-          104,
-          23,
-          753,
-          590,
-          945,
-          109,
-          915,
-          126,
-          322,
-          674,
-          769,
-          944,
-          285,
-          819,
-          218,
-          928,
-          143,
-          767,
-          644
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "max-mondays-2026-10-05",
-      "name": "Dynamax Sizzlipede during Max Monday",
-      "url": "https://leekduck.com/events/max-mondays-2026-10-05/",
-      "start": "2026-10-05T13:00:00.000Z",
-      "end": "2026-10-05T13:00:00.000Z",
-      "listedStart": "2026-10-05T13:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "sizzlipede__850",
-          "name": "Sizzlipede",
-          "speciesId": 850,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm850.icon.png",
-          "methods": [
-            {
-              "type": "max-battle"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Event description",
-              "headings": [],
-              "method": {
-                "type": "max-battle"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          850
-        ],
-        "wild": [],
-        "raid": [],
-        "maxBattle": [
-          850
-        ],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          850
-        ],
-        "shinyDebuts": [
-          850
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "go-pass-september-2026",
-      "name": "GO Pass: September",
-      "url": "https://leekduck.com/events/go-pass-september-2026/",
-      "start": "2026-10-06T02:00:00.000Z",
-      "end": "2026-10-06T02:00:00.000Z",
-      "listedStart": "2026-10-06T02:00:00.000Z",
-      "category": "Event",
-      "pokemon": [],
-      "pokemonLegacy": {
-        "roster": [],
-        "wild": [],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [],
-        "shinyDebuts": []
-      },
-      "warnings": []
-    },
-    {
-      "id": "go-pass-october-2026",
-      "name": "GO Pass: October",
-      "url": "https://leekduck.com/events/go-pass-october-2026/",
-      "start": "2026-10-06T02:00:00.000Z",
-      "end": "2026-10-06T02:00:00.000Z",
-      "listedStart": "2026-10-06T02:00:00.000Z",
-      "category": "Event",
-      "pokemon": [],
-      "pokemonLegacy": {
-        "roster": [],
-        "wild": [],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [],
-        "shinyDebuts": []
-      },
-      "warnings": []
-    },
-    {
-      "id": "shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026",
-      "name": "Shadow Thundurus (Incarnate Forme) in Shadow Raids",
-      "url": "https://leekduck.com/events/shadow-thundurus-incarnate-forme-in-shadow-raids-september-2026/",
-      "start": "2026-10-06T14:00:00.000Z",
-      "end": "2026-10-06T14:00:00.000Z",
-      "listedStart": "2026-10-06T14:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "thundurus-incarnate__642",
-          "name": "Thundurus (Incarnate)",
-          "speciesId": 642,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_642_11.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": 5
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids > Appearing in 5-Star Shadow Raids",
-              "headings": [
-                "Raids",
-                "Appearing in 5-Star Shadow Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": 5
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          642
-        ],
-        "wild": [],
-        "raid": [
-          642
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          642
-        ],
-        "shinyDebuts": [
-          642
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "mega-victreebel-in-mega-raids-september-2026",
-      "name": "Mega Victreebel in Mega Raids",
-      "url": "https://leekduck.com/events/mega-victreebel-in-mega-raids-september-2026/",
-      "start": "2026-10-06T14:00:00.000Z",
-      "end": "2026-10-06T14:00:00.000Z",
-      "listedStart": "2026-10-06T14:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "mega-victreebel__71",
-          "name": "Mega Victreebel",
-          "speciesId": 71,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm71.fMEGA.icon.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids",
-              "headings": [
-                "Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": null
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "victreebel__71",
-          "name": "Victreebel",
-          "speciesId": 71,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_071_00_shiny.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          71
-        ],
-        "wild": [],
-        "raid": [
-          71
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          71
-        ],
-        "shinyDebuts": [
-          71
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "xerneas-in-5-star-raid-battles-september-2026",
-      "name": "Xerneas in 5-star Raid Battles",
-      "url": "https://leekduck.com/events/xerneas-in-5-star-raid-battles-september-2026/",
-      "start": "2026-10-06T14:00:00.000Z",
-      "end": "2026-10-06T14:00:00.000Z",
-      "listedStart": "2026-10-06T14:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "xerneas__716",
-          "name": "Xerneas",
-          "speciesId": 716,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_716_00.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids",
-              "headings": [
-                "Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": null
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          716
-        ],
-        "wild": [],
-        "raid": [
-          716
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          716
-        ],
-        "shinyDebuts": [
-          716
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "shadow-landorus-incarnate-forme-in-shadow-raids-october-2026",
-      "name": "Shadow Landorus (Incarnate Forme) in Shadow Raids",
-      "url": "https://leekduck.com/events/shadow-landorus-incarnate-forme-in-shadow-raids-october-2026/",
-      "start": "2026-10-06T22:00:00.000Z",
-      "end": "2026-10-06T22:00:00.000Z",
-      "listedStart": "2026-10-06T22:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "landorus-incarnate__645",
-          "name": "Landorus (Incarnate)",
-          "speciesId": 645,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_645_11.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": 5
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids > Appearing in 5-Star Shadow Raids",
-              "headings": [
-                "Raids",
-                "Appearing in 5-Star Shadow Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": 5
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          645
-        ],
-        "wild": [],
-        "raid": [
-          645
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          645
-        ],
-        "shinyDebuts": [
-          645
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "raidhour20261007",
-      "name": "Yveltal Raid Hour",
-      "url": "https://leekduck.com/events/raidhour20261007/",
-      "start": "2026-10-07T11:00:00.000Z",
-      "end": "2026-10-07T11:00:00.000Z",
-      "listedStart": "2026-10-07T11:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "yveltal__717",
-          "name": "Yveltal",
-          "speciesId": 717,
-          "image": "",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": 5
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "text-fallback",
-              "section": "Event description",
-              "headings": [],
-              "method": {
-                "type": "raid",
-                "tier": 5
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          717
-        ],
-        "wild": [],
-        "raid": [
-          717
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [],
-        "shinyDebuts": []
-      },
-      "warnings": [
-        "Used text fallback for Yveltal Raid Hour; LeekDuck page has no Pokémon card."
-      ]
-    },
-    {
-      "id": "pokemonspotlighthour2026-10-08",
-      "name": "Elgyem Spotlight Hour",
-      "url": "https://leekduck.com/events/pokemonspotlighthour2026-10-08/",
-      "start": "2026-10-08T11:00:00.000Z",
-      "end": "2026-10-08T11:00:00.000Z",
-      "listedStart": "2026-10-08T11:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "elgyem__605",
-          "name": "Elgyem",
-          "speciesId": 605,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_605_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          605
-        ],
-        "wild": [
-          605
-        ],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          605
-        ],
-        "shinyDebuts": [
-          605
-        ]
-      },
-      "warnings": []
-    },
     {
       "id": "october-communityday2026",
       "name": "Zorua Community Day",
@@ -3947,9 +433,9 @@
             },
             {
               "kind": "page-reward",
-              "section": "Zorua Community Day",
+              "section": "Trickster’s Trail",
               "headings": [
-                "Zorua Community Day"
+                "Trickster’s Trail"
               ],
               "method": {
                 "type": "special-research"
@@ -3962,9 +448,9 @@
             },
             {
               "kind": "page-reward",
-              "section": "Zorua Community Day",
+              "section": "Trickster’s Trail",
               "headings": [
-                "Zorua Community Day"
+                "Trickster’s Trail"
               ],
               "method": {
                 "type": "special-research"
@@ -3977,9 +463,9 @@
             },
             {
               "kind": "page-reward",
-              "section": "Zorua Community Day",
+              "section": "Trickster’s Trail",
               "headings": [
-                "Zorua Community Day"
+                "Trickster’s Trail"
               ],
               "method": {
                 "type": "special-research"
@@ -3992,9 +478,9 @@
             },
             {
               "kind": "page-reward",
-              "section": "Zorua Community Day",
+              "section": "Trickster’s Trail",
               "headings": [
-                "Zorua Community Day"
+                "Trickster’s Trail"
               ],
               "method": {
                 "type": "special-research"
@@ -4007,9 +493,9 @@
             },
             {
               "kind": "page-reward",
-              "section": "Zorua Community Day",
+              "section": "Trickster’s Trail",
               "headings": [
-                "Zorua Community Day"
+                "Trickster’s Trail"
               ],
               "method": {
                 "type": "special-research"
@@ -5876,279 +2362,6 @@
       "warnings": []
     },
     {
-      "id": "mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026",
-      "name": "Mega Charizard X and Mega Charizard Y in Mega Raids",
-      "url": "https://leekduck.com/events/mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026/",
-      "start": "2026-10-20T22:00:00.000Z",
-      "end": "2026-10-20T22:00:00.000Z",
-      "listedStart": "2026-10-20T22:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "charizard__6",
-          "name": "Charizard",
-          "speciesId": 6,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_00_shiny.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "mega-charizard-x__6",
-          "name": "Mega Charizard X",
-          "speciesId": 6,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_51.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids",
-              "headings": [
-                "Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": null
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "mega-charizard-y__6",
-          "name": "Mega Charizard Y",
-          "speciesId": 6,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_52.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids",
-              "headings": [
-                "Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": null
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          6
-        ],
-        "wild": [],
-        "raid": [
-          6
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          6
-        ],
-        "shinyDebuts": [
-          6
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "palkia-in-5-star-raid-battles-october-2026",
-      "name": "Palkia in 5-star Raid Battles",
-      "url": "https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026/",
-      "start": "2026-10-20T22:00:00.000Z",
-      "end": "2026-10-20T22:00:00.000Z",
-      "listedStart": "2026-10-20T22:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "palkia__484",
-          "name": "Palkia",
-          "speciesId": 484,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids",
-              "headings": [
-                "Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": null
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          484
-        ],
-        "wild": [],
-        "raid": [
-          484
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          484
-        ],
-        "shinyDebuts": [
-          484
-        ]
-      },
-      "warnings": []
-    },
-    {
       "id": "raidhour20261021",
       "name": "Palkia Raid Hour",
       "url": "https://leekduck.com/events/raidhour20261021/",
@@ -6757,6 +2970,1052 @@
         "shinyDebuts": []
       },
       "warnings": []
+    },
+    {
+      "id": "max-mondays-2026-10-26",
+      "name": "Dynamax Sableye during Max Monday",
+      "url": "https://leekduck.com/events/max-mondays-2026-10-26/",
+      "start": "2026-10-26T13:00:00.000Z",
+      "end": "2026-10-26T13:00:00.000Z",
+      "listedStart": "2026-10-26T13:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "sableye__302",
+          "name": "Sableye",
+          "speciesId": 302,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Event description",
+              "headings": [],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          302
+        ],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [
+          302
+        ],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          302
+        ],
+        "shinyDebuts": [
+          302
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026",
+      "name": "Mega Charizard X and Mega Charizard Y in Mega Raids",
+      "url": "https://leekduck.com/events/mega-charizard-x-mega-charizard-y-in-mega-raids-october-2026/",
+      "start": "2026-10-27T14:00:00.000Z",
+      "end": "2026-10-27T14:00:00.000Z",
+      "listedStart": "2026-10-27T14:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "charizard__6",
+          "name": "Charizard",
+          "speciesId": 6,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_00_shiny.png",
+          "methods": [
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        },
+        {
+          "key": "mega-charizard-x__6",
+          "name": "Mega Charizard X",
+          "speciesId": 6,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_51.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": null
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon",
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids",
+              "headings": [
+                "Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": null
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        },
+        {
+          "key": "mega-charizard-y__6",
+          "name": "Mega Charizard Y",
+          "speciesId": 6,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_006_52.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": null
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon",
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids",
+              "headings": [
+                "Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": null
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          6
+        ],
+        "wild": [],
+        "raid": [
+          6
+        ],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          6
+        ],
+        "shinyDebuts": [
+          6
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "palkia-in-5-star-raid-battles-october-2026",
+      "name": "Palkia in 5-star Raid Battles",
+      "url": "https://leekduck.com/events/palkia-in-5-star-raid-battles-october-2026/",
+      "start": "2026-10-27T14:00:00.000Z",
+      "end": "2026-10-27T14:00:00.000Z",
+      "listedStart": "2026-10-27T14:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "palkia__484",
+          "name": "Palkia",
+          "speciesId": 484,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": null
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon",
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids",
+              "headings": [
+                "Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": null
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          484
+        ],
+        "wild": [],
+        "raid": [
+          484
+        ],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          484
+        ],
+        "shinyDebuts": [
+          484
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "giratina-origin-forme-in-5-star-raid-battles-october-2026",
+      "name": "Giratina (Origin Forme) in 5-star Raid Battles",
+      "url": "https://leekduck.com/events/giratina-origin-forme-in-5-star-raid-battles-october-2026/",
+      "start": "2026-10-27T22:00:00.000Z",
+      "end": "2026-10-27T22:00:00.000Z",
+      "listedStart": "2026-10-27T22:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "giratina-origin__487",
+          "name": "Giratina (Origin)",
+          "speciesId": 487,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_487_12.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": null
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon",
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids",
+              "headings": [
+                "Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": null
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          487
+        ],
+        "wild": [],
+        "raid": [
+          487
+        ],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          487
+        ],
+        "shinyDebuts": [
+          487
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "mega-sableye-in-mega-raids-october-2026",
+      "name": "Mega Sableye in Mega Raids",
+      "url": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/",
+      "start": "2026-10-27T22:00:00.000Z",
+      "end": "2026-10-27T22:00:00.000Z",
+      "listedStart": "2026-10-27T22:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "mega-sableye__302",
+          "name": "Mega Sableye",
+          "speciesId": 302,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_51.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": null
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon",
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids",
+              "headings": [
+                "Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": null
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        },
+        {
+          "key": "sableye__302",
+          "name": "Sableye",
+          "speciesId": 302,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_00_shiny.png",
+          "methods": [
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          302
+        ],
+        "wild": [],
+        "raid": [
+          302
+        ],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          302
+        ],
+        "shinyDebuts": [
+          302
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "raidhour20261028",
+      "name": "Giratina (Origin Forme) Raid Hour",
+      "url": "https://leekduck.com/events/raidhour20261028/",
+      "start": "2026-10-28T11:00:00.000Z",
+      "end": "2026-10-28T11:00:00.000Z",
+      "listedStart": "2026-10-28T11:00:00.000Z",
+      "category": "Event",
+      "pokemon": [],
+      "pokemonLegacy": {
+        "roster": [],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [],
+        "shinyDebuts": []
+      },
+      "warnings": []
+    },
+    {
+      "id": "pokemonspotlighthour2026-10-29",
+      "name": "Gastly Spotlight Hour",
+      "url": "https://leekduck.com/events/pokemonspotlighthour2026-10-29/",
+      "start": "2026-10-29T11:00:00.000Z",
+      "end": "2026-10-29T11:00:00.000Z",
+      "listedStart": "2026-10-29T11:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "gastly__92",
+          "name": "Gastly",
+          "speciesId": 92,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_092_00.png",
+          "methods": [
+            {
+              "type": "wild"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          92
+        ],
+        "wild": [
+          92
+        ],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          92
+        ],
+        "shinyDebuts": [
+          92
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "super-mega-raid-day-october-2026",
+      "name": "Super Mega Raid Day",
+      "url": "https://leekduck.com/events/super-mega-raid-day-october-2026/",
+      "start": "2026-10-31T09:00:00.000Z",
+      "end": "2026-10-31T09:00:00.000Z",
+      "listedStart": "2026-10-31T09:00:00.000Z",
+      "category": "Event",
+      "pokemon": [],
+      "pokemonLegacy": {
+        "roster": [],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [],
+        "shinyDebuts": []
+      },
+      "warnings": []
+    },
+    {
+      "id": "halloween-2026-part-1",
+      "name": "Pokémon GO Halloween 2026 Part I",
+      "url": "https://leekduck.com/events/halloween-2026-part-1/",
+      "start": "2026-11-01T02:00:00.000Z",
+      "end": "2026-11-01T02:00:00.000Z",
+      "listedStart": "2026-11-01T02:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "duskull__355",
+          "name": "Duskull",
+          "speciesId": 355,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pokemon_icon_355_00.png",
+          "methods": [
+            {
+              "type": "wild"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "piplup-wearing-a-halloween-mischief-costume__393",
+          "name": "Piplup wearing a Halloween Mischief costume",
+          "speciesId": 393,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm393.cHALLOWEEN_2021_NOEVOLVE.icon.png",
+          "methods": [
+            {
+              "type": "wild"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          355,
+          393
+        ],
+        "wild": [
+          355,
+          393
+        ],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [],
+        "shinyDebuts": []
+      },
+      "warnings": [
+        "Could not resolve a Pokémon name in list under Pokémon Debuts.",
+        "Could not resolve a Pokémon name in list under Spawns.",
+        "Could not resolve a Pokémon name in list under Raids > One-Star Raids."
+      ]
+    },
+    {
+      "id": "halloween-2026-part-2",
+      "name": "Pokémon GO Halloween 2026 Part II",
+      "url": "https://leekduck.com/events/halloween-2026-part-2/",
+      "start": "2026-11-01T02:00:00.000Z",
+      "end": "2026-11-01T02:00:00.000Z",
+      "listedStart": "2026-11-01T02:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "gengar-wearing-a-spooky-festival-costume__94",
+          "name": "Gengar wearing a Spooky Festival costume",
+          "speciesId": 94,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm94.cFALL_2022_NOEVOLVE.icon.png",
+          "methods": [
+            {
+              "type": "wild"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "greavard__971",
+          "name": "Greavard",
+          "speciesId": 971,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm971.icon.png",
+          "methods": [
+            {
+              "type": "wild"
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        },
+        {
+          "key": "houndstone__972",
+          "name": "Houndstone",
+          "speciesId": 972,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm972.s.icon.png",
+          "methods": [
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        },
+        {
+          "key": "litwick__607",
+          "name": "Litwick",
+          "speciesId": 607,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pokemon_icon_607_00.png",
+          "methods": [
+            {
+              "type": "wild"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "mega-sableye__302",
+          "name": "Mega Sableye",
+          "speciesId": 302,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_51.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mega Sableye: Super Max Level",
+              "headings": [
+                "Mega Sableye: Super Max Level"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "rowlet-wearing-a-pokemon-halloween-costume__722",
+          "name": "Rowlet wearing a Pokémon Halloween costume",
+          "speciesId": 722,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm722.cFALL_2024.icon.png",
+          "methods": [
+            {
+              "type": "wild"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          94,
+          971,
+          972,
+          607,
+          302,
+          722
+        ],
+        "wild": [
+          94,
+          971,
+          607,
+          722
+        ],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          971,
+          972,
+          302
+        ],
+        "shinyDebuts": [
+          971,
+          972,
+          302
+        ]
+      },
+      "warnings": [
+        "Could not resolve a Pokémon name in list under Raids > One-Star Raids."
+      ]
     }
   ]
 }
