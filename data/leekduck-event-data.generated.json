@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-18T04:41:49.001Z",
+  "generatedAt": "2026-10-25T04:51:20.229Z",
   "source": "LeekDuck",
   "eventCount": 24,
   "shinyAvailableIds": [
@@ -33,18 +33,22 @@
     63,
     65,
     66,
+    68,
     69,
     71,
     74,
     77,
     79,
     80,
+    81,
     84,
     88,
+    90,
     92,
     94,
     95,
     102,
+    103,
     104,
     108,
     109,
@@ -60,6 +64,7 @@
     130,
     131,
     133,
+    137,
     142,
     143,
     144,
@@ -78,13 +83,18 @@
     179,
     181,
     183,
+    184,
     187,
     188,
     191,
     194,
     201,
+    207,
     208,
+    212,
+    213,
     215,
+    216,
     218,
     220,
     222,
@@ -92,6 +102,7 @@
     227,
     228,
     229,
+    230,
     234,
     236,
     237,
@@ -109,6 +120,7 @@
     285,
     290,
     298,
+    299,
     302,
     303,
     304,
@@ -122,9 +134,12 @@
     319,
     322,
     323,
+    328,
+    330,
     331,
     333,
     334,
+    339,
     341,
     343,
     349,
@@ -135,32 +150,40 @@
     361,
     362,
     363,
+    365,
     366,
     371,
     374,
+    376,
     377,
     378,
     379,
     380,
     381,
     383,
+    393,
+    395,
     398,
     406,
+    410,
     418,
     420,
     425,
     427,
     428,
     433,
+    436,
     440,
     443,
     444,
     445,
     446,
     447,
+    448,
     458,
     459,
     460,
+    462,
     480,
     481,
     482,
@@ -173,6 +196,7 @@
     522,
     529,
     531,
+    534,
     543,
     546,
     548,
@@ -192,17 +216,25 @@
     582,
     587,
     590,
+    597,
+    598,
+    599,
     602,
     605,
     607,
     609,
     610,
+    612,
     613,
     618,
     621,
+    631,
+    632,
     633,
+    635,
     636,
     642,
+    643,
     644,
     645,
     646,
@@ -224,16 +256,21 @@
     686,
     687,
     688,
+    690,
     692,
     694,
     696,
     698,
     702,
     703,
+    704,
+    706,
+    707,
     708,
     710,
     712,
     714,
+    715,
     716,
     717,
     725,
@@ -249,12 +286,15 @@
     767,
     769,
     775,
+    776,
+    777,
     780,
     782,
     792,
     794,
     795,
     796,
+    808,
     815,
     816,
     819,
@@ -272,8 +312,10 @@
     872,
     873,
     876,
+    884,
     888,
     889,
+    895,
     906,
     908,
     909,
@@ -290,1687 +332,18 @@
     944,
     945,
     957,
+    959,
+    968,
     971,
     972,
     973,
     977,
+    980,
     996,
     1011,
     1019
   ],
   "events": [
-    {
-      "id": "pokemonspotlighthour2026-10-15",
-      "name": "Stufful Spotlight Hour",
-      "url": "https://leekduck.com/events/pokemonspotlighthour2026-10-15/",
-      "start": "2026-10-15T11:00:00.000Z",
-      "end": "2026-10-15T11:00:00.000Z",
-      "listedStart": "2026-10-15T11:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "stufful__759",
-          "name": "Stufful",
-          "speciesId": 759,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm759.icon.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          759
-        ],
-        "wild": [
-          759
-        ],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          759
-        ],
-        "shinyDebuts": [
-          759
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "sandile-hatch-day-2026",
-      "name": "Sandile Hatch Day",
-      "url": "https://leekduck.com/events/sandile-hatch-day-2026/",
-      "start": "2026-10-17T09:00:00.000Z",
-      "end": "2026-10-17T09:00:00.000Z",
-      "listedStart": "2026-10-17T09:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "krokorok__552",
-          "name": "Krokorok",
-          "speciesId": 552,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_552_00_shiny.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "krookodile__553",
-          "name": "Krookodile",
-          "speciesId": 553,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_553_00_shiny.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "sandile__551",
-          "name": "Sandile",
-          "speciesId": 551,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_551_00.png",
-          "methods": [
-            {
-              "type": "egg",
-              "distanceKm": 2
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Featured Pokémon",
-              "headings": [
-                "Featured Pokémon"
-              ],
-              "method": {
-                "type": "egg",
-                "distanceKm": 2
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          552,
-          553,
-          551
-        ],
-        "wild": [],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [
-          551
-        ],
-        "egg2km": [
-          551
-        ],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          552,
-          553,
-          551
-        ],
-        "shinyDebuts": [
-          552,
-          553,
-          551
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "fall-marathon-buddy-trek-2026",
-      "name": "Fall Marathon: Buddy Trek",
-      "url": "https://leekduck.com/events/fall-marathon-buddy-trek-2026/",
-      "start": "2026-10-19T12:00:00.000Z",
-      "end": "2026-10-19T12:00:00.000Z",
-      "listedStart": "2026-10-19T12:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "blitzle__522",
-          "name": "Blitzle",
-          "speciesId": 522,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_522_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Wild Encounters",
-              "headings": [
-                "Wild Encounters"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "brambleghast__947",
-          "name": "Brambleghast",
-          "speciesId": 947,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm947.icon.png",
-          "methods": [
-            {
-              "type": "debut"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "bramblin__946",
-          "name": "Bramblin",
-          "speciesId": 946,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm946.icon.png",
-          "methods": [
-            {
-              "type": "debut"
-            },
-            {
-              "type": "incense"
-            },
-            {
-              "type": "field-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Rewards",
-              "headings": [
-                "Field Research Task Rewards"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "cacnea__331",
-          "name": "Cacnea",
-          "speciesId": 331,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_331_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "field-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Wild Encounters",
-              "headings": [
-                "Wild Encounters"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Rewards",
-              "headings": [
-                "Field Research Task Rewards"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "doduo__84",
-          "name": "Doduo",
-          "speciesId": 84,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_084_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "field-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Wild Encounters",
-              "headings": [
-                "Wild Encounters"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Rewards",
-              "headings": [
-                "Field Research Task Rewards"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "dwebble__557",
-          "name": "Dwebble",
-          "speciesId": 557,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_557_00.png",
-          "methods": [
-            {
-              "type": "incense"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "electrike__309",
-          "name": "Electrike",
-          "speciesId": 309,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_309_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            },
-            {
-              "type": "incense"
-            },
-            {
-              "type": "field-research"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Wild Encounters",
-              "headings": [
-                "Wild Encounters"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Rewards",
-              "headings": [
-                "Field Research Task Rewards"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Rewards",
-              "headings": [
-                "Field Research Task Rewards"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "galarian-ponyta__77",
-          "name": "Galarian Ponyta",
-          "speciesId": 77,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm77.fGALARIAN.icon.png",
-          "methods": [
-            {
-              "type": "incense"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "helioptile__694",
-          "name": "Helioptile",
-          "speciesId": 694,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm694.icon.png",
-          "methods": [
-            {
-              "type": "incense"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "hisuian-growlithe__58",
-          "name": "Hisuian Growlithe",
-          "speciesId": 58,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm58.fHISUIAN.icon.png",
-          "methods": [
-            {
-              "type": "incense"
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "hoppip__187",
-          "name": "Hoppip",
-          "speciesId": 187,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_187_00.png",
-          "methods": [
-            {
-              "type": "incense"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 13 at 10:00 a.m. to October 16 at 10:00 a.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "manectric-mega-energy__310",
-          "name": "Manectric Mega Energy",
-          "speciesId": 310,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pokemon_icon_310_00.png",
-          "methods": [
-            {
-              "type": "field-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "reward",
-              "section": "Field Research Task Rewards",
-              "headings": [
-                "Field Research Task Rewards"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "reward",
-              "section": "Field Research Task Rewards",
-              "headings": [
-                "Field Research Task Rewards"
-              ],
-              "method": {
-                "type": "field-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "marathon-visor-pikachu__25",
-          "name": "Marathon Visor Pikachu",
-          "speciesId": 25,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pm25.fVISOR_2026.icon.png",
-          "methods": [
-            {
-              "type": "timed-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "page-reward",
-              "section": "Fall Marathon",
-              "headings": [
-                "Fall Marathon"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "mega-manectric__310",
-          "name": "Mega Manectric",
-          "speciesId": 310,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_310_51.png",
-          "methods": [
-            {
-              "type": "mention"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Mega Manectric",
-              "headings": [
-                "Mega Manectric"
-              ],
-              "method": {
-                "type": "mention"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "nincada__290",
-          "name": "Nincada",
-          "speciesId": 290,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_290_00.png",
-          "methods": [
-            {
-              "type": "incense"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Incense Encounters > October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time",
-              "headings": [
-                "Incense Encounters",
-                "October 16 at 10:00 a.m. to October 19 at 8:00 p.m. local time"
-              ],
-              "method": {
-                "type": "incense"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "ponyta__77",
-          "name": "Ponyta",
-          "speciesId": 77,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_077_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Wild Encounters",
-              "headings": [
-                "Wild Encounters"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "skarmory__227",
-          "name": "Skarmory",
-          "speciesId": 227,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_227_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Wild Encounters",
-              "headings": [
-                "Wild Encounters"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "stantler__234",
-          "name": "Stantler",
-          "speciesId": 234,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_234_00.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Wild Encounters",
-              "headings": [
-                "Wild Encounters"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          522,
-          947,
-          946,
-          331,
-          84,
-          557,
-          309,
-          77,
-          694,
-          58,
-          187,
-          310,
-          25,
-          290,
-          227,
-          234
-        ],
-        "wild": [
-          522,
-          331,
-          84,
-          309,
-          77,
-          227,
-          234
-        ],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [
-          946,
-          331,
-          84,
-          309,
-          310,
-          25
-        ],
-        "shiny": [
-          522,
-          331,
-          84,
-          557,
-          309,
-          77,
-          694,
-          58,
-          187,
-          310,
-          290,
-          227,
-          234
-        ],
-        "shinyDebuts": [
-          522,
-          331,
-          84,
-          557,
-          309,
-          77,
-          694,
-          58,
-          187,
-          310,
-          290,
-          227,
-          234
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "max-mondays-2026-10-19",
-      "name": "Dynamax Sneasel during Max Monday",
-      "url": "https://leekduck.com/events/max-mondays-2026-10-19/",
-      "start": "2026-10-19T13:00:00.000Z",
-      "end": "2026-10-19T13:00:00.000Z",
-      "listedStart": "2026-10-19T13:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "sneasel__215",
-          "name": "Sneasel",
-          "speciesId": 215,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_215_00.png",
-          "methods": [
-            {
-              "type": "max-battle"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Event description",
-              "headings": [],
-              "method": {
-                "type": "max-battle"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          215
-        ],
-        "wild": [],
-        "raid": [],
-        "maxBattle": [
-          215
-        ],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          215
-        ],
-        "shinyDebuts": [
-          215
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "pokemon-tcg-30th-celebration",
-      "name": "Pokémon TCG: 30th Celebration",
-      "url": "https://leekduck.com/events/pokemon-tcg-30th-celebration/",
-      "start": "2026-10-20T14:00:00.000Z",
-      "end": "2026-10-20T14:00:00.000Z",
-      "listedStart": "2026-10-20T14:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "gastly__92",
-          "name": "Gastly",
-          "speciesId": 92,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons_crop/pokemon_icon_092_00.png",
-          "methods": [
-            {
-              "type": "timed-research"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "page-reward",
-              "section": "Pokémon TCG 30th Celebration Event Bonus Timed Research",
-              "headings": [
-                "Pokémon TCG 30th Celebration Event Bonus Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "mega-gengar__94",
-          "name": "Mega Gengar",
-          "speciesId": 94,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_094_51.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": "mega"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids > Appearing in Mega Raids",
-              "headings": [
-                "Raids",
-                "Appearing in Mega Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": "mega"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          92,
-          94
-        ],
-        "wild": [],
-        "raid": [
-          94
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [
-          92
-        ],
-        "shiny": [
-          94
-        ],
-        "shinyDebuts": [
-          94
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "dialga-in-5-star-raid-battles-october-2026",
-      "name": "Dialga in 5-star Raid Battles",
-      "url": "https://leekduck.com/events/dialga-in-5-star-raid-battles-october-2026/",
-      "start": "2026-10-20T14:00:00.000Z",
-      "end": "2026-10-20T14:00:00.000Z",
-      "listedStart": "2026-10-20T14:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "dialga__483",
-          "name": "Dialga",
-          "speciesId": 483,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids",
-              "headings": [
-                "Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": null
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          483
-        ],
-        "wild": [],
-        "raid": [
-          483
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          483
-        ],
-        "shinyDebuts": [
-          483
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "mega-dragonite-in-mega-raids-october-2026",
-      "name": "Mega Dragonite in Mega Raids",
-      "url": "https://leekduck.com/events/mega-dragonite-in-mega-raids-october-2026/",
-      "start": "2026-10-20T14:00:00.000Z",
-      "end": "2026-10-20T14:00:00.000Z",
-      "listedStart": "2026-10-20T14:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "dragonite__149",
-          "name": "Dragonite",
-          "speciesId": 149,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_149_00_shiny.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "mega-dragonite__149",
-          "name": "Mega Dragonite",
-          "speciesId": 149,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm149.fMEGA.icon.png",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Raids",
-              "headings": [
-                "Raids"
-              ],
-              "method": {
-                "type": "raid",
-                "tier": null
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          149
-        ],
-        "wild": [],
-        "raid": [
-          149
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          149
-        ],
-        "shinyDebuts": [
-          149
-        ]
-      },
-      "warnings": []
-    },
-    {
-      "id": "raidhour20261021",
-      "name": "Palkia Raid Hour",
-      "url": "https://leekduck.com/events/raidhour20261021/",
-      "start": "2026-10-21T11:00:00.000Z",
-      "end": "2026-10-21T11:00:00.000Z",
-      "listedStart": "2026-10-21T11:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "palkia__484",
-          "name": "Palkia",
-          "speciesId": 484,
-          "image": "",
-          "methods": [
-            {
-              "type": "raid",
-              "tier": 5
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "text-fallback",
-              "section": "Event description",
-              "headings": [],
-              "method": {
-                "type": "raid",
-                "tier": 5
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          484
-        ],
-        "wild": [],
-        "raid": [
-          484
-        ],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [],
-        "shinyDebuts": []
-      },
-      "warnings": [
-        "Used text fallback for Palkia Raid Hour; LeekDuck page has no Pokémon card."
-      ]
-    },
-    {
-      "id": "pokemonspotlighthour2026-10-22",
-      "name": "Morelull Spotlight Hour",
-      "url": "https://leekduck.com/events/pokemonspotlighthour2026-10-22/",
-      "start": "2026-10-22T11:00:00.000Z",
-      "end": "2026-10-22T11:00:00.000Z",
-      "listedStart": "2026-10-22T11:00:00.000Z",
-      "category": "Event",
-      "pokemon": [
-        {
-          "key": "morelull__755",
-          "name": "Morelull",
-          "speciesId": 755,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm755.icon.png",
-          "methods": [
-            {
-              "type": "wild"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "local-shiny-icon"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Spawns",
-              "headings": [
-                "Spawns"
-              ],
-              "method": {
-                "type": "wild"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            }
-          ]
-        }
-      ],
-      "pokemonLegacy": {
-        "roster": [
-          755
-        ],
-        "wild": [
-          755
-        ],
-        "raid": [],
-        "maxBattle": [],
-        "egg": [],
-        "egg2km": [],
-        "egg5km": [],
-        "egg7km": [],
-        "egg10km": [],
-        "egg12km": [],
-        "research": [],
-        "shiny": [
-          755
-        ],
-        "shinyDebuts": [
-          755
-        ]
-      },
-      "warnings": []
-    },
     {
       "id": "dynamax-uxie-mesprit-azelf-max-battle-day-2026",
       "name": "Dynamax Uxie, Mesprit, and Azelf Max Battle Day",
@@ -2174,74 +547,10 @@
       "category": "Event",
       "pokemon": [
         {
-          "key": "minior-blue-core__poke_capture_0774_011_uk_n_00000000_f_n",
-          "name": "Minior (Blue Core)",
-          "speciesId": null,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_011_uk_n_00000000_f_n.png",
-          "methods": [
-            {
-              "type": "debut"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
           "key": "minior-green-core__poke_capture_0774_010_uk_n_00000000_f_n",
           "name": "Minior (Green Core)",
           "speciesId": null,
           "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_010_uk_n_00000000_f_n.png",
-          "methods": [
-            {
-              "type": "debut"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "minior-indigo-core__poke_capture_0774_012_uk_n_00000000_f_n",
-          "name": "Minior (Indigo Core)",
-          "speciesId": null,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_012_uk_n_00000000_f_n.png",
           "methods": [
             {
               "type": "debut"
@@ -2292,134 +601,6 @@
               ],
               "method": {
                 "type": "wild"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "minior-orange-core__poke_capture_0774_008_uk_n_00000000_f_n",
-          "name": "Minior (Orange Core)",
-          "speciesId": null,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_008_uk_n_00000000_f_n.png",
-          "methods": [
-            {
-              "type": "debut"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "minior-red-core__poke_capture_0774_007_uk_n_00000000_f_n",
-          "name": "Minior (Red Core)",
-          "speciesId": null,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_007_uk_n_00000000_f_n.png",
-          "methods": [
-            {
-              "type": "debut"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "minior-violet-core__poke_capture_0774_013_uk_n_00000000_f_n",
-          "name": "Minior (Violet Core)",
-          "speciesId": null,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_013_uk_n_00000000_f_n.png",
-          "methods": [
-            {
-              "type": "debut"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            }
-          ]
-        },
-        {
-          "key": "minior-yellow-core__poke_capture_0774_009_uk_n_00000000_f_n",
-          "name": "Minior (Yellow Core)",
-          "speciesId": null,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_009_uk_n_00000000_f_n.png",
-          "methods": [
-            {
-              "type": "debut"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": false,
-            "evidence": []
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Pokémon Debut",
-              "headings": [
-                "Pokémon Debut"
-              ],
-              "method": {
-                "type": "debut"
               },
               "shinyConfirmed": false,
               "evidence": {
@@ -2634,6 +815,9 @@
           "methods": [
             {
               "type": "mention"
+            },
+            {
+              "type": "timed-research"
             }
           ],
           "shiny": {
@@ -2655,6 +839,21 @@
               "shinyConfirmed": true,
               "evidence": {
                 "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "page-reward",
+              "section": "City Safari: Boston 2026",
+              "headings": [
+                "City Safari: Boston 2026"
+              ],
+              "method": {
+                "type": "timed-research"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
                 "shinyImage": false
               }
             }
@@ -2738,9 +937,6 @@
             {
               "type": "egg",
               "distanceKm": 7
-            },
-            {
-              "type": "timed-research"
             }
           ],
           "shiny": {
@@ -2773,21 +969,6 @@
               "method": {
                 "type": "egg",
                 "distanceKm": 7
-              },
-              "shinyConfirmed": false,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Timed Research",
-              "headings": [
-                "Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
               },
               "shinyConfirmed": false,
               "evidence": {
@@ -2877,9 +1058,6 @@
             {
               "type": "egg",
               "distanceKm": 7
-            },
-            {
-              "type": "timed-research"
             }
           ],
           "shiny": {
@@ -2914,21 +1092,6 @@
               "method": {
                 "type": "egg",
                 "distanceKm": 7
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Timed Research",
-              "headings": [
-                "Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
               },
               "shinyConfirmed": true,
               "evidence": {
@@ -3088,7 +1251,7 @@
               "distanceKm": 7
             },
             {
-              "type": "timed-research"
+              "type": "field-research"
             }
           ],
           "shiny": {
@@ -3131,13 +1294,28 @@
               }
             },
             {
-              "kind": "list",
-              "section": "Timed Research",
+              "kind": "reward",
+              "section": "Field Research Tasks",
               "headings": [
-                "Timed Research"
+                "Field Research Tasks"
               ],
               "method": {
-                "type": "timed-research"
+                "type": "field-research"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "reward",
+              "section": "Field Research Tasks",
+              "headings": [
+                "Field Research Tasks"
+              ],
+              "method": {
+                "type": "field-research"
               },
               "shinyConfirmed": true,
               "evidence": {
@@ -3159,9 +1337,6 @@
             {
               "type": "egg",
               "distanceKm": 7
-            },
-            {
-              "type": "timed-research"
             }
           ],
           "shiny": {
@@ -3196,21 +1371,6 @@
               "method": {
                 "type": "egg",
                 "distanceKm": 7
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": true,
-                "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Timed Research",
-              "headings": [
-                "Timed Research"
-              ],
-              "method": {
-                "type": "timed-research"
               },
               "shinyConfirmed": true,
               "evidence": {
@@ -3670,10 +1830,8 @@
         "egg10km": [],
         "egg12km": [],
         "research": [
-          701,
-          775,
-          749,
-          669
+          133,
+          749
         ],
         "shiny": [
           63,
@@ -4404,9 +2562,102 @@
       ]
     },
     {
+      "id": "max-mondays-2026-11-02",
+      "name": "Dynamax Machop during Max Monday",
+      "url": "https://leekduck.com/events/max-mondays-2026-11-02/",
+      "start": "2026-11-02T13:00:00.000Z",
+      "end": "2026-11-02T13:00:00.000Z",
+      "listedStart": "2026-11-02T13:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "machop__66",
+          "name": "Machop",
+          "speciesId": 66,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_066_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Event description",
+              "headings": [],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          66
+        ],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [
+          66
+        ],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          66
+        ],
+        "shinyDebuts": [
+          66
+        ]
+      },
+      "warnings": []
+    },
+    {
       "id": "go-pass-october-2026",
       "name": "GO Pass: October",
       "url": "https://leekduck.com/events/go-pass-october-2026/",
+      "start": "2026-11-03T02:00:00.000Z",
+      "end": "2026-11-03T02:00:00.000Z",
+      "listedStart": "2026-11-03T02:00:00.000Z",
+      "category": "Event",
+      "pokemon": [],
+      "pokemonLegacy": {
+        "roster": [],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [],
+        "shinyDebuts": []
+      },
+      "warnings": []
+    },
+    {
+      "id": "go-pass-november-2026",
+      "name": "GO Pass: November",
+      "url": "https://leekduck.com/events/go-pass-november-2026/",
       "start": "2026-11-03T02:00:00.000Z",
       "end": "2026-11-03T02:00:00.000Z",
       "listedStart": "2026-11-03T02:00:00.000Z",
@@ -4613,101 +2864,70 @@
       "warnings": []
     },
     {
-      "id": "mega-sableye-in-mega-raids-october-2026",
-      "name": "Mega Sableye in Mega Raids",
-      "url": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/",
-      "start": "2026-11-03T14:00:00.000Z",
-      "end": "2026-11-03T14:00:00.000Z",
-      "listedStart": "2026-11-03T14:00:00.000Z",
+      "id": "raidhour20261104",
+      "name": "Giratina (Altered Forme) Raid Hour",
+      "url": "https://leekduck.com/events/raidhour20261104/",
+      "start": "2026-11-04T11:00:00.000Z",
+      "end": "2026-11-04T11:00:00.000Z",
+      "listedStart": "2026-11-04T11:00:00.000Z",
+      "category": "Event",
+      "pokemon": [],
+      "pokemonLegacy": {
+        "roster": [],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [],
+        "shinyDebuts": []
+      },
+      "warnings": []
+    },
+    {
+      "id": "pokemonspotlighthour2026-11-05",
+      "name": "Teddiursa wearing a witch hat Spotlight Hour",
+      "url": "https://leekduck.com/events/pokemonspotlighthour2026-11-05/",
+      "start": "2026-11-05T11:00:00.000Z",
+      "end": "2026-11-05T11:00:00.000Z",
+      "listedStart": "2026-11-05T11:00:00.000Z",
       "category": "Event",
       "pokemon": [
         {
-          "key": "mega-sableye__302",
-          "name": "Mega Sableye",
-          "speciesId": 302,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_51.png",
+          "key": "teddiursa-wearing-a-witch-hat__216",
+          "name": "Teddiursa wearing a witch hat",
+          "speciesId": 216,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm216.cHALLOWEEN_2025.icon.png",
           "methods": [
             {
-              "type": "raid",
-              "tier": null
-            },
-            {
-              "type": "shiny-list"
+              "type": "wild"
             }
           ],
           "shiny": {
             "eventConfirmed": true,
             "evidence": [
-              "local-shiny-icon",
-              "shiny-image",
-              "shiny-section"
+              "local-shiny-icon"
             ]
           },
           "mentions": [
             {
               "kind": "list",
-              "section": "Raids",
+              "section": "Spawns",
               "headings": [
-                "Raids"
+                "Spawns"
               ],
               "method": {
-                "type": "raid",
-                "tier": null
+                "type": "wild"
               },
               "shinyConfirmed": true,
               "evidence": {
                 "localShinyIcon": true,
                 "shinyImage": false
-              }
-            },
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
-              }
-            }
-          ]
-        },
-        {
-          "key": "sableye__302",
-          "name": "Sableye",
-          "speciesId": 302,
-          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_00_shiny.png",
-          "methods": [
-            {
-              "type": "shiny-list"
-            }
-          ],
-          "shiny": {
-            "eventConfirmed": true,
-            "evidence": [
-              "shiny-image",
-              "shiny-section"
-            ]
-          },
-          "mentions": [
-            {
-              "kind": "list",
-              "section": "Shiny",
-              "headings": [
-                "Shiny"
-              ],
-              "method": {
-                "type": "shiny-list"
-              },
-              "shinyConfirmed": true,
-              "evidence": {
-                "localShinyIcon": false,
-                "shinyImage": true
               }
             }
           ]
@@ -4715,12 +2935,12 @@
       ],
       "pokemonLegacy": {
         "roster": [
-          302
+          216
         ],
-        "wild": [],
-        "raid": [
-          302
+        "wild": [
+          216
         ],
+        "raid": [],
         "maxBattle": [],
         "egg": [],
         "egg2km": [],
@@ -4730,10 +2950,10 @@
         "egg12km": [],
         "research": [],
         "shiny": [
-          302
+          216
         ],
         "shinyDebuts": [
-          302
+          216
         ]
       },
       "warnings": []
@@ -5004,6 +3224,4641 @@
       "warnings": [
         "Could not resolve a Pokémon name in list under Raids > One-Star Raids."
       ]
+    },
+    {
+      "id": "mega-sableye-in-mega-raids-october-2026",
+      "name": "Mega Sableye in Mega Raids",
+      "url": "https://leekduck.com/events/mega-sableye-in-mega-raids-october-2026/",
+      "start": "2026-11-08T14:00:00.000Z",
+      "end": "2026-11-08T14:00:00.000Z",
+      "listedStart": "2026-11-08T14:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "mega-sableye__302",
+          "name": "Mega Sableye",
+          "speciesId": 302,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_51.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": null
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon",
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids",
+              "headings": [
+                "Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": null
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        },
+        {
+          "key": "sableye__302",
+          "name": "Sableye",
+          "speciesId": 302,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_302_00_shiny.png",
+          "methods": [
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          302
+        ],
+        "wild": [],
+        "raid": [
+          302
+        ],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          302
+        ],
+        "shinyDebuts": [
+          302
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "giratina-altered-forme-in-5-star-raid-battles-november-2026",
+      "name": "Giratina (Altered Forme) in 5-star Raid Battles",
+      "url": "https://leekduck.com/events/giratina-altered-forme-in-5-star-raid-battles-november-2026/",
+      "start": "2026-11-08T14:00:00.000Z",
+      "end": "2026-11-08T14:00:00.000Z",
+      "listedStart": "2026-11-08T14:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "giratina-altered__487",
+          "name": "Giratina (Altered)",
+          "speciesId": 487,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_487_11.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": null
+            },
+            {
+              "type": "shiny-list"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon",
+              "shiny-image",
+              "shiny-section"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids",
+              "headings": [
+                "Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": null
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Shiny",
+              "headings": [
+                "Shiny"
+              ],
+              "method": {
+                "type": "shiny-list"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": true
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          487
+        ],
+        "wild": [],
+        "raid": [
+          487
+        ],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          487
+        ],
+        "shinyDebuts": [
+          487
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "shadow-tornadus-incarnate-forme-in-shadow-raids-november-4-2026",
+      "name": "Shadow Tornadus (Incarnate Forme) in Shadow Raids",
+      "url": "https://leekduck.com/events/shadow-tornadus-incarnate-forme-in-shadow-raids-november-4-2026/",
+      "start": "2026-11-08T14:00:00.000Z",
+      "end": "2026-11-08T14:00:00.000Z",
+      "listedStart": "2026-11-08T14:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "tornadus-incarnate__641",
+          "name": "Tornadus (Incarnate)",
+          "speciesId": 641,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_641_11.png",
+          "methods": [
+            {
+              "type": "raid",
+              "tier": 5
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids > Appearing in 5-Star Shadow Raids",
+              "headings": [
+                "Raids",
+                "Appearing in 5-Star Shadow Raids"
+              ],
+              "method": {
+                "type": "raid",
+                "tier": 5
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          641
+        ],
+        "wild": [],
+        "raid": [
+          641
+        ],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [],
+        "shinyDebuts": []
+      },
+      "warnings": []
+    },
+    {
+      "id": "into-the-wild-2026",
+      "name": "Into the Wild",
+      "url": "https://leekduck.com/events/into-the-wild-2026/",
+      "start": "2026-11-13T12:00:00.000Z",
+      "end": "2026-11-13T12:00:00.000Z",
+      "listedStart": "2026-11-13T12:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "druddigon__621",
+          "name": "Druddigon",
+          "speciesId": 621,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_621_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids > Three-Star Raids",
+              "headings": [
+                "Raids",
+                "Three-Star Raids"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "latias__380",
+          "name": "Latias",
+          "speciesId": 380,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_380_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Max Battles > Five-Star Max Battles: Friday, November 13",
+              "headings": [
+                "Max Battles",
+                "Five-Star Max Battles: Friday, November 13"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Featured Attacks > Latias",
+              "headings": [
+                "Featured Attacks",
+                "Latias"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "latios__381",
+          "name": "Latios",
+          "speciesId": 381,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_381_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Max Battles > Five-Star Max Battles: Friday, November 13",
+              "headings": [
+                "Max Battles",
+                "Five-Star Max Battles: Friday, November 13"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Featured Attacks > Latios",
+              "headings": [
+                "Featured Attacks",
+                "Latios"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "machop__66",
+          "name": "Machop",
+          "speciesId": 66,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_066_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Max Battles > Two-Star Max Battles",
+              "headings": [
+                "Max Battles",
+                "Two-Star Max Battles"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "magnemite__81",
+          "name": "Magnemite",
+          "speciesId": 81,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_081_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "meltan__808",
+          "name": "Meltan",
+          "speciesId": 808,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_808_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Dynamax Pokémon Debuts",
+              "headings": [
+                "Dynamax Pokémon Debuts"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Featured Pokémon and Rewards",
+              "headings": [
+                "Featured Pokémon and Rewards"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "noibat__714",
+          "name": "Noibat",
+          "speciesId": 714,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_714_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "orthworm__968",
+          "name": "Orthworm",
+          "speciesId": 968,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm968.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids > Three-Star Raids",
+              "headings": [
+                "Raids",
+                "Three-Star Raids"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "ralts__280",
+          "name": "Ralts",
+          "speciesId": 280,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_280_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Max Battles > One-Star Max Battles",
+              "headings": [
+                "Max Battles",
+                "One-Star Max Battles"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "regidrago__895",
+          "name": "Regidrago",
+          "speciesId": 895,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm895.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Dynamax Pokémon Debuts",
+              "headings": [
+                "Dynamax Pokémon Debuts"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Max Battles > Five-Star Max Battles: Thursday, November 12",
+              "headings": [
+                "Max Battles",
+                "Five-Star Max Battles: Thursday, November 12"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Featured Attacks > Regidrago",
+              "headings": [
+                "Featured Attacks",
+                "Regidrago"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "registeel__379",
+          "name": "Registeel",
+          "speciesId": 379,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_379_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Max Battles > Five-Star Max Battles: Wednesday, November 11",
+              "headings": [
+                "Max Battles",
+                "Five-Star Max Battles: Wednesday, November 11"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Featured Attacks > Registeel",
+              "headings": [
+                "Featured Attacks",
+                "Registeel"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "togedemaru__777",
+          "name": "Togedemaru",
+          "speciesId": 777,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm777.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Spawns",
+              "headings": [
+                "Spawns"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "zacian-crowned-sword__888",
+          "name": "Zacian (Crowned Sword)",
+          "speciesId": 888,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm888.fCROWNED_SWORD.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids > Five-Star Raids",
+              "headings": [
+                "Raids",
+                "Five-Star Raids"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Raids > Raid Hour: Monday, November 9",
+              "headings": [
+                "Raids",
+                "Raid Hour: Monday, November 9"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "zamazenta-crowned-shield__889",
+          "name": "Zamazenta (Crowned Shield)",
+          "speciesId": 889,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm889.fCROWNED_SHIELD.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Raids > Five-Star Raids",
+              "headings": [
+                "Raids",
+                "Five-Star Raids"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Raids > Raid Hour: Tuesday, November 10",
+              "headings": [
+                "Raids",
+                "Raid Hour: Tuesday, November 10"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          621,
+          380,
+          381,
+          66,
+          81,
+          808,
+          714,
+          968,
+          280,
+          895,
+          379,
+          777,
+          888,
+          889
+        ],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [
+          621,
+          380,
+          381,
+          66,
+          81,
+          808,
+          714,
+          968,
+          280,
+          895,
+          379,
+          777,
+          888,
+          889
+        ],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          621,
+          380,
+          381,
+          66,
+          81,
+          808,
+          714,
+          968,
+          280,
+          895,
+          379,
+          777,
+          888,
+          889
+        ],
+        "shinyDebuts": [
+          621,
+          380,
+          381,
+          66,
+          81,
+          808,
+          714,
+          968,
+          280,
+          895,
+          379,
+          777,
+          888,
+          889
+        ]
+      },
+      "warnings": []
+    },
+    {
+      "id": "pokemon-go-wild-area-2026-global",
+      "name": "Pokémon GO Wild Area 2026: Global",
+      "url": "https://leekduck.com/events/pokemon-go-wild-area-2026-global/",
+      "start": "2026-11-14T02:00:00.000Z",
+      "end": "2026-11-14T02:00:00.000Z",
+      "listedStart": "2026-11-14T02:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "aggron__306",
+          "name": "Aggron",
+          "speciesId": 306,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_306_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "alolan-diglett__50",
+          "name": "Alolan Diglett",
+          "speciesId": 50,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_050_61.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "alolan-exeggutor__103",
+          "name": "Alolan Exeggutor",
+          "speciesId": 103,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_103_61.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "alolan-sandshrew__27",
+          "name": "Alolan Sandshrew",
+          "speciesId": 27,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_027_61.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "amaura__698",
+          "name": "Amaura",
+          "speciesId": 698,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm698.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "aron__304",
+          "name": "Aron",
+          "speciesId": 304,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_304_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "axew__610",
+          "name": "Axew",
+          "speciesId": 610,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_610_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "azumarill__184",
+          "name": "Azumarill",
+          "speciesId": 184,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_184_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "bagon__371",
+          "name": "Bagon",
+          "speciesId": 371,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_371_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "barboach__339",
+          "name": "Barboach",
+          "speciesId": 339,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_339_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "beldum__374",
+          "name": "Beldum",
+          "speciesId": 374,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_374_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "bronzor__436",
+          "name": "Bronzor",
+          "speciesId": 436,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_436_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "charmander__4",
+          "name": "Charmander",
+          "speciesId": 4,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_004_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "clodsire__980",
+          "name": "Clodsire",
+          "speciesId": 980,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm980.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "conkeldurr__534",
+          "name": "Conkeldurr",
+          "speciesId": 534,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_534_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "deino__633",
+          "name": "Deino",
+          "speciesId": 633,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_633_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "dialga__483",
+          "name": "Dialga",
+          "speciesId": 483,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_483_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Max Battles > Saturday, November 14",
+              "headings": [
+                "Max Battles",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "drampa__780",
+          "name": "Drampa",
+          "speciesId": 780,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm780.icon.png",
+          "methods": [
+            {
+              "type": "egg",
+              "distanceKm": 10
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Eggs > 10 km Eggs",
+              "headings": [
+                "Eggs",
+                "10 km Eggs"
+              ],
+              "method": {
+                "type": "egg",
+                "distanceKm": 10
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "dratini__147",
+          "name": "Dratini",
+          "speciesId": 147,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_147_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "drilbur__529",
+          "name": "Drilbur",
+          "speciesId": 529,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_529_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "duraludon__884",
+          "name": "Duraludon",
+          "speciesId": 884,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm884.icon.png",
+          "methods": [
+            {
+              "type": "egg",
+              "distanceKm": 10
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Eggs > 10 km Eggs",
+              "headings": [
+                "Eggs",
+                "10 km Eggs"
+              ],
+              "method": {
+                "type": "egg",
+                "distanceKm": 10
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "durant__632",
+          "name": "Durant",
+          "speciesId": 632,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_632_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "empoleon__395",
+          "name": "Empoleon",
+          "speciesId": 395,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_395_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "ferroseed__597",
+          "name": "Ferroseed",
+          "speciesId": 597,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_597_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "ferrothorn__598",
+          "name": "Ferrothorn",
+          "speciesId": 598,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_598_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "flygon__330",
+          "name": "Flygon",
+          "speciesId": 330,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_330_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Moves > Flygon",
+              "headings": [
+                "Moves",
+                "Flygon"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "frigibax__996",
+          "name": "Frigibax",
+          "speciesId": 996,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm996.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "galarian-stunfisk__618",
+          "name": "Galarian Stunfisk",
+          "speciesId": 618,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_618_31.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "gible__443",
+          "name": "Gible",
+          "speciesId": 443,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_443_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "gligar__207",
+          "name": "Gligar",
+          "speciesId": 207,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_207_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "goodra__706",
+          "name": "Goodra",
+          "speciesId": 706,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_706_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "goomy__704",
+          "name": "Goomy",
+          "speciesId": 704,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_704_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "haxorus__612",
+          "name": "Haxorus",
+          "speciesId": 612,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_612_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Moves > Haxorus",
+              "headings": [
+                "Moves",
+                "Haxorus"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "heatmor__631",
+          "name": "Heatmor",
+          "speciesId": 631,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_631_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "honedge__679",
+          "name": "Honedge",
+          "speciesId": 679,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_679_00.png",
+          "methods": [
+            {
+              "type": "egg",
+              "distanceKm": 10
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Eggs > 10 km Eggs",
+              "headings": [
+                "Eggs",
+                "10 km Eggs"
+              ],
+              "method": {
+                "type": "egg",
+                "distanceKm": 10
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "hydreigon__635",
+          "name": "Hydreigon",
+          "speciesId": 635,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_635_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Moves > Hydreigon",
+              "headings": [
+                "Moves",
+                "Hydreigon"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "jangmo-o__782",
+          "name": "Jangmo-o",
+          "speciesId": 782,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm782.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "kingdra__230",
+          "name": "Kingdra",
+          "speciesId": 230,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_230_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "klefki__707",
+          "name": "Klefki",
+          "speciesId": 707,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_707_00.png",
+          "methods": [
+            {
+              "type": "egg",
+              "distanceKm": 10
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Eggs > 10 km Eggs",
+              "headings": [
+                "Eggs",
+                "10 km Eggs"
+              ],
+              "method": {
+                "type": "egg",
+                "distanceKm": 10
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "klink__599",
+          "name": "Klink",
+          "speciesId": 599,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_599_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "kyurem-black__646",
+          "name": "Kyurem (Black)",
+          "speciesId": 646,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_646_13.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Five-Star Raids > Sunday, November 15",
+              "headings": [
+                "Five-Star Raids",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "kyurem-white__646",
+          "name": "Kyurem (White)",
+          "speciesId": 646,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_646_12.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Five-Star Raids > Saturday, November 14",
+              "headings": [
+                "Five-Star Raids",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "latias__380",
+          "name": "Latias",
+          "speciesId": 380,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_380_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Incense Encounters > Ticket Holder Incense Encounters",
+              "headings": [
+                "Incense Encounters",
+                "Ticket Holder Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "latios__381",
+          "name": "Latios",
+          "speciesId": 381,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_381_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Incense Encounters > Ticket Holder Incense Encounters",
+              "headings": [
+                "Incense Encounters",
+                "Ticket Holder Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "lucario__448",
+          "name": "Lucario",
+          "speciesId": 448,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_448_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "magikarp__129",
+          "name": "Magikarp",
+          "speciesId": 129,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_129_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "magnemite__81",
+          "name": "Magnemite",
+          "speciesId": 81,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_081_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "magnezone__462",
+          "name": "Magnezone",
+          "speciesId": 462,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_462_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Moves > Magnezone",
+              "headings": [
+                "Moves",
+                "Magnezone"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "metagross__376",
+          "name": "Metagross",
+          "speciesId": 376,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_376_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Moves > Metagross",
+              "headings": [
+                "Moves",
+                "Metagross"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "modern-jacket-machamp__68",
+          "name": "Modern Jacket Machamp",
+          "speciesId": 68,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_068_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Three-Star Raids",
+              "headings": [
+                "Three-Star Raids"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Moves > Machamp wearing a modern jacket",
+              "headings": [
+                "Moves",
+                "Machamp wearing a modern jacket"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "noibat__714",
+          "name": "Noibat",
+          "speciesId": 714,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_714_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "noivern__715",
+          "name": "Noivern",
+          "speciesId": 715,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_715_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "nosepass__299",
+          "name": "Nosepass",
+          "speciesId": 299,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_299_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "onix__95",
+          "name": "Onix",
+          "speciesId": 95,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_095_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "palkia__484",
+          "name": "Palkia",
+          "speciesId": 484,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_484_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Max Battles > Sunday, November 15",
+              "headings": [
+                "Max Battles",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "piplup__393",
+          "name": "Piplup",
+          "speciesId": 393,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_393_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "porygon__137",
+          "name": "Porygon",
+          "speciesId": 137,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_137_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "reshiram__643",
+          "name": "Reshiram",
+          "speciesId": 643,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_643_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Five-Star Raids > Sunday, November 15",
+              "headings": [
+                "Five-Star Raids",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "rookidee__821",
+          "name": "Rookidee",
+          "speciesId": 821,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm821.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "scizor__212",
+          "name": "Scizor",
+          "speciesId": 212,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_212_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Incense Encounters",
+              "headings": [
+                "Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "shellder__90",
+          "name": "Shellder",
+          "speciesId": 90,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_090_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "shieldon__410",
+          "name": "Shieldon",
+          "speciesId": 410,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_410_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "shuckle__213",
+          "name": "Shuckle",
+          "speciesId": 213,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_213_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "sizzlipede__850",
+          "name": "Sizzlipede",
+          "speciesId": 850,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm850.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "skarmory__227",
+          "name": "Skarmory",
+          "speciesId": 227,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_227_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "skrelp__690",
+          "name": "Skrelp",
+          "speciesId": 690,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_690_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "swablu__333",
+          "name": "Swablu",
+          "speciesId": 333,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_333_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "tinkatink__957",
+          "name": "Tinkatink",
+          "speciesId": 957,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm957.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Solid as Steel Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Solid as Steel Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "tinkaton__959",
+          "name": "Tinkaton",
+          "speciesId": 959,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm959.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Sunday, November 15",
+              "headings": [
+                "Mighty Pokémon",
+                "Sunday, November 15"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            },
+            {
+              "kind": "list",
+              "section": "Moves > Tinkaton",
+              "headings": [
+                "Moves",
+                "Tinkaton"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "trapinch__328",
+          "name": "Trapinch",
+          "speciesId": 328,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_328_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "turtonator__776",
+          "name": "Turtonator",
+          "speciesId": 776,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm776.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "tynamo__602",
+          "name": "Tynamo",
+          "speciesId": 602,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_602_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "tyrunt__696",
+          "name": "Tyrunt",
+          "speciesId": 696,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pm696.icon.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Rotating Habitat Hours > Daring as Dragons Hour",
+              "headings": [
+                "Rotating Habitat Hours",
+                "Daring as Dragons Hour"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "unown-d__201",
+          "name": "Unown D",
+          "speciesId": 201,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_201_14.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Incense Encounters > Ticket Holder Incense Encounters",
+              "headings": [
+                "Incense Encounters",
+                "Ticket Holder Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "unown-i__201",
+          "name": "Unown I",
+          "speciesId": 201,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_201_19.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Incense Encounters > Ticket Holder Incense Encounters",
+              "headings": [
+                "Incense Encounters",
+                "Ticket Holder Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "unown-l__201",
+          "name": "Unown L",
+          "speciesId": 201,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_201_22.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Incense Encounters > Ticket Holder Incense Encounters",
+              "headings": [
+                "Incense Encounters",
+                "Ticket Holder Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "unown-w__201",
+          "name": "Unown W",
+          "speciesId": 201,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_201_33.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Incense Encounters > Ticket Holder Incense Encounters",
+              "headings": [
+                "Incense Encounters",
+                "Ticket Holder Incense Encounters"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "walrein__365",
+          "name": "Walrein",
+          "speciesId": 365,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_365_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Mighty Pokémon > Saturday, November 14",
+              "headings": [
+                "Mighty Pokémon",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "zekrom__644",
+          "name": "Zekrom",
+          "speciesId": 644,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/pokemon_icon_644_00.png",
+          "methods": [
+            {
+              "type": "max-battle"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": true,
+            "evidence": [
+              "local-shiny-icon"
+            ]
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Five-Star Raids > Saturday, November 14",
+              "headings": [
+                "Five-Star Raids",
+                "Saturday, November 14"
+              ],
+              "method": {
+                "type": "max-battle"
+              },
+              "shinyConfirmed": true,
+              "evidence": {
+                "localShinyIcon": true,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [
+          306,
+          50,
+          103,
+          27,
+          698,
+          304,
+          610,
+          184,
+          371,
+          339,
+          374,
+          436,
+          4,
+          980,
+          534,
+          633,
+          483,
+          780,
+          147,
+          529,
+          884,
+          632,
+          395,
+          597,
+          598,
+          330,
+          996,
+          618,
+          443,
+          207,
+          706,
+          704,
+          612,
+          631,
+          679,
+          635,
+          782,
+          230,
+          707,
+          599,
+          646,
+          380,
+          381,
+          448,
+          129,
+          81,
+          462,
+          376,
+          68,
+          714,
+          715,
+          299,
+          95,
+          484,
+          393,
+          137,
+          643,
+          821,
+          212,
+          90,
+          410,
+          213,
+          850,
+          227,
+          690,
+          333,
+          957,
+          959,
+          328,
+          776,
+          602,
+          696,
+          201,
+          365,
+          644
+        ],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [
+          306,
+          50,
+          103,
+          27,
+          698,
+          304,
+          610,
+          184,
+          371,
+          339,
+          374,
+          436,
+          4,
+          980,
+          534,
+          633,
+          483,
+          147,
+          529,
+          632,
+          395,
+          597,
+          598,
+          330,
+          996,
+          618,
+          443,
+          207,
+          706,
+          704,
+          612,
+          631,
+          635,
+          782,
+          230,
+          599,
+          646,
+          380,
+          381,
+          448,
+          129,
+          81,
+          462,
+          376,
+          68,
+          714,
+          715,
+          299,
+          95,
+          484,
+          393,
+          137,
+          643,
+          821,
+          212,
+          90,
+          410,
+          213,
+          850,
+          227,
+          690,
+          333,
+          957,
+          959,
+          328,
+          776,
+          602,
+          696,
+          201,
+          365,
+          644
+        ],
+        "egg": [
+          780,
+          884,
+          679,
+          707
+        ],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [
+          780,
+          884,
+          679,
+          707
+        ],
+        "egg12km": [],
+        "research": [],
+        "shiny": [
+          306,
+          50,
+          103,
+          27,
+          698,
+          304,
+          610,
+          184,
+          371,
+          339,
+          374,
+          436,
+          4,
+          980,
+          534,
+          633,
+          483,
+          780,
+          147,
+          529,
+          884,
+          632,
+          395,
+          597,
+          598,
+          330,
+          996,
+          443,
+          207,
+          706,
+          704,
+          612,
+          631,
+          679,
+          635,
+          782,
+          230,
+          707,
+          599,
+          646,
+          380,
+          381,
+          448,
+          129,
+          81,
+          462,
+          376,
+          68,
+          714,
+          715,
+          299,
+          95,
+          484,
+          393,
+          137,
+          643,
+          821,
+          212,
+          90,
+          410,
+          213,
+          850,
+          227,
+          690,
+          333,
+          957,
+          959,
+          328,
+          776,
+          602,
+          696,
+          201,
+          365,
+          644
+        ],
+        "shinyDebuts": [
+          306,
+          50,
+          103,
+          27,
+          698,
+          304,
+          610,
+          184,
+          371,
+          339,
+          374,
+          436,
+          4,
+          980,
+          534,
+          633,
+          483,
+          780,
+          147,
+          529,
+          884,
+          632,
+          395,
+          597,
+          598,
+          330,
+          996,
+          443,
+          207,
+          706,
+          704,
+          612,
+          631,
+          679,
+          635,
+          782,
+          230,
+          707,
+          599,
+          646,
+          380,
+          381,
+          448,
+          129,
+          81,
+          462,
+          376,
+          68,
+          714,
+          715,
+          299,
+          95,
+          484,
+          393,
+          137,
+          643,
+          821,
+          212,
+          90,
+          410,
+          213,
+          850,
+          227,
+          690,
+          333,
+          957,
+          959,
+          328,
+          776,
+          602,
+          696,
+          201,
+          365,
+          644
+        ]
+      },
+      "warnings": [
+        "Could not resolve a Pokémon name in list under Gigantamax Duraludon Debuts.",
+        "Could not resolve a Pokémon name in list under Max Battles > Six-Star Max Battles."
+      ]
+    },
+    {
+      "id": "minior-showers-leonids-2026",
+      "name": "Minior Showers: Leonids 2026",
+      "url": "https://leekduck.com/events/minior-showers-leonids-2026/",
+      "start": "2026-11-14T09:00:00.000Z",
+      "end": "2026-11-14T09:00:00.000Z",
+      "listedStart": "2026-11-14T09:00:00.000Z",
+      "category": "Event",
+      "pokemon": [
+        {
+          "key": "minior-blue-core__poke_capture_0774_011_uk_n_00000000_f_n",
+          "name": "Minior (Blue Core)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_011_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Minior Cores",
+              "headings": [
+                "Minior Cores"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "minior-green-core__poke_capture_0774_010_uk_n_00000000_f_n",
+          "name": "Minior (Green Core)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_010_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Minior Cores",
+              "headings": [
+                "Minior Cores"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "minior-indigo-core__poke_capture_0774_012_uk_n_00000000_f_n",
+          "name": "Minior (Indigo Core)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_012_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Minior Cores",
+              "headings": [
+                "Minior Cores"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "minior-meteor-form__poke_capture_0774_000_uk_n_00000000_f_n",
+          "name": "Minior (Meteor Form)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_000_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "wild"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Wild Encounters",
+              "headings": [
+                "Wild Encounters"
+              ],
+              "method": {
+                "type": "wild"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "minior-orange-core__poke_capture_0774_008_uk_n_00000000_f_n",
+          "name": "Minior (Orange Core)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_008_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Minior Cores",
+              "headings": [
+                "Minior Cores"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "minior-red-core__poke_capture_0774_007_uk_n_00000000_f_n",
+          "name": "Minior (Red Core)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_007_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Minior Cores",
+              "headings": [
+                "Minior Cores"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "minior-violet-core__poke_capture_0774_013_uk_n_00000000_f_n",
+          "name": "Minior (Violet Core)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_013_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Minior Cores",
+              "headings": [
+                "Minior Cores"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        },
+        {
+          "key": "minior-yellow-core__poke_capture_0774_009_uk_n_00000000_f_n",
+          "name": "Minior (Yellow Core)",
+          "speciesId": null,
+          "image": "https://cdn.leekduck.com/assets/img/pokemon_icons/poke_capture_0774_009_uk_n_00000000_f_n.png",
+          "methods": [
+            {
+              "type": "mention"
+            }
+          ],
+          "shiny": {
+            "eventConfirmed": false,
+            "evidence": []
+          },
+          "mentions": [
+            {
+              "kind": "list",
+              "section": "Minior Cores",
+              "headings": [
+                "Minior Cores"
+              ],
+              "method": {
+                "type": "mention"
+              },
+              "shinyConfirmed": false,
+              "evidence": {
+                "localShinyIcon": false,
+                "shinyImage": false
+              }
+            }
+          ]
+        }
+      ],
+      "pokemonLegacy": {
+        "roster": [],
+        "wild": [],
+        "raid": [],
+        "maxBattle": [],
+        "egg": [],
+        "egg2km": [],
+        "egg5km": [],
+        "egg7km": [],
+        "egg10km": [],
+        "egg12km": [],
+        "research": [],
+        "shiny": [],
+        "shinyDebuts": []
+      },
+      "warnings": []
     }
   ]
 }
